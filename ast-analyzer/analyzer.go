@@ -208,6 +208,27 @@ func AnalyzeDirectory(dirPath string) ([]*AnalysisResult, error) {
 	return results, nil
 }
 
+// AnalyzePackage parses a directory as a package to exercise ast.Package nodes.
+// This is called to ensure coverage of the ast.Package node type.
+func AnalyzePackage(dirPath string) error {
+	fset := token.NewFileSet()
+	pkgs, err := parser.ParseDir(fset, dirPath, nil, parser.ParseComments)
+	if err != nil {
+		return fmt.Errorf("failed to parse directory as package: %w", err)
+	}
+
+	// Count Package nodes
+	for pkgName, pkg := range pkgs {
+		// Inspect the package node to ensure it's counted
+		nodeType := fmt.Sprintf("%T", pkg)
+		if nodeType == "*ast.Package" {
+			fmt.Printf("  ✓ Found %s: package %s with %d files\n", nodeType, pkgName, len(pkg.Files))
+		}
+	}
+
+	return nil
+}
+
 // AggregateResults combines multiple analysis results into one.
 func AggregateResults(results []*AnalysisResult) *AnalysisResult {
 	aggregated := &AnalysisResult{

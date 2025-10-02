@@ -1,0 +1,526 @@
+=== AST for package_node.go ===
+
+File Information:
+  Package: main
+  Position: go-nodes/package_node.go:4:1
+  Imports:
+    "fmt"
+    "go/ast"
+    "go/parser"
+    "go/token"
+    "os"
+  Comment Groups: 13
+  Declarations: 2
+
+=== AST Node Tree ===
+
+*ast.File (go-nodes/package_node.go:4:1)
+  Package: main
+  *ast.GenDecl (go-nodes/package_node.go:6:1) Token: import
+    *ast.ImportSpec (go-nodes/package_node.go:7:2)
+      Path: "fmt"
+    *ast.ImportSpec (go-nodes/package_node.go:8:2)
+      Path: "go/ast"
+    *ast.ImportSpec (go-nodes/package_node.go:9:2)
+      Path: "go/parser"
+    *ast.ImportSpec (go-nodes/package_node.go:10:2)
+      Path: "go/token"
+    *ast.ImportSpec (go-nodes/package_node.go:11:2)
+      Path: "os"
+  *ast.FuncDecl (go-nodes/package_node.go:17:1)
+    Name: main
+    Type:
+      *ast.FuncType (go-nodes/package_node.go:17:1)
+        Params:
+          *ast.FieldList (go-nodes/package_node.go:17:10) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/package_node.go:17:13) Stmts: 23
+        *ast.ExprStmt (go-nodes/package_node.go:18:2)
+          *ast.CallExpr (go-nodes/package_node.go:18:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:18:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:18:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:18:14) Kind: STRING Value: "=== package_node.go AST Node Coverage ==="
+        *ast.ExprStmt (go-nodes/package_node.go:19:2)
+          *ast.CallExpr (go-nodes/package_node.go:19:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:19:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:19:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:19:14) Kind: STRING Value: "Exercising AST Nodes:"
+        *ast.ExprStmt (go-nodes/package_node.go:20:2)
+          *ast.CallExpr (go-nodes/package_node.go:20:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:20:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:20:2) Name: fmt
+                Sel: Println
+        *ast.ExprStmt (go-nodes/package_node.go:23:2)
+          *ast.CallExpr (go-nodes/package_node.go:23:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:23:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:23:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:23:14) Kind: STRING Value: "ast.Package Node:"
+        *ast.ExprStmt (go-nodes/package_node.go:24:2)
+          *ast.CallExpr (go-nodes/package_node.go:24:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:24:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:24:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:24:14) Kind: STRING Value: "  The *ast.Package type represents a set of source files"
+        *ast.ExprStmt (go-nodes/package_node.go:25:2)
+          *ast.CallExpr (go-nodes/package_node.go:25:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:25:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:25:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:25:14) Kind: STRING Value: "  that collectively form a Go package."
+        *ast.ExprStmt (go-nodes/package_node.go:26:2)
+          *ast.CallExpr (go-nodes/package_node.go:26:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:26:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:26:2) Name: fmt
+                Sel: Println
+        *ast.ExprStmt (go-nodes/package_node.go:29:2)
+          *ast.CallExpr (go-nodes/package_node.go:29:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:29:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:29:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:29:14) Kind: STRING Value: "  ✓ Creating ast.Package by parsing directory:"
+        *ast.AssignStmt (go-nodes/package_node.go:32:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/package_node.go:32:2) Name: dir
+            *ast.Ident (go-nodes/package_node.go:32:7) Name: err
+          RHS:
+            *ast.CallExpr (go-nodes/package_node.go:32:14)
+              Fun:
+                *ast.SelectorExpr (go-nodes/package_node.go:32:14)
+                  X:
+                    *ast.Ident (go-nodes/package_node.go:32:14) Name: os
+                  Sel: Getwd
+        *ast.IfStmt (go-nodes/package_node.go:33:2)
+          Cond:
+            *ast.BinaryExpr (go-nodes/package_node.go:33:5) Op: !=
+              X:
+                *ast.Ident (go-nodes/package_node.go:33:5) Name: err
+              Y:
+                *ast.Ident (go-nodes/package_node.go:33:12) Name: nil
+          Body:
+            *ast.BlockStmt (go-nodes/package_node.go:33:16) Stmts: 2
+              *ast.ExprStmt (go-nodes/package_node.go:34:3)
+                *ast.CallExpr (go-nodes/package_node.go:34:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/package_node.go:34:3)
+                      X:
+                        *ast.Ident (go-nodes/package_node.go:34:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/package_node.go:34:14) Kind: STRING Value: "    Error getting working directory: %v\n"
+                    [1]:
+                      *ast.Ident (go-nodes/package_node.go:34:59) Name: err
+              *ast.ReturnStmt (go-nodes/package_node.go:35:3)
+        *ast.AssignStmt (go-nodes/package_node.go:39:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/package_node.go:39:2) Name: fset
+          RHS:
+            *ast.CallExpr (go-nodes/package_node.go:39:10)
+              Fun:
+                *ast.SelectorExpr (go-nodes/package_node.go:39:10)
+                  X:
+                    *ast.Ident (go-nodes/package_node.go:39:10) Name: token
+                  Sel: NewFileSet
+        *ast.AssignStmt (go-nodes/package_node.go:40:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/package_node.go:40:2) Name: pkgs
+            *ast.Ident (go-nodes/package_node.go:40:8) Name: err
+          RHS:
+            *ast.CallExpr (go-nodes/package_node.go:40:15)
+              Fun:
+                *ast.SelectorExpr (go-nodes/package_node.go:40:15)
+                  X:
+                    *ast.Ident (go-nodes/package_node.go:40:15) Name: parser
+                  Sel: ParseDir
+              Args:
+                [0]:
+                  *ast.Ident (go-nodes/package_node.go:40:31) Name: fset
+                [1]:
+                  *ast.Ident (go-nodes/package_node.go:40:37) Name: dir
+                [2]:
+                  *ast.Ident (go-nodes/package_node.go:40:42) Name: nil
+                [3]:
+                  *ast.SelectorExpr (go-nodes/package_node.go:40:47)
+                    X:
+                      *ast.Ident (go-nodes/package_node.go:40:47) Name: parser
+                    Sel: ParseComments
+        *ast.IfStmt (go-nodes/package_node.go:41:2)
+          Cond:
+            *ast.BinaryExpr (go-nodes/package_node.go:41:5) Op: !=
+              X:
+                *ast.Ident (go-nodes/package_node.go:41:5) Name: err
+              Y:
+                *ast.Ident (go-nodes/package_node.go:41:12) Name: nil
+          Body:
+            *ast.BlockStmt (go-nodes/package_node.go:41:16) Stmts: 2
+              *ast.ExprStmt (go-nodes/package_node.go:42:3)
+                *ast.CallExpr (go-nodes/package_node.go:42:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/package_node.go:42:3)
+                      X:
+                        *ast.Ident (go-nodes/package_node.go:42:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/package_node.go:42:14) Kind: STRING Value: "    Error parsing directory: %v\n"
+                    [1]:
+                      *ast.Ident (go-nodes/package_node.go:42:51) Name: err
+              *ast.ReturnStmt (go-nodes/package_node.go:43:3)
+        *ast.RangeStmt (go-nodes/package_node.go:47:2) Token: :=
+          Key:
+            *ast.Ident (go-nodes/package_node.go:47:6) Name: pkgName
+          Value:
+            *ast.Ident (go-nodes/package_node.go:47:15) Name: pkg
+          X:
+            *ast.Ident (go-nodes/package_node.go:47:28) Name: pkgs
+          Body:
+            *ast.BlockStmt (go-nodes/package_node.go:47:33) Stmts: 12
+              *ast.AssignStmt (go-nodes/package_node.go:49:3) Token: :=
+                LHS:
+                  *ast.Ident (go-nodes/package_node.go:49:3) Name: nodeType
+                RHS:
+                  *ast.CallExpr (go-nodes/package_node.go:49:15)
+                    Fun:
+                      *ast.SelectorExpr (go-nodes/package_node.go:49:15)
+                        X:
+                          *ast.Ident (go-nodes/package_node.go:49:15) Name: fmt
+                        Sel: Sprintf
+                    Args:
+                      [0]:
+                        *ast.BasicLit (go-nodes/package_node.go:49:27) Kind: STRING Value: "%T"
+                      [1]:
+                        *ast.Ident (go-nodes/package_node.go:49:33) Name: pkg
+              *ast.ExprStmt (go-nodes/package_node.go:50:3)
+                *ast.CallExpr (go-nodes/package_node.go:50:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/package_node.go:50:3)
+                      X:
+                        *ast.Ident (go-nodes/package_node.go:50:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/package_node.go:50:14) Kind: STRING Value: "    Package node type: %s\n"
+                    [1]:
+                      *ast.Ident (go-nodes/package_node.go:50:45) Name: nodeType
+              *ast.IfStmt (go-nodes/package_node.go:53:3)
+                Init:
+                  *ast.AssignStmt (go-nodes/package_node.go:53:6) Token: :=
+                    LHS:
+                      *ast.Ident (go-nodes/package_node.go:53:6) Name: _
+                      *ast.Ident (go-nodes/package_node.go:53:9) Name: ok
+                    RHS:
+                      *ast.TypeAssertExpr (go-nodes/package_node.go:53:15)
+                Cond:
+                  *ast.Ident (go-nodes/package_node.go:53:48) Name: ok
+                Body:
+                  *ast.BlockStmt (go-nodes/package_node.go:53:51) Stmts: 1
+                    *ast.ExprStmt (go-nodes/package_node.go:54:4)
+                      *ast.CallExpr (go-nodes/package_node.go:54:4)
+                        Fun:
+                          *ast.SelectorExpr (go-nodes/package_node.go:54:4)
+                            X:
+                              *ast.Ident (go-nodes/package_node.go:54:4) Name: fmt
+                            Sel: Println
+                        Args:
+                          [0]:
+                            *ast.BasicLit (go-nodes/package_node.go:54:16) Kind: STRING Value: "    ✓ Confirmed: This is an *ast.Package node"
+              *ast.ExprStmt (go-nodes/package_node.go:56:3)
+                *ast.CallExpr (go-nodes/package_node.go:56:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/package_node.go:56:3)
+                      X:
+                        *ast.Ident (go-nodes/package_node.go:56:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/package_node.go:56:14) Kind: STRING Value: "    Package name: %s\n"
+                    [1]:
+                      *ast.Ident (go-nodes/package_node.go:56:40) Name: pkgName
+              *ast.ExprStmt (go-nodes/package_node.go:57:3)
+                *ast.CallExpr (go-nodes/package_node.go:57:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/package_node.go:57:3)
+                      X:
+                        *ast.Ident (go-nodes/package_node.go:57:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/package_node.go:57:14) Kind: STRING Value: "    Number of files: %d\n"
+                    [1]:
+                      *ast.CallExpr (go-nodes/package_node.go:57:43)
+                        Fun:
+                          *ast.Ident (go-nodes/package_node.go:57:43) Name: len
+                        Args:
+                          [0]:
+                            *ast.SelectorExpr (go-nodes/package_node.go:57:47)
+                              X:
+                                *ast.Ident (go-nodes/package_node.go:57:47) Name: pkg
+                              Sel: Files
+              *ast.AssignStmt (go-nodes/package_node.go:60:3) Token: :=
+                LHS:
+                  *ast.Ident (go-nodes/package_node.go:60:3) Name: count
+                RHS:
+                  *ast.BasicLit (go-nodes/package_node.go:60:12) Kind: INT Value: 0
+              *ast.ExprStmt (go-nodes/package_node.go:61:3)
+                *ast.CallExpr (go-nodes/package_node.go:61:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/package_node.go:61:3)
+                      X:
+                        *ast.Ident (go-nodes/package_node.go:61:3) Name: fmt
+                      Sel: Println
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/package_node.go:61:15) Kind: STRING Value: "    Files in package:"
+              *ast.RangeStmt (go-nodes/package_node.go:62:3) Token: :=
+                Key:
+                  *ast.Ident (go-nodes/package_node.go:62:7) Name: fileName
+                X:
+                  *ast.SelectorExpr (go-nodes/package_node.go:62:25)
+                    X:
+                      *ast.Ident (go-nodes/package_node.go:62:25) Name: pkg
+                    Sel: Files
+                Body:
+                  *ast.BlockStmt (go-nodes/package_node.go:62:35) Stmts: 1
+                    *ast.IfStmt (go-nodes/package_node.go:63:4)
+                      Cond:
+                        *ast.BinaryExpr (go-nodes/package_node.go:63:7) Op: <
+                          X:
+                            *ast.Ident (go-nodes/package_node.go:63:7) Name: count
+                          Y:
+                            *ast.BasicLit (go-nodes/package_node.go:63:15) Kind: INT Value: 5
+                      Body:
+                        *ast.BlockStmt (go-nodes/package_node.go:63:17) Stmts: 2
+                          *ast.ExprStmt (go-nodes/package_node.go:64:5)
+                            *ast.CallExpr (go-nodes/package_node.go:64:5)
+                              Fun:
+                                *ast.SelectorExpr (go-nodes/package_node.go:64:5)
+                                  X:
+                                    *ast.Ident (go-nodes/package_node.go:64:5) Name: fmt
+                                  Sel: Printf
+                              Args:
+                                [0]:
+                                  *ast.BasicLit (go-nodes/package_node.go:64:16) Kind: STRING Value: "      - %s\n"
+                                [1]:
+                                  *ast.Ident (go-nodes/package_node.go:64:32) Name: fileName
+                          *ast.IncDecStmt (go-nodes/package_node.go:65:5)
+              *ast.IfStmt (go-nodes/package_node.go:68:3)
+                Cond:
+                  *ast.BinaryExpr (go-nodes/package_node.go:68:6) Op: >
+                    X:
+                      *ast.CallExpr (go-nodes/package_node.go:68:6)
+                        Fun:
+                          *ast.Ident (go-nodes/package_node.go:68:6) Name: len
+                        Args:
+                          [0]:
+                            *ast.SelectorExpr (go-nodes/package_node.go:68:10)
+                              X:
+                                *ast.Ident (go-nodes/package_node.go:68:10) Name: pkg
+                              Sel: Files
+                    Y:
+                      *ast.BasicLit (go-nodes/package_node.go:68:23) Kind: INT Value: 5
+                Body:
+                  *ast.BlockStmt (go-nodes/package_node.go:68:25) Stmts: 1
+                    *ast.ExprStmt (go-nodes/package_node.go:69:4)
+                      *ast.CallExpr (go-nodes/package_node.go:69:4)
+                        Fun:
+                          *ast.SelectorExpr (go-nodes/package_node.go:69:4)
+                            X:
+                              *ast.Ident (go-nodes/package_node.go:69:4) Name: fmt
+                            Sel: Printf
+                        Args:
+                          [0]:
+                            *ast.BasicLit (go-nodes/package_node.go:69:15) Kind: STRING Value: "      ... and %d more files\n"
+                          [1]:
+                            *ast.BinaryExpr (go-nodes/package_node.go:69:48) Op: -
+                              X:
+                                *ast.CallExpr (go-nodes/package_node.go:69:48)
+                                  Fun:
+                                    *ast.Ident (go-nodes/package_node.go:69:48) Name: len
+                                  Args:
+                                    [0]:
+                                      *ast.SelectorExpr (go-nodes/package_node.go:69:52)
+                                        X:
+                                          *ast.Ident (go-nodes/package_node.go:69:52) Name: pkg
+                                        Sel: Files
+                              Y:
+                                *ast.BasicLit (go-nodes/package_node.go:69:63) Kind: INT Value: 5
+              *ast.ExprStmt (go-nodes/package_node.go:71:3)
+                *ast.CallExpr (go-nodes/package_node.go:71:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/package_node.go:71:3)
+                      X:
+                        *ast.Ident (go-nodes/package_node.go:71:3) Name: fmt
+                      Sel: Println
+              *ast.IfStmt (go-nodes/package_node.go:82:3)
+                Cond:
+                  *ast.BinaryExpr (go-nodes/package_node.go:82:6) Op: !=
+                    X:
+                      *ast.SelectorExpr (go-nodes/package_node.go:82:6)
+                        X:
+                          *ast.Ident (go-nodes/package_node.go:82:6) Name: pkg
+                        Sel: Scope
+                    Y:
+                      *ast.Ident (go-nodes/package_node.go:82:19) Name: nil
+                Body:
+                  *ast.BlockStmt (go-nodes/package_node.go:82:23) Stmts: 1
+                    *ast.ExprStmt (go-nodes/package_node.go:83:4)
+                      *ast.CallExpr (go-nodes/package_node.go:83:4)
+                        Fun:
+                          *ast.SelectorExpr (go-nodes/package_node.go:83:4)
+                            X:
+                              *ast.Ident (go-nodes/package_node.go:83:4) Name: fmt
+                            Sel: Printf
+                        Args:
+                          [0]:
+                            *ast.BasicLit (go-nodes/package_node.go:83:15) Kind: STRING Value: "    Package scope contains %d objects\n"
+                          [1]:
+                            *ast.CallExpr (go-nodes/package_node.go:83:58)
+                              Fun:
+                                *ast.Ident (go-nodes/package_node.go:83:58) Name: len
+                              Args:
+                                [0]:
+                                  *ast.SelectorExpr (go-nodes/package_node.go:83:62)
+                                    X:
+                                      *ast.SelectorExpr (go-nodes/package_node.go:83:62)
+                                        X:
+                                          *ast.Ident (go-nodes/package_node.go:83:62) Name: pkg
+                                        Sel: Scope
+                                    Sel: Objects
+              *ast.ExprStmt (go-nodes/package_node.go:87:3)
+                *ast.CallExpr (go-nodes/package_node.go:87:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/package_node.go:87:3)
+                      X:
+                        *ast.Ident (go-nodes/package_node.go:87:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/package_node.go:87:14) Kind: STRING Value: "    Package imports: %d packages\n"
+                    [1]:
+                      *ast.CallExpr (go-nodes/package_node.go:87:52)
+                        Fun:
+                          *ast.Ident (go-nodes/package_node.go:87:52) Name: len
+                        Args:
+                          [0]:
+                            *ast.SelectorExpr (go-nodes/package_node.go:87:56)
+                              X:
+                                *ast.Ident (go-nodes/package_node.go:87:56) Name: pkg
+                              Sel: Imports
+        *ast.ExprStmt (go-nodes/package_node.go:90:2)
+          *ast.CallExpr (go-nodes/package_node.go:90:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:90:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:90:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:90:14) Kind: STRING Value: "\nKey Points:"
+        *ast.ExprStmt (go-nodes/package_node.go:91:2)
+          *ast.CallExpr (go-nodes/package_node.go:91:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:91:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:91:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:91:14) Kind: STRING Value: "  • ast.Package represents an entire package (multiple files)"
+        *ast.ExprStmt (go-nodes/package_node.go:92:2)
+          *ast.CallExpr (go-nodes/package_node.go:92:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:92:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:92:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:92:14) Kind: STRING Value: "  • Created by parser.ParseDir(), not parser.ParseFile()"
+        *ast.ExprStmt (go-nodes/package_node.go:93:2)
+          *ast.CallExpr (go-nodes/package_node.go:93:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:93:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:93:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:93:14) Kind: STRING Value: "  • Contains a map of filenames to *ast.File nodes"
+        *ast.ExprStmt (go-nodes/package_node.go:94:2)
+          *ast.CallExpr (go-nodes/package_node.go:94:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:94:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:94:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:94:14) Kind: STRING Value: "  • Has a unified scope across all files in the package"
+        *ast.ExprStmt (go-nodes/package_node.go:95:2)
+          *ast.CallExpr (go-nodes/package_node.go:95:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:95:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:95:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:95:14) Kind: STRING Value: "  • Tracks imports at the package level"
+        *ast.ExprStmt (go-nodes/package_node.go:96:2)
+          *ast.CallExpr (go-nodes/package_node.go:96:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:96:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:96:2) Name: fmt
+                Sel: Println
+        *ast.ExprStmt (go-nodes/package_node.go:97:2)
+          *ast.CallExpr (go-nodes/package_node.go:97:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:97:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:97:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:97:14) Kind: STRING Value: "Summary: *ast.Package node exercised"
+        *ast.ExprStmt (go-nodes/package_node.go:98:2)
+          *ast.CallExpr (go-nodes/package_node.go:98:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/package_node.go:98:2)
+                X:
+                  *ast.Ident (go-nodes/package_node.go:98:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/package_node.go:98:14) Kind: STRING Value: "========================================"

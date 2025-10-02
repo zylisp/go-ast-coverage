@@ -99,11 +99,11 @@ go run <filename>.go
 
 ## AST Node Coverage
 
-This test suite aims for 100% coverage of all AST node types defined in Go's `go/ast` package:
+This test suite achieves **94.64% coverage (53 of 56 node types)** of all AST node types defined in Go's `go/ast` package. The three uncovered nodes are error recovery nodes that require invalid syntax (see note below).
 
 ### Expression Nodes (ast.Expr)
 
-- ✓ `*ast.BadExpr` - Error recovery node
+- ✗ `*ast.BadExpr` - Error recovery node (not covered - see note below)
 - ✓ `*ast.Ident` - Identifiers
 - ✓ `*ast.Ellipsis` - `...` in variadic functions
 - ✓ `*ast.BasicLit` - Basic literals (int, float, string, char, etc.)
@@ -123,7 +123,7 @@ This test suite aims for 100% coverage of all AST node types defined in Go's `go
 
 ### Statement Nodes (ast.Stmt)
 
-- ✓ `*ast.BadStmt` - Error recovery node
+- ✗ `*ast.BadStmt` - Error recovery node (not covered - see note below)
 - ✓ `*ast.DeclStmt` - Declarations in function bodies
 - ✓ `*ast.EmptyStmt` - Empty statements
 - ✓ `*ast.LabeledStmt` - Labeled statements
@@ -147,7 +147,7 @@ This test suite aims for 100% coverage of all AST node types defined in Go's `go
 
 ### Declaration Nodes (ast.Decl)
 
-- ✓ `*ast.BadDecl` - Error recovery node
+- ✗ `*ast.BadDecl` - Error recovery node (not covered - see note below)
 - ✓ `*ast.GenDecl` - General declarations (import, const, type, var)
 - ✓ `*ast.FuncDecl` - Function declarations
 
@@ -174,6 +174,39 @@ This test suite aims for 100% coverage of all AST node types defined in Go's `go
 - ✓ `*ast.CommentGroup` - Comment groups
 - ✓ `*ast.Field` - Struct fields, function parameters
 - ✓ `*ast.FieldList` - Field lists
+
+### Coverage Note: Error Recovery Nodes
+
+**Current Coverage: 53 of 56 node types (94.64%)**
+
+Three AST node types are intentionally not covered in this test suite:
+
+- `*ast.BadExpr` - Error recovery node for expressions
+- `*ast.BadStmt` - Error recovery node for statements
+- `*ast.BadDecl` - Error recovery node for declarations
+
+**Why aren't these covered?**
+
+These "Bad*" nodes are error recovery nodes created by Go's parser when it encounters syntax errors. They allow the parser to continue parsing despite errors, which is useful for tools like IDEs that need to work with incomplete or invalid code.
+
+However, this test suite is designed around a fundamental requirement: **all test files must compile and execute successfully**. Since Bad* nodes only appear in syntactically invalid Go code, they cannot be demonstrated in a compilable test file.
+
+To generate these nodes, you would need:
+```go
+// This won't compile!
+func badExample() {
+    x := 5 +      // BadExpr: incomplete expression
+    if {          // BadStmt: invalid if statement
+    const         // BadDecl: incomplete declaration
+}
+```
+
+**Achieving this coverage would require:**
+1. Creating intentionally invalid Go files
+2. Removing the compilation requirement from the test suite
+3. Special parsing logic to handle syntax errors
+
+Since the value of covering error recovery nodes is minimal compared to the cost of abandoning the "all files compile" principle, we've chosen to maintain 94.64% coverage with all valid, executable Go code.
 
 ## Features Demonstrated
 

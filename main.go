@@ -196,6 +196,13 @@ func analyzeFiles(dir string) error {
 		fmt.Println()
 	}
 
+	// Parse directory as package to exercise ast.Package node
+	fmt.Println("Analyzing directory as package for ast.Package coverage:")
+	if err := analyzer.AnalyzePackage(dir); err != nil {
+		fmt.Printf("Warning: failed to analyze package: %v\n", err)
+	}
+	fmt.Println()
+
 	return nil
 }
 
