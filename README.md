@@ -205,7 +205,7 @@ This test suite aims for 100% coverage of all AST node types defined in Go's `go
 ### Analyzing a Single File
 
 ```go
-import "github.com/zylisp/go-ast-coverage/ast-analyzer"
+import "zylisp/go-ast-coverage/ast-analyzer"
 
 result, err := analyzer.AnalyzeFile("path/to/file.go")
 if err != nil {
@@ -217,7 +217,7 @@ analyzer.PrintAnalysis(result)
 ### Generating Coverage Report
 
 ```go
-import "github.com/zylisp/go-ast-coverage/coverage-report"
+import "zylisp/go-ast-coverage/coverage-report"
 
 report, err := report.GenerateReport("go-nodes")
 if err != nil {

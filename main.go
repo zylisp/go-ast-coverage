@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/zylisp/go-ast-coverage/ast-analyzer"
-	"github.com/zylisp/go-ast-coverage/ast-generator"
-	"github.com/zylisp/go-ast-coverage/coverage-report"
+	"zylisp/go-ast-coverage/ast-analyzer"
+	"zylisp/go-ast-coverage/ast-generator"
+	"zylisp/go-ast-coverage/coverage-report"
 )
 
 // Configuration flags

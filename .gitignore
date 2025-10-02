@@ -24,6 +24,7 @@ coverage-report.*
 # Go workspace file
 go.work
 go.work.sum
+workbench
 
 # env file
 .env

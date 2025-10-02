@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/zylisp/go-ast-coverage/ast-analyzer"
+	"zylisp/go-ast-coverage/ast-analyzer"
 )
 
 // CoverageReport represents the overall coverage status.
