@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"zylisp/go-ast-coverage/ast-analyzer"
+	"zylisp/go-ast-coverage/analyzer"
 )
 
 // CoverageReport represents the overall coverage status.
