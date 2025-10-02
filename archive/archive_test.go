@@ -292,11 +292,11 @@ func main() {
 		t.Fatalf("failed to save: %v", err)
 	}
 
-	// Test 1: LoadArchive
-	t.Run("LoadArchive", func(t *testing.T) {
-		archive, err := LoadArchive(archivePath)
+	// Test 1: Load
+	t.Run("Load", func(t *testing.T) {
+		archive, err := Load(archivePath)
 		if err != nil {
-			t.Fatalf("LoadArchive failed: %v", err)
+			t.Fatalf("Load failed: %v", err)
 		}
 
 		if archive.GetFilename() != "example.go" {
@@ -314,7 +314,7 @@ func main() {
 
 	// Test 2: GetAST with full reconstruction
 	t.Run("GetAST", func(t *testing.T) {
-		archive, _ := LoadArchive(archivePath)
+		archive, _ := Load(archivePath)
 		file, fset, err := archive.GetAST()
 		if err != nil {
 			t.Fatalf("GetAST failed: %v", err)
@@ -331,7 +331,7 @@ func main() {
 
 	// Test 3: GetCleanedAST (fast access)
 	t.Run("GetCleanedAST", func(t *testing.T) {
-		archive, _ := LoadArchive(archivePath)
+		archive, _ := Load(archivePath)
 		cleanAST := archive.GetCleanedAST()
 		if cleanAST == nil {
 			t.Error("expected cleaned AST")
@@ -340,7 +340,7 @@ func main() {
 
 	// Test 4: ExtractFunctions
 	t.Run("ExtractFunctions", func(t *testing.T) {
-		archive, _ := LoadArchive(archivePath)
+		archive, _ := Load(archivePath)
 		funcs, err := ExtractFunctions(archive)
 		if err != nil {
 			t.Fatalf("ExtractFunctions failed: %v", err)
@@ -354,7 +354,7 @@ func main() {
 
 	// Test 5: ExtractTypes
 	t.Run("ExtractTypes", func(t *testing.T) {
-		archive, _ := LoadArchive(archivePath)
+		archive, _ := Load(archivePath)
 		types, err := ExtractTypes(archive)
 		if err != nil {
 			t.Fatalf("ExtractTypes failed: %v", err)
@@ -372,7 +372,7 @@ func main() {
 
 	// Test 6: GetImports
 	t.Run("GetImports", func(t *testing.T) {
-		archive, _ := LoadArchive(archivePath)
+		archive, _ := Load(archivePath)
 		imports := GetImports(archive)
 
 		if len(imports) != 1 {
@@ -386,7 +386,7 @@ func main() {
 
 	// Test 7: GetFunctionNames
 	t.Run("GetFunctionNames", func(t *testing.T) {
-		archive, _ := LoadArchive(archivePath)
+		archive, _ := Load(archivePath)
 		names, err := GetFunctionNames(archive)
 		if err != nil {
 			t.Fatalf("GetFunctionNames failed: %v", err)
@@ -399,7 +399,7 @@ func main() {
 
 	// Test 8: GetTypeNames
 	t.Run("GetTypeNames", func(t *testing.T) {
-		archive, _ := LoadArchive(archivePath)
+		archive, _ := Load(archivePath)
 		names, err := GetTypeNames(archive)
 		if err != nil {
 			t.Fatalf("GetTypeNames failed: %v", err)
@@ -412,7 +412,7 @@ func main() {
 
 	// Test 9: FindNodesByType
 	t.Run("FindNodesByType", func(t *testing.T) {
-		archive, _ := LoadArchive(archivePath)
+		archive, _ := Load(archivePath)
 		nodes, err := FindNodesByType(archive, "*ast.FuncDecl")
 		if err != nil {
 			t.Fatalf("FindNodesByType failed: %v", err)
@@ -424,13 +424,13 @@ func main() {
 	})
 }
 
-// TestLoadAllArchives tests loading all archives from ast-nodes directory
-func TestLoadAllArchives(t *testing.T) {
+// TestLoadAll tests loading all archives from nodes/ast directory
+func TestLoadAll(t *testing.T) {
 	// This test uses the actual generated .asta files
-	archives, err := LoadAllArchives("../ast-nodes")
+	archives, err := LoadAll("../nodes/ast")
 	if err != nil {
 		// It's okay if the directory doesn't exist in test env
-		t.Skipf("Skipping test - ast-nodes not available: %v", err)
+		t.Skipf("Skipping test - nodes/ast not available: %v", err)
 	}
 
 	if len(archives) == 0 {
@@ -449,8 +449,8 @@ func TestLoadAllArchives(t *testing.T) {
 	}
 }
 
-// TestWalkArchives tests the iterator pattern
-func TestWalkArchives(t *testing.T) {
+// TestWalk tests the iterator pattern
+func TestWalk(t *testing.T) {
 	testDir := "test_walk"
 	os.MkdirAll(testDir, 0755)
 	defer os.RemoveAll(testDir)
@@ -465,7 +465,7 @@ func TestWalkArchives(t *testing.T) {
 
 	// Walk archives
 	count := 0
-	err := WalkArchives(testDir, func(archive *ASTArchive) error {
+	err := Walk(testDir, func(archive *ASTArchive) error {
 		count++
 		if archive.GetFilename() == "" {
 			return fmt.Errorf("empty filename")
@@ -474,7 +474,7 @@ func TestWalkArchives(t *testing.T) {
 	})
 
 	if err != nil {
-		t.Fatalf("WalkArchives failed: %v", err)
+		t.Fatalf("Walk failed: %v", err)
 	}
 
 	if count != 2 {
@@ -482,8 +482,8 @@ func TestWalkArchives(t *testing.T) {
 	}
 }
 
-// TestWalkArchivesError tests error handling in WalkArchives
-func TestWalkArchivesError(t *testing.T) {
+// TestWalkError tests error handling in Walk
+func TestWalkError(t *testing.T) {
 	testDir := "test_walk_error"
 	os.MkdirAll(testDir, 0755)
 	defer os.RemoveAll(testDir)
@@ -496,13 +496,13 @@ func TestWalkArchivesError(t *testing.T) {
 
 	// Walk should stop on error
 	count := 0
-	err := WalkArchives(testDir, func(archive *ASTArchive) error {
+	err := Walk(testDir, func(archive *ASTArchive) error {
 		count++
 		return fmt.Errorf("intentional error")
 	})
 
 	if err == nil {
-		t.Error("expected error from WalkArchives")
+		t.Error("expected error from Walk")
 	}
 
 	if count != 1 {

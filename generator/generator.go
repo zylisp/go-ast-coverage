@@ -10,6 +10,8 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+
+	"zylisp/go-ast-coverage/archive"
 )
 
 // WriteASTFiles generates AST archive files for all Go files in the input directory.
@@ -68,7 +70,7 @@ func generateASTFile(inPath, outPath string) error {
 	}
 
 	// Save AST archive with source preservation
-	if err := SaveASTWithSourcePreservation(file, fset, filepath.Base(inPath), outPath); err != nil {
+	if err := archive.SaveASTWithSourcePreservation(file, fset, filepath.Base(inPath), outPath); err != nil {
 		return fmt.Errorf("failed to create AST archive: %w", err)
 	}
 

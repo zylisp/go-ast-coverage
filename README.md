@@ -315,11 +315,11 @@ fmt.Printf("Loaded %d archives\n", len(arcs))
 For large collections, use the iterator pattern to avoid loading all archives into memory:
 
 ```go
-err := archive.Walk("nodes/ast", func(arc *generator.ASTArchive) error {
+err := archive.Walk("nodes/ast", func(arc *archive.ASTArchive) error {
     fmt.Printf("Processing: %s\n", arc.GetFilename())
 
     // Your processing logic here
-    funcs, _ := generator.ExtractFunctions(arc)
+    funcs, _ := archive.ExtractFunctions(arc)
     fmt.Printf("  Functions: %d\n", len(funcs))
 
     return nil
@@ -335,7 +335,7 @@ if err != nil {
 arc, _ := archive.Load("nodes/ast/declarations.asta")
 
 // Extract functions
-functions, err := generator.ExtractFunctions(arc)
+functions, err := archive.ExtractFunctions(arc)
 for _, fn := range functions {
     if fn.Recv != nil {
         // Method
@@ -347,18 +347,18 @@ for _, fn := range functions {
 }
 
 // Extract type definitions
-types, err := generator.ExtractTypes(arc)
+types, err := archive.ExtractTypes(arc)
 for _, typ := range types {
     fmt.Printf("Type: %s\n", typ.Name.Name)
 }
 
 // Get imports
-imports := generator.GetImports(arc)
+imports := archive.GetImports(arc)
 fmt.Printf("Imports: %v\n", imports)
 
 // Get just the names
-funcNames, _ := generator.GetFunctionNames(arc)
-typeNames, _ := generator.GetTypeNames(arc)
+funcNames, _ := archive.GetFunctionNames(arc)
+typeNames, _ := archive.GetTypeNames(arc)
 ```
 
 ### Working with the AST
@@ -446,23 +446,23 @@ import (
 
 func main() {
     // Analyze all archives
-    err := archive.Walk("nodes/ast", func(arc *generator.ASTArchive) error {
+    err := archive.Walk("nodes/ast", func(arc *archive.ASTArchive) error {
         fmt.Printf("\n=== %s ===\n", arc.GetFilename())
 
         // Get function names
-        funcNames, err := generator.GetFunctionNames(arc)
+        funcNames, err := archive.GetFunctionNames(arc)
         if err != nil {
             return err
         }
 
         // Get type names
-        typeNames, err := generator.GetTypeNames(arc)
+        typeNames, err := archive.GetTypeNames(arc)
         if err != nil {
             return err
         }
 
         // Get imports
-        imports := generator.GetImports(arc)
+        imports := archive.GetImports(arc)
 
         fmt.Printf("Functions: %v\n", funcNames)
         fmt.Printf("Types: %v\n", typeNames)

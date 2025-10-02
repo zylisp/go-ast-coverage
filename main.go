@@ -43,7 +43,7 @@ func main() {
 	fmt.Println("=== Go AST Coverage Test Suite ===")
 	fmt.Println()
 
-	astNodesDir := "go-nodes"
+	astNodesDir := "nodes/go"
 
 	// Run test files
 	if *runTests {
@@ -68,7 +68,7 @@ func main() {
 	// Generate AST files
 	if *generateAST {
 		fmt.Println("Generating AST files...")
-		if err := generateASTFiles(astNodesDir, "ast-nodes"); err != nil {
+		if err := generateASTFiles(astNodesDir, "nodes/ast"); err != nil {
 			fmt.Fprintf(os.Stderr, "Error generating AST files: %v\n", err)
 			os.Exit(1)
 		}

@@ -308,10 +308,10 @@ func LoadAll(dir string) ([]*ASTArchive, error) {
 	return archives, nil
 }
 
-// WalkArchives iterates over all .asta files in a directory, calling fn for each.
+// Walk iterates over all .asta files in a directory, calling fn for each.
 // If fn returns an error, iteration stops and that error is returned.
 // This is useful for processing archives without loading them all into memory at once.
-func WalkArchives(dir string, fn func(*ASTArchive) error) error {
+func Walk(dir string, fn func(*ASTArchive) error) error {
 	entries, err := os.ReadDir(dir)
 	if err != nil {
 		return fmt.Errorf("failed to read directory: %w", err)
