@@ -1,0 +1,1591 @@
+=== AST for array_slice_types.go ===
+
+File Information:
+  Package: main
+  Position: go-nodes/array_slice_types.go:3:1
+  Imports:
+    "fmt"
+  Comment Groups: 27
+  Declarations: 3
+
+=== AST Node Tree ===
+
+*ast.File (go-nodes/array_slice_types.go:3:1)
+  Package: main
+  *ast.GenDecl (go-nodes/array_slice_types.go:5:1) Token: import
+    *ast.ImportSpec (go-nodes/array_slice_types.go:5:8)
+      Path: "fmt"
+  *ast.FuncDecl (go-nodes/array_slice_types.go:13:1)
+    Name: funcMain
+    Type:
+      *ast.FuncType (go-nodes/array_slice_types.go:13:1)
+        Params:
+          *ast.FieldList (go-nodes/array_slice_types.go:13:14) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/array_slice_types.go:13:17) Stmts: 90
+        *ast.ExprStmt (go-nodes/array_slice_types.go:14:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:14:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:14:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:14:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:14:14) Kind: STRING Value: "=== array_slice_types.go AST Node Coverage ==="
+        *ast.ExprStmt (go-nodes/array_slice_types.go:15:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:15:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:15:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:15:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:15:14) Kind: STRING Value: "Exercising AST Nodes:"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:18:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:18:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:18:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:18:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:18:14) Kind: STRING Value: "  ✓ ast.ArrayType (fixed-size arrays):"
+        *ast.DeclStmt (go-nodes/array_slice_types.go:19:2)
+          *ast.GenDecl (go-nodes/array_slice_types.go:19:2) Token: var
+            *ast.ValueSpec (go-nodes/array_slice_types.go:19:6)
+              Name: arr1
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:19:11)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:19:12) Kind: INT Value: 5
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:19:14) Name: int
+        *ast.ExprStmt (go-nodes/array_slice_types.go:20:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:20:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:20:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:20:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:20:13) Kind: STRING Value: "    Zero-value [5]int: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:20:44) Name: arr1
+        *ast.AssignStmt (go-nodes/array_slice_types.go:22:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:22:2) Name: arr2
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:22:10)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:22:10)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:22:11) Kind: INT Value: 5
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:22:13) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:22:17) Kind: INT Value: 1
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:22:20) Kind: INT Value: 2
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:22:23) Kind: INT Value: 3
+                [3]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:22:26) Kind: INT Value: 4
+                [4]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:22:29) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/array_slice_types.go:23:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:23:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:23:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:23:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:23:13) Kind: STRING Value: "    Initialized [5]int: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:23:45) Name: arr2
+        *ast.AssignStmt (go-nodes/array_slice_types.go:25:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:25:2) Name: arr3
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:25:10)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:25:10)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:25:11) Kind: INT Value: 3
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:25:13) Name: string
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:25:20) Kind: STRING Value: "a"
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:25:25) Kind: STRING Value: "b"
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:25:30) Kind: STRING Value: "c"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:26:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:26:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:26:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:26:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:26:13) Kind: STRING Value: "    [3]string: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:26:36) Name: arr3
+        *ast.AssignStmt (go-nodes/array_slice_types.go:29:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:29:2) Name: arr4
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:29:10)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:29:10)
+                  Len:
+                    *ast.Ellipsis (go-nodes/array_slice_types.go:29:11)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:29:15) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:29:19) Kind: INT Value: 10
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:29:23) Kind: INT Value: 20
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:29:27) Kind: INT Value: 30
+        *ast.ExprStmt (go-nodes/array_slice_types.go:30:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:30:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:30:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:30:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:30:13) Kind: STRING Value: "    [...] int: %v (length: %d)\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:30:49) Name: arr4
+              [2]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:30:55)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:30:55) Name: len
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:30:59) Name: arr4
+        *ast.AssignStmt (go-nodes/array_slice_types.go:33:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:33:2) Name: arr5
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:33:10)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:33:10)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:33:11) Kind: INT Value: 5
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:33:13) Name: int
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/array_slice_types.go:33:17)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/array_slice_types.go:33:24)
+                [2]:
+                  *ast.KeyValueExpr (go-nodes/array_slice_types.go:33:31)
+        *ast.ExprStmt (go-nodes/array_slice_types.go:34:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:34:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:34:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:34:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:34:13) Kind: STRING Value: "    Partial init [5]int: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:34:46) Name: arr5
+        *ast.AssignStmt (go-nodes/array_slice_types.go:37:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:37:2) Name: arr6
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:37:10)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:37:10)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:37:11) Kind: INT Value: 2
+                  Elt:
+                    *ast.ArrayType (go-nodes/array_slice_types.go:37:13)
+                      Len:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:37:14) Kind: INT Value: 3
+                      Elt:
+                        *ast.Ident (go-nodes/array_slice_types.go:37:16) Name: int
+              Elts:
+                [0]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:37:20)
+                    Elts:
+                      [0]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:37:21) Kind: INT Value: 1
+                      [1]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:37:24) Kind: INT Value: 2
+                      [2]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:37:27) Kind: INT Value: 3
+                [1]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:37:31)
+                    Elts:
+                      [0]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:37:32) Kind: INT Value: 4
+                      [1]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:37:35) Kind: INT Value: 5
+                      [2]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:37:38) Kind: INT Value: 6
+        *ast.ExprStmt (go-nodes/array_slice_types.go:38:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:38:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:38:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:38:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:38:13) Kind: STRING Value: "    [2][3]int: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:38:36) Name: arr6
+        *ast.AssignStmt (go-nodes/array_slice_types.go:40:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:40:2) Name: arr7
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:40:10)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:40:10)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:40:11) Kind: INT Value: 2
+                  Elt:
+                    *ast.ArrayType (go-nodes/array_slice_types.go:40:13)
+                      Len:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:40:14) Kind: INT Value: 2
+                      Elt:
+                        *ast.ArrayType (go-nodes/array_slice_types.go:40:16)
+                          Len:
+                            *ast.BasicLit (go-nodes/array_slice_types.go:40:17) Kind: INT Value: 2
+                          Elt:
+                            *ast.Ident (go-nodes/array_slice_types.go:40:19) Name: int
+              Elts:
+                [0]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:40:23)
+                    Elts:
+                      [0]:
+                        *ast.CompositeLit (go-nodes/array_slice_types.go:40:24)
+                          Elts:
+                            [0]:
+                              *ast.BasicLit (go-nodes/array_slice_types.go:40:25) Kind: INT Value: 1
+                            [1]:
+                              *ast.BasicLit (go-nodes/array_slice_types.go:40:28) Kind: INT Value: 2
+                      [1]:
+                        *ast.CompositeLit (go-nodes/array_slice_types.go:40:32)
+                          Elts:
+                            [0]:
+                              *ast.BasicLit (go-nodes/array_slice_types.go:40:33) Kind: INT Value: 3
+                            [1]:
+                              *ast.BasicLit (go-nodes/array_slice_types.go:40:36) Kind: INT Value: 4
+                [1]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:40:41)
+                    Elts:
+                      [0]:
+                        *ast.CompositeLit (go-nodes/array_slice_types.go:40:42)
+                          Elts:
+                            [0]:
+                              *ast.BasicLit (go-nodes/array_slice_types.go:40:43) Kind: INT Value: 5
+                            [1]:
+                              *ast.BasicLit (go-nodes/array_slice_types.go:40:46) Kind: INT Value: 6
+                      [1]:
+                        *ast.CompositeLit (go-nodes/array_slice_types.go:40:50)
+                          Elts:
+                            [0]:
+                              *ast.BasicLit (go-nodes/array_slice_types.go:40:51) Kind: INT Value: 7
+                            [1]:
+                              *ast.BasicLit (go-nodes/array_slice_types.go:40:54) Kind: INT Value: 8
+        *ast.ExprStmt (go-nodes/array_slice_types.go:41:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:41:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:41:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:41:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:41:13) Kind: STRING Value: "    [2][2][2]int: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:41:39) Name: arr7
+        *ast.ExprStmt (go-nodes/array_slice_types.go:44:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:44:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:44:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:44:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:44:14) Kind: STRING Value: "  ✓ ast.IndexExpr (array indexing):"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:45:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:45:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:45:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:45:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:45:13) Kind: STRING Value: "    arr2[0]=%d, arr2[2]=%d, arr2[4]=%d\n"
+              [1]:
+                *ast.IndexExpr (go-nodes/array_slice_types.go:45:57)
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:45:57) Name: arr2
+                  Index:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:45:62) Kind: INT Value: 0
+              [2]:
+                *ast.IndexExpr (go-nodes/array_slice_types.go:45:66)
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:45:66) Name: arr2
+                  Index:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:45:71) Kind: INT Value: 2
+              [3]:
+                *ast.IndexExpr (go-nodes/array_slice_types.go:45:75)
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:45:75) Name: arr2
+                  Index:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:45:80) Kind: INT Value: 4
+        *ast.ExprStmt (go-nodes/array_slice_types.go:46:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:46:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:46:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:46:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:46:13) Kind: STRING Value: "    arr6[0][1]=%d, arr6[1][2]=%d\n"
+              [1]:
+                *ast.IndexExpr (go-nodes/array_slice_types.go:46:51)
+                  X:
+                    *ast.IndexExpr (go-nodes/array_slice_types.go:46:51)
+                      X:
+                        *ast.Ident (go-nodes/array_slice_types.go:46:51) Name: arr6
+                      Index:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:46:56) Kind: INT Value: 0
+                  Index:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:46:59) Kind: INT Value: 1
+              [2]:
+                *ast.IndexExpr (go-nodes/array_slice_types.go:46:63)
+                  X:
+                    *ast.IndexExpr (go-nodes/array_slice_types.go:46:63)
+                      X:
+                        *ast.Ident (go-nodes/array_slice_types.go:46:63) Name: arr6
+                      Index:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:46:68) Kind: INT Value: 1
+                  Index:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:46:71) Kind: INT Value: 2
+        *ast.AssignStmt (go-nodes/array_slice_types.go:49:2) Token: =
+          LHS:
+            *ast.IndexExpr (go-nodes/array_slice_types.go:49:2)
+              X:
+                *ast.Ident (go-nodes/array_slice_types.go:49:2) Name: arr2
+              Index:
+                *ast.BasicLit (go-nodes/array_slice_types.go:49:7) Kind: INT Value: 2
+          RHS:
+            *ast.BasicLit (go-nodes/array_slice_types.go:49:12) Kind: INT Value: 99
+        *ast.ExprStmt (go-nodes/array_slice_types.go:50:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:50:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:50:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:50:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:50:13) Kind: STRING Value: "    After arr2[2]=99: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:50:43) Name: arr2
+        *ast.ExprStmt (go-nodes/array_slice_types.go:53:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:53:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:53:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:53:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:53:14) Kind: STRING Value: "  ✓ Array iteration:"
+        *ast.ForStmt (go-nodes/array_slice_types.go:54:2)
+          Init:
+            *ast.AssignStmt (go-nodes/array_slice_types.go:54:6) Token: :=
+              LHS:
+                *ast.Ident (go-nodes/array_slice_types.go:54:6) Name: i
+              RHS:
+                *ast.BasicLit (go-nodes/array_slice_types.go:54:11) Kind: INT Value: 0
+          Cond:
+            *ast.BinaryExpr (go-nodes/array_slice_types.go:54:14) Op: <
+              X:
+                *ast.Ident (go-nodes/array_slice_types.go:54:14) Name: i
+              Y:
+                *ast.CallExpr (go-nodes/array_slice_types.go:54:18)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:54:18) Name: len
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:54:22) Name: arr3
+          Post:
+            *ast.IncDecStmt (go-nodes/array_slice_types.go:54:29)
+          Body:
+            *ast.BlockStmt (go-nodes/array_slice_types.go:54:33) Stmts: 1
+              *ast.ExprStmt (go-nodes/array_slice_types.go:55:3)
+                *ast.CallExpr (go-nodes/array_slice_types.go:55:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/array_slice_types.go:55:3)
+                      X:
+                        *ast.Ident (go-nodes/array_slice_types.go:55:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/array_slice_types.go:55:14) Kind: STRING Value: "    arr3[%d]=%s\n"
+                    [1]:
+                      *ast.Ident (go-nodes/array_slice_types.go:55:35) Name: i
+                    [2]:
+                      *ast.IndexExpr (go-nodes/array_slice_types.go:55:38)
+                        X:
+                          *ast.Ident (go-nodes/array_slice_types.go:55:38) Name: arr3
+                        Index:
+                          *ast.Ident (go-nodes/array_slice_types.go:55:43) Name: i
+        *ast.AssignStmt (go-nodes/array_slice_types.go:59:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:59:2) Name: comp1
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:59:11)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:59:11)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:59:12) Kind: INT Value: 3
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:59:14) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:59:18) Kind: INT Value: 1
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:59:21) Kind: INT Value: 2
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:59:24) Kind: INT Value: 3
+        *ast.AssignStmt (go-nodes/array_slice_types.go:60:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:60:2) Name: comp2
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:60:11)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:60:11)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:60:12) Kind: INT Value: 3
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:60:14) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:60:18) Kind: INT Value: 1
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:60:21) Kind: INT Value: 2
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:60:24) Kind: INT Value: 3
+        *ast.AssignStmt (go-nodes/array_slice_types.go:61:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:61:2) Name: comp3
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:61:11)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:61:11)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:61:12) Kind: INT Value: 3
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:61:14) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:61:18) Kind: INT Value: 1
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:61:21) Kind: INT Value: 2
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:61:24) Kind: INT Value: 4
+        *ast.ExprStmt (go-nodes/array_slice_types.go:62:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:62:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:62:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:62:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:62:13) Kind: STRING Value: "    Array comparison: comp1==comp2: %v, comp1==comp3: %v\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/array_slice_types.go:62:75) Op: ==
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:62:75) Name: comp1
+                  Y:
+                    *ast.Ident (go-nodes/array_slice_types.go:62:84) Name: comp2
+              [2]:
+                *ast.BinaryExpr (go-nodes/array_slice_types.go:62:91) Op: ==
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:62:91) Name: comp1
+                  Y:
+                    *ast.Ident (go-nodes/array_slice_types.go:62:100) Name: comp3
+        *ast.ExprStmt (go-nodes/array_slice_types.go:65:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:65:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:65:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:65:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:65:14) Kind: STRING Value: "  ✓ ast.ArrayType (slices - nil Len):"
+        *ast.DeclStmt (go-nodes/array_slice_types.go:66:2)
+          *ast.GenDecl (go-nodes/array_slice_types.go:66:2) Token: var
+            *ast.ValueSpec (go-nodes/array_slice_types.go:66:6)
+              Name: slice1
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:66:13)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:66:15) Name: int
+        *ast.ExprStmt (go-nodes/array_slice_types.go:67:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:67:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:67:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:67:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:67:13) Kind: STRING Value: "    Zero-value []int: %v (nil: %v, len: %d, cap: %d)\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:67:71) Name: slice1
+              [2]:
+                *ast.BinaryExpr (go-nodes/array_slice_types.go:67:79) Op: ==
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:67:79) Name: slice1
+                  Y:
+                    *ast.Ident (go-nodes/array_slice_types.go:67:89) Name: nil
+              [3]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:67:94)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:67:94) Name: len
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:67:98) Name: slice1
+              [4]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:67:107)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:67:107) Name: cap
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:67:111) Name: slice1
+        *ast.AssignStmt (go-nodes/array_slice_types.go:69:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:69:2) Name: slice2
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:69:12)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:69:12)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:69:14) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:69:18) Kind: INT Value: 1
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:69:21) Kind: INT Value: 2
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:69:24) Kind: INT Value: 3
+                [3]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:69:27) Kind: INT Value: 4
+                [4]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:69:30) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/array_slice_types.go:70:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:70:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:70:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:70:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:70:13) Kind: STRING Value: "    Initialized []int: %v (len: %d, cap: %d)\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:70:63) Name: slice2
+              [2]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:70:71)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:70:71) Name: len
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:70:75) Name: slice2
+              [3]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:70:84)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:70:84) Name: cap
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:70:88) Name: slice2
+        *ast.AssignStmt (go-nodes/array_slice_types.go:72:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:72:2) Name: slice3
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:72:12)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:72:12)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:72:14) Name: string
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:72:21) Kind: STRING Value: "x"
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:72:26) Kind: STRING Value: "y"
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:72:31) Kind: STRING Value: "z"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:73:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:73:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:73:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:73:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:73:13) Kind: STRING Value: "    []string: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:73:35) Name: slice3
+        *ast.AssignStmt (go-nodes/array_slice_types.go:76:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:76:2) Name: slice4
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:76:12)
+              Fun:
+                *ast.Ident (go-nodes/array_slice_types.go:76:12) Name: make
+              Args:
+                [0]:
+                  *ast.ArrayType (go-nodes/array_slice_types.go:76:17)
+                    Elt:
+                      *ast.Ident (go-nodes/array_slice_types.go:76:19) Name: int
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:76:24) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/array_slice_types.go:77:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:77:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:77:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:77:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:77:13) Kind: STRING Value: "    make([]int, 5): %v (len: %d, cap: %d)\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:77:60) Name: slice4
+              [2]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:77:68)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:77:68) Name: len
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:77:72) Name: slice4
+              [3]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:77:81)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:77:81) Name: cap
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:77:85) Name: slice4
+        *ast.AssignStmt (go-nodes/array_slice_types.go:79:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:79:2) Name: slice5
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:79:12)
+              Fun:
+                *ast.Ident (go-nodes/array_slice_types.go:79:12) Name: make
+              Args:
+                [0]:
+                  *ast.ArrayType (go-nodes/array_slice_types.go:79:17)
+                    Elt:
+                      *ast.Ident (go-nodes/array_slice_types.go:79:19) Name: int
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:79:24) Kind: INT Value: 3
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:79:27) Kind: INT Value: 10
+        *ast.ExprStmt (go-nodes/array_slice_types.go:80:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:80:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:80:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:80:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:80:13) Kind: STRING Value: "    make([]int, 3, 10): %v (len: %d, cap: %d)\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:80:64) Name: slice5
+              [2]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:80:72)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:80:72) Name: len
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:80:76) Name: slice5
+              [3]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:80:85)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:80:85) Name: cap
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:80:89) Name: slice5
+        *ast.ExprStmt (go-nodes/array_slice_types.go:83:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:83:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:83:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:83:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:83:14) Kind: STRING Value: "  ✓ ast.SliceExpr (slicing operations):"
+        *ast.AssignStmt (go-nodes/array_slice_types.go:84:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:84:2) Name: s
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:84:7)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:84:7)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:84:9) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:13) Kind: INT Value: 0
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:16) Kind: INT Value: 1
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:19) Kind: INT Value: 2
+                [3]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:22) Kind: INT Value: 3
+                [4]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:25) Kind: INT Value: 4
+                [5]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:28) Kind: INT Value: 5
+                [6]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:31) Kind: INT Value: 6
+                [7]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:34) Kind: INT Value: 7
+                [8]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:37) Kind: INT Value: 8
+                [9]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:84:40) Kind: INT Value: 9
+        *ast.ExprStmt (go-nodes/array_slice_types.go:87:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:87:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:87:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:87:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:87:13) Kind: STRING Value: "    s[2:5]: %v\n"
+              [1]:
+                *ast.SliceExpr (go-nodes/array_slice_types.go:87:33)
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:87:33) Name: s
+                  Low:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:87:35) Kind: INT Value: 2
+                  High:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:87:37) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/array_slice_types.go:88:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:88:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:88:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:88:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:88:13) Kind: STRING Value: "    s[:4]: %v\n"
+              [1]:
+                *ast.SliceExpr (go-nodes/array_slice_types.go:88:32)
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:88:32) Name: s
+                  High:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:88:35) Kind: INT Value: 4
+        *ast.ExprStmt (go-nodes/array_slice_types.go:89:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:89:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:89:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:89:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:89:13) Kind: STRING Value: "    s[6:]: %v\n"
+              [1]:
+                *ast.SliceExpr (go-nodes/array_slice_types.go:89:32)
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:89:32) Name: s
+                  Low:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:89:34) Kind: INT Value: 6
+        *ast.ExprStmt (go-nodes/array_slice_types.go:90:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:90:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:90:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:90:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:90:13) Kind: STRING Value: "    s[:]: %v\n"
+              [1]:
+                *ast.SliceExpr (go-nodes/array_slice_types.go:90:31)
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:90:31) Name: s
+        *ast.AssignStmt (go-nodes/array_slice_types.go:93:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:93:2) Name: fullSlice
+          RHS:
+            *ast.SliceExpr (go-nodes/array_slice_types.go:93:15)
+              X:
+                *ast.Ident (go-nodes/array_slice_types.go:93:15) Name: s
+              Low:
+                *ast.BasicLit (go-nodes/array_slice_types.go:93:17) Kind: INT Value: 2
+              High:
+                *ast.BasicLit (go-nodes/array_slice_types.go:93:19) Kind: INT Value: 5
+              Max:
+                *ast.BasicLit (go-nodes/array_slice_types.go:93:21) Kind: INT Value: 7
+        *ast.ExprStmt (go-nodes/array_slice_types.go:94:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:94:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:94:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:94:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:94:13) Kind: STRING Value: "    s[2:5:7]: %v (len: %d, cap: %d)\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:94:54) Name: fullSlice
+              [2]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:94:65)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:94:65) Name: len
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:94:69) Name: fullSlice
+              [3]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:94:81)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:94:81) Name: cap
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:94:85) Name: fullSlice
+        *ast.AssignStmt (go-nodes/array_slice_types.go:97:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:97:2) Name: arrayForSlice
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:97:19)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:97:19)
+                  Len:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:97:20) Kind: INT Value: 5
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:97:22) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:97:26) Kind: INT Value: 10
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:97:30) Kind: INT Value: 20
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:97:34) Kind: INT Value: 30
+                [3]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:97:38) Kind: INT Value: 40
+                [4]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:97:42) Kind: INT Value: 50
+        *ast.AssignStmt (go-nodes/array_slice_types.go:98:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:98:2) Name: sliceFromArray
+          RHS:
+            *ast.SliceExpr (go-nodes/array_slice_types.go:98:20)
+              X:
+                *ast.Ident (go-nodes/array_slice_types.go:98:20) Name: arrayForSlice
+              Low:
+                *ast.BasicLit (go-nodes/array_slice_types.go:98:34) Kind: INT Value: 1
+              High:
+                *ast.BasicLit (go-nodes/array_slice_types.go:98:36) Kind: INT Value: 4
+        *ast.ExprStmt (go-nodes/array_slice_types.go:99:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:99:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:99:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:99:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:99:13) Kind: STRING Value: "    array[1:4]: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:99:37) Name: sliceFromArray
+        *ast.ExprStmt (go-nodes/array_slice_types.go:102:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:102:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:102:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:102:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:102:14) Kind: STRING Value: "  ✓ Slice indexing (ast.IndexExpr):"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:103:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:103:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:103:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:103:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:103:13) Kind: STRING Value: "    slice2[0]=%d, slice2[2]=%d\n"
+              [1]:
+                *ast.IndexExpr (go-nodes/array_slice_types.go:103:49)
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:103:49) Name: slice2
+                  Index:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:103:56) Kind: INT Value: 0
+              [2]:
+                *ast.IndexExpr (go-nodes/array_slice_types.go:103:60)
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:103:60) Name: slice2
+                  Index:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:103:67) Kind: INT Value: 2
+        *ast.AssignStmt (go-nodes/array_slice_types.go:104:2) Token: =
+          LHS:
+            *ast.IndexExpr (go-nodes/array_slice_types.go:104:2)
+              X:
+                *ast.Ident (go-nodes/array_slice_types.go:104:2) Name: slice2
+              Index:
+                *ast.BasicLit (go-nodes/array_slice_types.go:104:9) Kind: INT Value: 1
+          RHS:
+            *ast.BasicLit (go-nodes/array_slice_types.go:104:14) Kind: INT Value: 99
+        *ast.ExprStmt (go-nodes/array_slice_types.go:105:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:105:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:105:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:105:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:105:13) Kind: STRING Value: "    After slice2[1]=99: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:105:45) Name: slice2
+        *ast.ExprStmt (go-nodes/array_slice_types.go:108:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:108:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:108:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:108:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:108:14) Kind: STRING Value: "  ✓ Slice operations:"
+        *ast.AssignStmt (go-nodes/array_slice_types.go:109:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:109:2) Name: slice6
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:109:12)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:109:12)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:109:14) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:109:18) Kind: INT Value: 1
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:109:21) Kind: INT Value: 2
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:109:24) Kind: INT Value: 3
+        *ast.AssignStmt (go-nodes/array_slice_types.go:110:2) Token: =
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:110:2) Name: slice6
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:110:11)
+              Fun:
+                *ast.Ident (go-nodes/array_slice_types.go:110:11) Name: append
+              Args:
+                [0]:
+                  *ast.Ident (go-nodes/array_slice_types.go:110:18) Name: slice6
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:110:26) Kind: INT Value: 4
+        *ast.ExprStmt (go-nodes/array_slice_types.go:111:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:111:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:111:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:111:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:111:13) Kind: STRING Value: "    append(slice6, 4): %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:111:44) Name: slice6
+        *ast.AssignStmt (go-nodes/array_slice_types.go:112:2) Token: =
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:112:2) Name: slice6
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:112:11)
+              Fun:
+                *ast.Ident (go-nodes/array_slice_types.go:112:11) Name: append
+              Args:
+                [0]:
+                  *ast.Ident (go-nodes/array_slice_types.go:112:18) Name: slice6
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:112:26) Kind: INT Value: 5
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:112:29) Kind: INT Value: 6
+                [3]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:112:32) Kind: INT Value: 7
+        *ast.ExprStmt (go-nodes/array_slice_types.go:113:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:113:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:113:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:113:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:113:13) Kind: STRING Value: "    append(slice6, 5,6,7): %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:113:48) Name: slice6
+        *ast.AssignStmt (go-nodes/array_slice_types.go:116:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:116:2) Name: slice7
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:116:12)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:116:12)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:116:14) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:116:18) Kind: INT Value: 10
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:116:22) Kind: INT Value: 20
+        *ast.AssignStmt (go-nodes/array_slice_types.go:117:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:117:2) Name: slice8
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:117:12)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:117:12)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:117:14) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:117:18) Kind: INT Value: 30
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:117:22) Kind: INT Value: 40
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:117:26) Kind: INT Value: 50
+        *ast.AssignStmt (go-nodes/array_slice_types.go:118:2) Token: =
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:118:2) Name: slice7
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:118:11)
+              Fun:
+                *ast.Ident (go-nodes/array_slice_types.go:118:11) Name: append
+              Args:
+                [0]:
+                  *ast.Ident (go-nodes/array_slice_types.go:118:18) Name: slice7
+                [1]:
+                  *ast.Ident (go-nodes/array_slice_types.go:118:26) Name: slice8
+        *ast.ExprStmt (go-nodes/array_slice_types.go:119:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:119:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:119:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:119:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:119:13) Kind: STRING Value: "    append(slice7, slice8...): %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:119:52) Name: slice7
+        *ast.AssignStmt (go-nodes/array_slice_types.go:122:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:122:2) Name: slice9
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:122:12)
+              Fun:
+                *ast.Ident (go-nodes/array_slice_types.go:122:12) Name: make
+              Args:
+                [0]:
+                  *ast.ArrayType (go-nodes/array_slice_types.go:122:17)
+                    Elt:
+                      *ast.Ident (go-nodes/array_slice_types.go:122:19) Name: int
+                [1]:
+                  *ast.CallExpr (go-nodes/array_slice_types.go:122:24)
+                    Fun:
+                      *ast.Ident (go-nodes/array_slice_types.go:122:24) Name: len
+                    Args:
+                      [0]:
+                        *ast.Ident (go-nodes/array_slice_types.go:122:28) Name: slice2
+        *ast.AssignStmt (go-nodes/array_slice_types.go:123:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:123:2) Name: n
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:123:7)
+              Fun:
+                *ast.Ident (go-nodes/array_slice_types.go:123:7) Name: copy
+              Args:
+                [0]:
+                  *ast.Ident (go-nodes/array_slice_types.go:123:12) Name: slice9
+                [1]:
+                  *ast.Ident (go-nodes/array_slice_types.go:123:20) Name: slice2
+        *ast.ExprStmt (go-nodes/array_slice_types.go:124:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:124:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:124:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:124:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:124:13) Kind: STRING Value: "    copy(slice9, slice2): %v (copied %d elements)\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:124:68) Name: slice9
+              [2]:
+                *ast.Ident (go-nodes/array_slice_types.go:124:76) Name: n
+        *ast.ExprStmt (go-nodes/array_slice_types.go:127:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:127:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:127:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:127:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:127:14) Kind: STRING Value: "  ✓ Multi-dimensional slices:"
+        *ast.AssignStmt (go-nodes/array_slice_types.go:128:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:128:2) Name: matrix
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:128:12)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:128:12)
+                  Elt:
+                    *ast.ArrayType (go-nodes/array_slice_types.go:128:14)
+                      Elt:
+                        *ast.Ident (go-nodes/array_slice_types.go:128:16) Name: int
+              Elts:
+                [0]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:129:3)
+                    Elts:
+                      [0]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:129:4) Kind: INT Value: 1
+                      [1]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:129:7) Kind: INT Value: 2
+                      [2]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:129:10) Kind: INT Value: 3
+                [1]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:130:3)
+                    Elts:
+                      [0]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:130:4) Kind: INT Value: 4
+                      [1]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:130:7) Kind: INT Value: 5
+                      [2]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:130:10) Kind: INT Value: 6
+                [2]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:131:3)
+                    Elts:
+                      [0]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:131:4) Kind: INT Value: 7
+                      [1]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:131:7) Kind: INT Value: 8
+                      [2]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:131:10) Kind: INT Value: 9
+        *ast.ExprStmt (go-nodes/array_slice_types.go:133:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:133:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:133:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:133:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:133:13) Kind: STRING Value: "    [][]int: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:133:34) Name: matrix
+        *ast.ExprStmt (go-nodes/array_slice_types.go:134:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:134:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:134:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:134:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:134:13) Kind: STRING Value: "    matrix[1][2]: %d\n"
+              [1]:
+                *ast.IndexExpr (go-nodes/array_slice_types.go:134:39)
+                  X:
+                    *ast.IndexExpr (go-nodes/array_slice_types.go:134:39)
+                      X:
+                        *ast.Ident (go-nodes/array_slice_types.go:134:39) Name: matrix
+                      Index:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:134:46) Kind: INT Value: 1
+                  Index:
+                    *ast.BasicLit (go-nodes/array_slice_types.go:134:49) Kind: INT Value: 2
+        *ast.AssignStmt (go-nodes/array_slice_types.go:137:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:137:2) Name: jagged
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:137:12)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:137:12)
+                  Elt:
+                    *ast.ArrayType (go-nodes/array_slice_types.go:137:14)
+                      Elt:
+                        *ast.Ident (go-nodes/array_slice_types.go:137:16) Name: int
+              Elts:
+                [0]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:138:3)
+                    Elts:
+                      [0]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:138:4) Kind: INT Value: 1
+                [1]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:139:3)
+                    Elts:
+                      [0]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:139:4) Kind: INT Value: 2
+                      [1]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:139:7) Kind: INT Value: 3
+                [2]:
+                  *ast.CompositeLit (go-nodes/array_slice_types.go:140:3)
+                    Elts:
+                      [0]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:140:4) Kind: INT Value: 4
+                      [1]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:140:7) Kind: INT Value: 5
+                      [2]:
+                        *ast.BasicLit (go-nodes/array_slice_types.go:140:10) Kind: INT Value: 6
+        *ast.ExprStmt (go-nodes/array_slice_types.go:142:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:142:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:142:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:142:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:142:13) Kind: STRING Value: "    Jagged [][]int: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:142:41) Name: jagged
+        *ast.ExprStmt (go-nodes/array_slice_types.go:145:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:145:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:145:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:145:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:145:14) Kind: STRING Value: "  ✓ Slice iteration:"
+        *ast.RangeStmt (go-nodes/array_slice_types.go:146:2) Token: :=
+          Key:
+            *ast.Ident (go-nodes/array_slice_types.go:146:6) Name: i
+          Value:
+            *ast.Ident (go-nodes/array_slice_types.go:146:9) Name: v
+          X:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:146:20)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:146:20)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:146:22) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:146:26) Kind: INT Value: 100
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:146:31) Kind: INT Value: 200
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:146:36) Kind: INT Value: 300
+          Body:
+            *ast.BlockStmt (go-nodes/array_slice_types.go:146:41) Stmts: 1
+              *ast.ExprStmt (go-nodes/array_slice_types.go:147:3)
+                *ast.CallExpr (go-nodes/array_slice_types.go:147:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/array_slice_types.go:147:3)
+                      X:
+                        *ast.Ident (go-nodes/array_slice_types.go:147:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/array_slice_types.go:147:14) Kind: STRING Value: "    index=%d, value=%d\n"
+                    [1]:
+                      *ast.Ident (go-nodes/array_slice_types.go:147:42) Name: i
+                    [2]:
+                      *ast.Ident (go-nodes/array_slice_types.go:147:45) Name: v
+        *ast.AssignStmt (go-nodes/array_slice_types.go:151:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:151:2) Name: byteSlice
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:151:15)
+              Fun:
+                *ast.ArrayType (go-nodes/array_slice_types.go:151:15)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:151:17) Name: byte
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:151:22) Kind: STRING Value: "Hello"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:152:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:152:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:152:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:152:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:152:13) Kind: STRING Value: "    []byte: %v, as string: %s\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:152:48) Name: byteSlice
+              [2]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:152:59)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:152:59) Name: string
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:152:66) Name: byteSlice
+        *ast.AssignStmt (go-nodes/array_slice_types.go:155:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:155:2) Name: runeSlice
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:155:15)
+              Fun:
+                *ast.ArrayType (go-nodes/array_slice_types.go:155:15)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:155:17) Name: rune
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:155:22) Kind: STRING Value: "世界"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:156:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:156:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:156:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:156:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:156:13) Kind: STRING Value: "    []rune: %v, as string: %s\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:156:48) Name: runeSlice
+              [2]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:156:59)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:156:59) Name: string
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:156:66) Name: runeSlice
+        *ast.DeclStmt (go-nodes/array_slice_types.go:159:2)
+          *ast.GenDecl (go-nodes/array_slice_types.go:159:2) Token: var
+            *ast.ValueSpec (go-nodes/array_slice_types.go:159:6)
+              Name: nilSlice
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:159:15)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:159:17) Name: int
+        *ast.AssignStmt (go-nodes/array_slice_types.go:160:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:160:2) Name: emptySlice
+          RHS:
+            *ast.CompositeLit (go-nodes/array_slice_types.go:160:16)
+              Type:
+                *ast.ArrayType (go-nodes/array_slice_types.go:160:16)
+                  Elt:
+                    *ast.Ident (go-nodes/array_slice_types.go:160:18) Name: int
+        *ast.ExprStmt (go-nodes/array_slice_types.go:161:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:161:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:161:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:161:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:161:13) Kind: STRING Value: "    nil slice: %v (nil: %v)\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:161:46) Name: nilSlice
+              [2]:
+                *ast.BinaryExpr (go-nodes/array_slice_types.go:161:56) Op: ==
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:161:56) Name: nilSlice
+                  Y:
+                    *ast.Ident (go-nodes/array_slice_types.go:161:68) Name: nil
+        *ast.ExprStmt (go-nodes/array_slice_types.go:162:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:162:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:162:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:162:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:162:13) Kind: STRING Value: "    empty slice: %v (nil: %v)\n"
+              [1]:
+                *ast.Ident (go-nodes/array_slice_types.go:162:48) Name: emptySlice
+              [2]:
+                *ast.BinaryExpr (go-nodes/array_slice_types.go:162:60) Op: ==
+                  X:
+                    *ast.Ident (go-nodes/array_slice_types.go:162:60) Name: emptySlice
+                  Y:
+                    *ast.Ident (go-nodes/array_slice_types.go:162:74) Name: nil
+        *ast.AssignStmt (go-nodes/array_slice_types.go:165:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/array_slice_types.go:165:2) Name: growing
+          RHS:
+            *ast.CallExpr (go-nodes/array_slice_types.go:165:13)
+              Fun:
+                *ast.Ident (go-nodes/array_slice_types.go:165:13) Name: make
+              Args:
+                [0]:
+                  *ast.ArrayType (go-nodes/array_slice_types.go:165:18)
+                    Elt:
+                      *ast.Ident (go-nodes/array_slice_types.go:165:20) Name: int
+                [1]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:165:25) Kind: INT Value: 0
+                [2]:
+                  *ast.BasicLit (go-nodes/array_slice_types.go:165:28) Kind: INT Value: 2
+        *ast.ExprStmt (go-nodes/array_slice_types.go:166:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:166:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:166:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:166:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:166:13) Kind: STRING Value: "    Initial: len=%d, cap=%d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:166:46)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:166:46) Name: len
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:166:50) Name: growing
+              [2]:
+                *ast.CallExpr (go-nodes/array_slice_types.go:166:60)
+                  Fun:
+                    *ast.Ident (go-nodes/array_slice_types.go:166:60) Name: cap
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/array_slice_types.go:166:64) Name: growing
+        *ast.ForStmt (go-nodes/array_slice_types.go:167:2)
+          Init:
+            *ast.AssignStmt (go-nodes/array_slice_types.go:167:6) Token: :=
+              LHS:
+                *ast.Ident (go-nodes/array_slice_types.go:167:6) Name: i
+              RHS:
+                *ast.BasicLit (go-nodes/array_slice_types.go:167:11) Kind: INT Value: 0
+          Cond:
+            *ast.BinaryExpr (go-nodes/array_slice_types.go:167:14) Op: <
+              X:
+                *ast.Ident (go-nodes/array_slice_types.go:167:14) Name: i
+              Y:
+                *ast.BasicLit (go-nodes/array_slice_types.go:167:18) Kind: INT Value: 5
+          Post:
+            *ast.IncDecStmt (go-nodes/array_slice_types.go:167:21)
+          Body:
+            *ast.BlockStmt (go-nodes/array_slice_types.go:167:25) Stmts: 2
+              *ast.AssignStmt (go-nodes/array_slice_types.go:168:3) Token: =
+                LHS:
+                  *ast.Ident (go-nodes/array_slice_types.go:168:3) Name: growing
+                RHS:
+                  *ast.CallExpr (go-nodes/array_slice_types.go:168:13)
+                    Fun:
+                      *ast.Ident (go-nodes/array_slice_types.go:168:13) Name: append
+                    Args:
+                      [0]:
+                        *ast.Ident (go-nodes/array_slice_types.go:168:20) Name: growing
+                      [1]:
+                        *ast.Ident (go-nodes/array_slice_types.go:168:29) Name: i
+              *ast.ExprStmt (go-nodes/array_slice_types.go:169:3)
+                *ast.CallExpr (go-nodes/array_slice_types.go:169:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/array_slice_types.go:169:3)
+                      X:
+                        *ast.Ident (go-nodes/array_slice_types.go:169:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/array_slice_types.go:169:14) Kind: STRING Value: "    After append %d: len=%d, cap=%d\n"
+                    [1]:
+                      *ast.Ident (go-nodes/array_slice_types.go:169:55) Name: i
+                    [2]:
+                      *ast.CallExpr (go-nodes/array_slice_types.go:169:58)
+                        Fun:
+                          *ast.Ident (go-nodes/array_slice_types.go:169:58) Name: len
+                        Args:
+                          [0]:
+                            *ast.Ident (go-nodes/array_slice_types.go:169:62) Name: growing
+                    [3]:
+                      *ast.CallExpr (go-nodes/array_slice_types.go:169:72)
+                        Fun:
+                          *ast.Ident (go-nodes/array_slice_types.go:169:72) Name: cap
+                        Args:
+                          [0]:
+                            *ast.Ident (go-nodes/array_slice_types.go:169:76) Name: growing
+        *ast.ExprStmt (go-nodes/array_slice_types.go:172:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:172:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:172:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:172:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:172:14) Kind: STRING Value: "Summary: Comprehensive array and slice AST node coverage"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:173:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:173:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:173:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:173:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:173:14) Kind: STRING Value: "Primary AST Nodes: ast.ArrayType, ast.IndexExpr, ast.SliceExpr, ast.Ellipsis"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:174:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:174:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:174:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:174:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:174:14) Kind: STRING Value: "Features: fixed arrays, slices, indexing, slicing, multi-dimensional, append, copy"
+        *ast.ExprStmt (go-nodes/array_slice_types.go:175:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:175:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/array_slice_types.go:175:2)
+                X:
+                  *ast.Ident (go-nodes/array_slice_types.go:175:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/array_slice_types.go:175:14) Kind: STRING Value: "========================================"
+  *ast.FuncDecl (go-nodes/array_slice_types.go:178:1)
+    Name: main
+    Type:
+      *ast.FuncType (go-nodes/array_slice_types.go:178:1)
+        Params:
+          *ast.FieldList (go-nodes/array_slice_types.go:178:10) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/array_slice_types.go:178:13) Stmts: 1
+        *ast.ExprStmt (go-nodes/array_slice_types.go:179:2)
+          *ast.CallExpr (go-nodes/array_slice_types.go:179:2)
+            Fun:
+              *ast.Ident (go-nodes/array_slice_types.go:179:2) Name: funcMain

@@ -11,6 +11,7 @@ import (
 	"strings"
 
 	"github.com/zylisp/go-ast-coverage/ast-analyzer"
+	"github.com/zylisp/go-ast-coverage/ast-generator"
 	"github.com/zylisp/go-ast-coverage/coverage-report"
 )
 
@@ -19,6 +20,7 @@ var (
 	runTests       = flag.Bool("run", false, "Run all test files")
 	analyze        = flag.Bool("analyze", false, "Analyze AST nodes in test files")
 	generateReport = flag.Bool("report", false, "Generate coverage report")
+	generateAST    = flag.Bool("generate", false, "Generate AST files from go-nodes")
 	saveJSON       = flag.Bool("json", false, "Save report as JSON")
 	verbose        = flag.Bool("verbose", false, "Verbose output")
 	all            = flag.Bool("all", false, "Run all tests, analyze, and generate report")
@@ -58,6 +60,16 @@ func main() {
 		fmt.Println("Analyzing AST nodes...")
 		if err := analyzeFiles(astNodesDir); err != nil {
 			fmt.Fprintf(os.Stderr, "Error analyzing files: %v\n", err)
+			os.Exit(1)
+		}
+		fmt.Println()
+	}
+
+	// Generate AST files
+	if *generateAST {
+		fmt.Println("Generating AST files...")
+		if err := generateASTFiles(astNodesDir, "ast-nodes"); err != nil {
+			fmt.Fprintf(os.Stderr, "Error generating AST files: %v\n", err)
 			os.Exit(1)
 		}
 		fmt.Println()
@@ -215,5 +227,14 @@ func generateCoverageReport(dir string) error {
 		fmt.Printf("✓ Text report saved to: %s\n", textPath)
 	}
 
+	return nil
+}
+
+// generateASTFiles generates AST representation files from Go source files.
+func generateASTFiles(inDir, outDir string) error {
+	if err := generator.WriteASTFiles(inDir, outDir); err != nil {
+		return fmt.Errorf("failed to generate AST files: %w", err)
+	}
+	fmt.Printf("✓ AST files written to: %s\n", outDir)
 	return nil
 }

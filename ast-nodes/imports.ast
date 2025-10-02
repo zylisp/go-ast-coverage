@@ -1,0 +1,577 @@
+=== AST for imports.go ===
+
+File Information:
+  Package: main
+  Position: go-nodes/imports.go:3:1
+  Imports:
+    "fmt"
+    "os"
+    "strings"
+    "time"
+    fmtAlias "fmt"
+    str "strings"
+    _ "image/png"
+    . "math"
+    "io"
+    "bytes"
+  Comment Groups: 24
+  Declarations: 9
+
+=== AST Node Tree ===
+
+*ast.File (go-nodes/imports.go:3:1)
+  Package: main
+  *ast.GenDecl (go-nodes/imports.go:11:1) Token: import
+    *ast.ImportSpec (go-nodes/imports.go:11:8)
+      Path: "fmt"
+  *ast.GenDecl (go-nodes/imports.go:14:1) Token: import
+    *ast.ImportSpec (go-nodes/imports.go:15:2)
+      Path: "os"
+    *ast.ImportSpec (go-nodes/imports.go:16:2)
+      Path: "strings"
+    *ast.ImportSpec (go-nodes/imports.go:17:2)
+      Path: "time"
+  *ast.GenDecl (go-nodes/imports.go:21:1) Token: import
+    *ast.ImportSpec (go-nodes/imports.go:22:2)
+      Name: fmtAlias
+      Path: "fmt"
+    *ast.ImportSpec (go-nodes/imports.go:23:2)
+      Name: str
+      Path: "strings"
+  *ast.GenDecl (go-nodes/imports.go:27:1) Token: import
+    *ast.ImportSpec (go-nodes/imports.go:28:2)
+      Name: _
+      Path: "image/png"
+  *ast.GenDecl (go-nodes/imports.go:32:1) Token: import
+    *ast.ImportSpec (go-nodes/imports.go:33:2)
+      Name: .
+      Path: "math"
+  *ast.GenDecl (go-nodes/imports.go:37:1) Token: import
+    *ast.ImportSpec (go-nodes/imports.go:37:8)
+      Path: "io"
+  *ast.GenDecl (go-nodes/imports.go:38:1) Token: import
+    *ast.ImportSpec (go-nodes/imports.go:38:8)
+      Path: "bytes"
+  *ast.FuncDecl (go-nodes/imports.go:40:1)
+    Name: funcMain
+    Type:
+      *ast.FuncType (go-nodes/imports.go:40:1)
+        Params:
+          *ast.FieldList (go-nodes/imports.go:40:14) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/imports.go:40:17) Stmts: 44
+        *ast.ExprStmt (go-nodes/imports.go:41:2)
+          *ast.CallExpr (go-nodes/imports.go:41:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:41:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:41:2) Name: fmtAlias
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:41:19) Kind: STRING Value: "=== imports.go AST Node Coverage ==="
+        *ast.ExprStmt (go-nodes/imports.go:42:2)
+          *ast.CallExpr (go-nodes/imports.go:42:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:42:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:42:2) Name: fmtAlias
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:42:19) Kind: STRING Value: "Exercising AST Nodes:"
+        *ast.ExprStmt (go-nodes/imports.go:45:2)
+          *ast.CallExpr (go-nodes/imports.go:45:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:45:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:45:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:45:14) Kind: STRING Value: "  ✓ ast.ImportSpec (standard single import):"
+        *ast.ExprStmt (go-nodes/imports.go:46:2)
+          *ast.CallExpr (go-nodes/imports.go:46:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:46:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:46:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:46:14) Kind: STRING Value: "    fmt package imported and used"
+        *ast.ExprStmt (go-nodes/imports.go:49:2)
+          *ast.CallExpr (go-nodes/imports.go:49:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:49:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:49:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:49:14) Kind: STRING Value: "  ✓ ast.GenDecl (grouped imports):"
+        *ast.ExprStmt (go-nodes/imports.go:50:2)
+          *ast.CallExpr (go-nodes/imports.go:50:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:50:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:50:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:50:13) Kind: STRING Value: "    os.Stdout type: %T\n"
+              [1]:
+                *ast.SelectorExpr (go-nodes/imports.go:50:41)
+                  X:
+                    *ast.Ident (go-nodes/imports.go:50:41) Name: os
+                  Sel: Stdout
+        *ast.ExprStmt (go-nodes/imports.go:51:2)
+          *ast.CallExpr (go-nodes/imports.go:51:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:51:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:51:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:51:13) Kind: STRING Value: "    strings.ToUpper: %s\n"
+              [1]:
+                *ast.CallExpr (go-nodes/imports.go:51:42)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/imports.go:51:42)
+                      X:
+                        *ast.Ident (go-nodes/imports.go:51:42) Name: strings
+                      Sel: ToUpper
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/imports.go:51:58) Kind: STRING Value: "test"
+        *ast.ExprStmt (go-nodes/imports.go:52:2)
+          *ast.CallExpr (go-nodes/imports.go:52:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:52:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:52:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:52:13) Kind: STRING Value: "    time.Now: %s\n"
+              [1]:
+                *ast.CallExpr (go-nodes/imports.go:52:35)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/imports.go:52:35)
+                      X:
+                        *ast.CallExpr (go-nodes/imports.go:52:35)
+                          Fun:
+                            *ast.SelectorExpr (go-nodes/imports.go:52:35)
+                              X:
+                                *ast.Ident (go-nodes/imports.go:52:35) Name: time
+                              Sel: Now
+                      Sel: Format
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/imports.go:52:53) Kind: STRING Value: "2006-01-02"
+        *ast.ExprStmt (go-nodes/imports.go:55:2)
+          *ast.CallExpr (go-nodes/imports.go:55:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:55:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:55:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:55:14) Kind: STRING Value: "  ✓ ast.ImportSpec (aliased import):"
+        *ast.ExprStmt (go-nodes/imports.go:56:2)
+          *ast.CallExpr (go-nodes/imports.go:56:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:56:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:56:2) Name: fmtAlias
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:56:18) Kind: STRING Value: "    Using fmtAlias (alias for fmt)\n"
+        *ast.AssignStmt (go-nodes/imports.go:57:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/imports.go:57:2) Name: result
+          RHS:
+            *ast.CallExpr (go-nodes/imports.go:57:12)
+              Fun:
+                *ast.SelectorExpr (go-nodes/imports.go:57:12)
+                  X:
+                    *ast.Ident (go-nodes/imports.go:57:12) Name: str
+                  Sel: Contains
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/imports.go:57:25) Kind: STRING Value: "hello"
+                [1]:
+                  *ast.BasicLit (go-nodes/imports.go:57:34) Kind: STRING Value: "ll"
+        *ast.ExprStmt (go-nodes/imports.go:58:2)
+          *ast.CallExpr (go-nodes/imports.go:58:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:58:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:58:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:58:13) Kind: STRING Value: "    Using str (alias for strings): Contains = %v\n"
+              [1]:
+                *ast.Ident (go-nodes/imports.go:58:67) Name: result
+        *ast.ExprStmt (go-nodes/imports.go:61:2)
+          *ast.CallExpr (go-nodes/imports.go:61:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:61:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:61:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:61:14) Kind: STRING Value: "  ✓ ast.ImportSpec (blank import _):"
+        *ast.ExprStmt (go-nodes/imports.go:62:2)
+          *ast.CallExpr (go-nodes/imports.go:62:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:62:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:62:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:62:14) Kind: STRING Value: "    image/png imported for side effects"
+        *ast.ExprStmt (go-nodes/imports.go:63:2)
+          *ast.CallExpr (go-nodes/imports.go:63:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:63:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:63:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:63:14) Kind: STRING Value: "    (Registers PNG decoder without explicit use)"
+        *ast.ExprStmt (go-nodes/imports.go:66:2)
+          *ast.CallExpr (go-nodes/imports.go:66:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:66:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:66:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:66:14) Kind: STRING Value: "  ✓ ast.ImportSpec (dot import .):"
+        *ast.AssignStmt (go-nodes/imports.go:68:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/imports.go:68:2) Name: piValue
+          RHS:
+            *ast.Ident (go-nodes/imports.go:68:13) Name: Pi
+        *ast.AssignStmt (go-nodes/imports.go:69:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/imports.go:69:2) Name: sqrtValue
+          RHS:
+            *ast.CallExpr (go-nodes/imports.go:69:15)
+              Fun:
+                *ast.Ident (go-nodes/imports.go:69:15) Name: Sqrt
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/imports.go:69:20) Kind: INT Value: 16
+        *ast.ExprStmt (go-nodes/imports.go:70:2)
+          *ast.CallExpr (go-nodes/imports.go:70:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:70:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:70:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:70:13) Kind: STRING Value: "    Pi (from math via .): %f\n"
+              [1]:
+                *ast.Ident (go-nodes/imports.go:70:47) Name: piValue
+        *ast.ExprStmt (go-nodes/imports.go:71:2)
+          *ast.CallExpr (go-nodes/imports.go:71:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:71:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:71:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:71:13) Kind: STRING Value: "    Sqrt(16) (from math via .): %f\n"
+              [1]:
+                *ast.Ident (go-nodes/imports.go:71:53) Name: sqrtValue
+        *ast.ExprStmt (go-nodes/imports.go:74:2)
+          *ast.CallExpr (go-nodes/imports.go:74:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:74:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:74:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:74:14) Kind: STRING Value: "  ✓ Multiple import blocks:"
+        *ast.DeclStmt (go-nodes/imports.go:75:2)
+          *ast.GenDecl (go-nodes/imports.go:75:2) Token: var
+            *ast.ValueSpec (go-nodes/imports.go:75:6)
+              Name: buf
+              Type:
+                *ast.SelectorExpr (go-nodes/imports.go:75:10)
+                  X:
+                    *ast.Ident (go-nodes/imports.go:75:10) Name: bytes
+                  Sel: Buffer
+        *ast.ExprStmt (go-nodes/imports.go:76:2)
+          *ast.CallExpr (go-nodes/imports.go:76:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:76:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:76:2) Name: buf
+                Sel: WriteString
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:76:18) Kind: STRING Value: "io and bytes packages imported"
+        *ast.ExprStmt (go-nodes/imports.go:77:2)
+          *ast.CallExpr (go-nodes/imports.go:77:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:77:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:77:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:77:13) Kind: STRING Value: "    %s\n"
+              [1]:
+                *ast.CallExpr (go-nodes/imports.go:77:25)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/imports.go:77:25)
+                      X:
+                        *ast.Ident (go-nodes/imports.go:77:25) Name: buf
+                      Sel: String
+        *ast.ExprStmt (go-nodes/imports.go:80:2)
+          *ast.CallExpr (go-nodes/imports.go:80:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:80:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:80:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:80:14) Kind: STRING Value: "  ✓ Import usage patterns:"
+        *ast.ExprStmt (go-nodes/imports.go:83:2)
+          *ast.CallExpr (go-nodes/imports.go:83:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:83:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:83:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:83:14) Kind: STRING Value: "    Package qualifier: fmt.Println"
+        *ast.ExprStmt (go-nodes/imports.go:86:2)
+          *ast.CallExpr (go-nodes/imports.go:86:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:86:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:86:2) Name: fmtAlias
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:86:19) Kind: STRING Value: "    Aliased package: fmtAlias.Println"
+        *ast.DeclStmt (go-nodes/imports.go:89:2)
+          *ast.GenDecl (go-nodes/imports.go:89:2) Token: var
+            *ast.ValueSpec (go-nodes/imports.go:89:6)
+              Name: t
+              Type:
+                *ast.SelectorExpr (go-nodes/imports.go:89:8)
+                  X:
+                    *ast.Ident (go-nodes/imports.go:89:8) Name: time
+                  Sel: Time
+              Value[0]:
+                *ast.CallExpr (go-nodes/imports.go:89:20)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/imports.go:89:20)
+                      X:
+                        *ast.Ident (go-nodes/imports.go:89:20) Name: time
+                      Sel: Now
+        *ast.ExprStmt (go-nodes/imports.go:90:2)
+          *ast.CallExpr (go-nodes/imports.go:90:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:90:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:90:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:90:13) Kind: STRING Value: "    Imported type: time.Time = %T\n"
+              [1]:
+                *ast.Ident (go-nodes/imports.go:90:52) Name: t
+        *ast.DeclStmt (go-nodes/imports.go:93:2)
+          *ast.GenDecl (go-nodes/imports.go:93:2) Token: const
+            *ast.ValueSpec (go-nodes/imports.go:93:8)
+              Name: layout
+              Value[0]:
+                *ast.SelectorExpr (go-nodes/imports.go:93:17)
+                  X:
+                    *ast.Ident (go-nodes/imports.go:93:17) Name: time
+                  Sel: RFC3339
+        *ast.ExprStmt (go-nodes/imports.go:94:2)
+          *ast.CallExpr (go-nodes/imports.go:94:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:94:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:94:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:94:13) Kind: STRING Value: "    Imported constant: time.RFC3339 = %s\n"
+              [1]:
+                *ast.Ident (go-nodes/imports.go:94:59) Name: layout
+        *ast.AssignStmt (go-nodes/imports.go:97:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/imports.go:97:2) Name: upper
+          RHS:
+            *ast.CallExpr (go-nodes/imports.go:97:11)
+              Fun:
+                *ast.SelectorExpr (go-nodes/imports.go:97:11)
+                  X:
+                    *ast.Ident (go-nodes/imports.go:97:11) Name: strings
+                  Sel: ToUpper
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/imports.go:97:27) Kind: STRING Value: "hello"
+        *ast.ExprStmt (go-nodes/imports.go:98:2)
+          *ast.CallExpr (go-nodes/imports.go:98:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:98:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:98:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:98:13) Kind: STRING Value: "    Imported function: strings.ToUpper = %s\n"
+              [1]:
+                *ast.Ident (go-nodes/imports.go:98:62) Name: upper
+        *ast.ExprStmt (go-nodes/imports.go:101:2)
+          *ast.CallExpr (go-nodes/imports.go:101:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:101:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:101:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:101:14) Kind: STRING Value: "  ✓ Nested package imports:"
+        *ast.ExprStmt (go-nodes/imports.go:102:2)
+          *ast.CallExpr (go-nodes/imports.go:102:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:102:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:102:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:102:13) Kind: STRING Value: "    io package: io.Reader type = %T\n"
+              [1]:
+                *ast.CallExpr (go-nodes/imports.go:102:54)
+                  Fun:
+                    *ast.ParenExpr (go-nodes/imports.go:102:54)
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/imports.go:102:66) Name: nil
+        *ast.ExprStmt (go-nodes/imports.go:103:2)
+          *ast.CallExpr (go-nodes/imports.go:103:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:103:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:103:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:103:14) Kind: STRING Value: "    image/png package (nested: image/png)"
+        *ast.ExprStmt (go-nodes/imports.go:106:2)
+          *ast.CallExpr (go-nodes/imports.go:106:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:106:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:106:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:106:14) Kind: STRING Value: "  ✓ Import path patterns:"
+        *ast.ExprStmt (go-nodes/imports.go:107:2)
+          *ast.CallExpr (go-nodes/imports.go:107:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:107:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:107:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:107:14) Kind: STRING Value: "    Single-level: fmt, os, io"
+        *ast.ExprStmt (go-nodes/imports.go:108:2)
+          *ast.CallExpr (go-nodes/imports.go:108:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:108:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:108:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:108:14) Kind: STRING Value: "    Multi-level: strings, bytes"
+        *ast.ExprStmt (go-nodes/imports.go:109:2)
+          *ast.CallExpr (go-nodes/imports.go:109:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:109:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:109:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:109:14) Kind: STRING Value: "    Nested: image/png"
+        *ast.ExprStmt (go-nodes/imports.go:111:2)
+          *ast.CallExpr (go-nodes/imports.go:111:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:111:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:111:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:111:14) Kind: STRING Value: "Summary: Comprehensive import AST node coverage"
+        *ast.ExprStmt (go-nodes/imports.go:112:2)
+          *ast.CallExpr (go-nodes/imports.go:112:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:112:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:112:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:112:14) Kind: STRING Value: "Primary AST Nodes: ast.GenDecl, ast.ImportSpec"
+        *ast.ExprStmt (go-nodes/imports.go:113:2)
+          *ast.CallExpr (go-nodes/imports.go:113:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:113:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:113:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:113:14) Kind: STRING Value: "Features: single, grouped, aliased, blank, dot imports"
+        *ast.ExprStmt (go-nodes/imports.go:114:2)
+          *ast.CallExpr (go-nodes/imports.go:114:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/imports.go:114:2)
+                X:
+                  *ast.Ident (go-nodes/imports.go:114:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/imports.go:114:14) Kind: STRING Value: "========================================"
+  *ast.FuncDecl (go-nodes/imports.go:117:1)
+    Name: main
+    Type:
+      *ast.FuncType (go-nodes/imports.go:117:1)
+        Params:
+          *ast.FieldList (go-nodes/imports.go:117:10) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/imports.go:117:13) Stmts: 1
+        *ast.ExprStmt (go-nodes/imports.go:118:2)
+          *ast.CallExpr (go-nodes/imports.go:118:2)
+            Fun:
+              *ast.Ident (go-nodes/imports.go:118:2) Name: funcMain

@@ -1,0 +1,1597 @@
+=== AST for generics.go ===
+
+File Information:
+  Package: main
+  Position: go-nodes/generics.go:3:1
+  Imports:
+    "fmt"
+  Comment Groups: 36
+  Declarations: 21
+
+=== AST Node Tree ===
+
+*ast.File (go-nodes/generics.go:3:1)
+  Package: main
+  *ast.GenDecl (go-nodes/generics.go:5:1) Token: import
+    *ast.ImportSpec (go-nodes/generics.go:6:2)
+      Path: "fmt"
+  *ast.GenDecl (go-nodes/generics.go:15:1) Token: type
+    *ast.TypeSpec (go-nodes/generics.go:15:6)
+      Name: Box
+      Type:
+        *ast.StructType (go-nodes/generics.go:15:17)
+          *ast.FieldList (go-nodes/generics.go:15:24) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:16:2)
+                Name: value
+                Type:
+                  *ast.Ident (go-nodes/generics.go:16:8) Name: T
+  *ast.GenDecl (go-nodes/generics.go:20:1) Token: type
+    *ast.TypeSpec (go-nodes/generics.go:20:6)
+      Name: Pair
+      Type:
+        *ast.StructType (go-nodes/generics.go:20:32)
+          *ast.FieldList (go-nodes/generics.go:20:39) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:21:2)
+                Name: Key
+                Type:
+                  *ast.Ident (go-nodes/generics.go:21:8) Name: K
+            Field[1]:
+              *ast.Field (go-nodes/generics.go:22:2)
+                Name: Value
+                Type:
+                  *ast.Ident (go-nodes/generics.go:22:8) Name: V
+  *ast.GenDecl (go-nodes/generics.go:26:1) Token: type
+    *ast.TypeSpec (go-nodes/generics.go:26:6)
+      Name: Number
+      Type:
+        *ast.InterfaceType (go-nodes/generics.go:26:13)
+          *ast.FieldList (go-nodes/generics.go:26:23) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:27:2)
+                Type:
+                  *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                    X:
+                      *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                        X:
+                          *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                            X:
+                              *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                                X:
+                                  *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                                    X:
+                                      *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                                        X:
+                                          *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                                            X:
+                                              *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                                                X:
+                                                  *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                                                    X:
+                                                      *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                                                        X:
+                                                          *ast.BinaryExpr (go-nodes/generics.go:27:2) Op: |
+                                                            X:
+                                                              *ast.UnaryExpr (go-nodes/generics.go:27:2) Op: ~
+                                                                X:
+                                                                  *ast.Ident (go-nodes/generics.go:27:3) Name: int
+                                                            Y:
+                                                              *ast.UnaryExpr (go-nodes/generics.go:27:9) Op: ~
+                                                                X:
+                                                                  *ast.Ident (go-nodes/generics.go:27:10) Name: int8
+                                                        Y:
+                                                          *ast.UnaryExpr (go-nodes/generics.go:27:17) Op: ~
+                                                            X:
+                                                              *ast.Ident (go-nodes/generics.go:27:18) Name: int16
+                                                    Y:
+                                                      *ast.UnaryExpr (go-nodes/generics.go:27:26) Op: ~
+                                                        X:
+                                                          *ast.Ident (go-nodes/generics.go:27:27) Name: int32
+                                                Y:
+                                                  *ast.UnaryExpr (go-nodes/generics.go:27:35) Op: ~
+                                                    X:
+                                                      *ast.Ident (go-nodes/generics.go:27:36) Name: int64
+                                            Y:
+                                              *ast.UnaryExpr (go-nodes/generics.go:28:3) Op: ~
+                                                X:
+                                                  *ast.Ident (go-nodes/generics.go:28:4) Name: uint
+                                        Y:
+                                          *ast.UnaryExpr (go-nodes/generics.go:28:11) Op: ~
+                                            X:
+                                              *ast.Ident (go-nodes/generics.go:28:12) Name: uint8
+                                    Y:
+                                      *ast.UnaryExpr (go-nodes/generics.go:28:20) Op: ~
+                                        X:
+                                          *ast.Ident (go-nodes/generics.go:28:21) Name: uint16
+                                Y:
+                                  *ast.UnaryExpr (go-nodes/generics.go:28:30) Op: ~
+                                    X:
+                                      *ast.Ident (go-nodes/generics.go:28:31) Name: uint32
+                            Y:
+                              *ast.UnaryExpr (go-nodes/generics.go:28:40) Op: ~
+                                X:
+                                  *ast.Ident (go-nodes/generics.go:28:41) Name: uint64
+                        Y:
+                          *ast.UnaryExpr (go-nodes/generics.go:29:3) Op: ~
+                            X:
+                              *ast.Ident (go-nodes/generics.go:29:4) Name: float32
+                    Y:
+                      *ast.UnaryExpr (go-nodes/generics.go:29:14) Op: ~
+                        X:
+                          *ast.Ident (go-nodes/generics.go:29:15) Name: float64
+  *ast.GenDecl (go-nodes/generics.go:32:1) Token: type
+    *ast.TypeSpec (go-nodes/generics.go:32:6)
+      Name: Calculator
+      Type:
+        *ast.StructType (go-nodes/generics.go:32:27)
+          *ast.FieldList (go-nodes/generics.go:32:34) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:33:2)
+                Name: value
+                Type:
+                  *ast.Ident (go-nodes/generics.go:33:8) Name: T
+  *ast.FuncDecl (go-nodes/generics.go:37:1)
+    Name: Identity
+    Type:
+      *ast.FuncType (go-nodes/generics.go:37:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:37:21) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:37:22)
+                Name: val
+                Type:
+                  *ast.Ident (go-nodes/generics.go:37:26) Name: T
+        Results:
+          *ast.FieldList (go-nodes/generics.go:37:29) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:37:29)
+                Type:
+                  *ast.Ident (go-nodes/generics.go:37:29) Name: T
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:37:31) Stmts: 1
+        *ast.ReturnStmt (go-nodes/generics.go:38:2)
+          Result[0]:
+            *ast.Ident (go-nodes/generics.go:38:9) Name: val
+  *ast.FuncDecl (go-nodes/generics.go:42:1)
+    Name: MakePair
+    Type:
+      *ast.FuncType (go-nodes/generics.go:42:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:42:35) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:42:36)
+                Name: key
+                Type:
+                  *ast.Ident (go-nodes/generics.go:42:40) Name: K
+            Field[1]:
+              *ast.Field (go-nodes/generics.go:42:43)
+                Name: value
+                Type:
+                  *ast.Ident (go-nodes/generics.go:42:49) Name: V
+        Results:
+          *ast.FieldList (go-nodes/generics.go:42:52) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:42:52)
+                Type:
+                  *ast.IndexListExpr (go-nodes/generics.go:42:52)
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:42:63) Stmts: 1
+        *ast.ReturnStmt (go-nodes/generics.go:43:2)
+          Result[0]:
+            *ast.CompositeLit (go-nodes/generics.go:43:9)
+              Type:
+                *ast.IndexListExpr (go-nodes/generics.go:43:9)
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:43:20)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:43:30)
+  *ast.FuncDecl (go-nodes/generics.go:47:1)
+    Name: Add
+    Type:
+      *ast.FuncType (go-nodes/generics.go:47:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:47:19) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:47:20)
+                Name: a
+                Name: b
+                Type:
+                  *ast.Ident (go-nodes/generics.go:47:25) Name: T
+        Results:
+          *ast.FieldList (go-nodes/generics.go:47:28) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:47:28)
+                Type:
+                  *ast.Ident (go-nodes/generics.go:47:28) Name: T
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:47:30) Stmts: 1
+        *ast.ReturnStmt (go-nodes/generics.go:48:2)
+          Result[0]:
+            *ast.BinaryExpr (go-nodes/generics.go:48:9) Op: +
+              X:
+                *ast.Ident (go-nodes/generics.go:48:9) Name: a
+              Y:
+                *ast.Ident (go-nodes/generics.go:48:13) Name: b
+  *ast.FuncDecl (go-nodes/generics.go:52:1)
+    Name: Print
+    Type:
+      *ast.FuncType (go-nodes/generics.go:52:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:52:27) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:52:28)
+                Name: val
+                Type:
+                  *ast.Ident (go-nodes/generics.go:52:32) Name: T
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:52:35) Stmts: 1
+        *ast.ExprStmt (go-nodes/generics.go:53:2)
+          *ast.CallExpr (go-nodes/generics.go:53:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:53:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:53:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.CallExpr (go-nodes/generics.go:53:14)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/generics.go:53:14)
+                      X:
+                        *ast.Ident (go-nodes/generics.go:53:14) Name: val
+                      Sel: String
+  *ast.FuncDecl (go-nodes/generics.go:57:1)
+    Name: Equal
+    Type:
+      *ast.FuncType (go-nodes/generics.go:57:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:57:25) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:57:26)
+                Name: a
+                Name: b
+                Type:
+                  *ast.Ident (go-nodes/generics.go:57:31) Name: T
+        Results:
+          *ast.FieldList (go-nodes/generics.go:57:34) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:57:34)
+                Type:
+                  *ast.Ident (go-nodes/generics.go:57:34) Name: bool
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:57:39) Stmts: 1
+        *ast.ReturnStmt (go-nodes/generics.go:58:2)
+          Result[0]:
+            *ast.BinaryExpr (go-nodes/generics.go:58:9) Op: ==
+              X:
+                *ast.Ident (go-nodes/generics.go:58:9) Name: a
+              Y:
+                *ast.Ident (go-nodes/generics.go:58:14) Name: b
+  *ast.FuncDecl (go-nodes/generics.go:62:1)
+    Name: Map
+    Type:
+      *ast.FuncType (go-nodes/generics.go:62:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:62:23) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:62:24)
+                Name: slice
+                Type:
+                  *ast.ArrayType (go-nodes/generics.go:62:30)
+                    Elt:
+                      *ast.Ident (go-nodes/generics.go:62:32) Name: T
+            Field[1]:
+              *ast.Field (go-nodes/generics.go:62:35)
+                Name: f
+                Type:
+                  *ast.FuncType (go-nodes/generics.go:62:37)
+                    Params:
+                      *ast.FieldList (go-nodes/generics.go:62:41) NumFields: 1
+                        Field[0]:
+                          *ast.Field (go-nodes/generics.go:62:42)
+                            Type:
+                              *ast.Ident (go-nodes/generics.go:62:42) Name: T
+                    Results:
+                      *ast.FieldList (go-nodes/generics.go:62:45) NumFields: 1
+                        Field[0]:
+                          *ast.Field (go-nodes/generics.go:62:45)
+                            Type:
+                              *ast.Ident (go-nodes/generics.go:62:45) Name: U
+        Results:
+          *ast.FieldList (go-nodes/generics.go:62:48) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:62:48)
+                Type:
+                  *ast.ArrayType (go-nodes/generics.go:62:48)
+                    Elt:
+                      *ast.Ident (go-nodes/generics.go:62:50) Name: U
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:62:52) Stmts: 3
+        *ast.AssignStmt (go-nodes/generics.go:63:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:63:2) Name: result
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:63:12)
+              Fun:
+                *ast.Ident (go-nodes/generics.go:63:12) Name: make
+              Args:
+                [0]:
+                  *ast.ArrayType (go-nodes/generics.go:63:17)
+                    Elt:
+                      *ast.Ident (go-nodes/generics.go:63:19) Name: U
+                [1]:
+                  *ast.CallExpr (go-nodes/generics.go:63:22)
+                    Fun:
+                      *ast.Ident (go-nodes/generics.go:63:22) Name: len
+                    Args:
+                      [0]:
+                        *ast.Ident (go-nodes/generics.go:63:26) Name: slice
+        *ast.RangeStmt (go-nodes/generics.go:64:2) Token: :=
+          Key:
+            *ast.Ident (go-nodes/generics.go:64:6) Name: i
+          Value:
+            *ast.Ident (go-nodes/generics.go:64:9) Name: v
+          X:
+            *ast.Ident (go-nodes/generics.go:64:20) Name: slice
+          Body:
+            *ast.BlockStmt (go-nodes/generics.go:64:26) Stmts: 1
+              *ast.AssignStmt (go-nodes/generics.go:65:3) Token: =
+                LHS:
+                  *ast.IndexExpr (go-nodes/generics.go:65:3)
+                    X:
+                      *ast.Ident (go-nodes/generics.go:65:3) Name: result
+                    Index:
+                      *ast.Ident (go-nodes/generics.go:65:10) Name: i
+                RHS:
+                  *ast.CallExpr (go-nodes/generics.go:65:15)
+                    Fun:
+                      *ast.Ident (go-nodes/generics.go:65:15) Name: f
+                    Args:
+                      [0]:
+                        *ast.Ident (go-nodes/generics.go:65:17) Name: v
+        *ast.ReturnStmt (go-nodes/generics.go:67:2)
+          Result[0]:
+            *ast.Ident (go-nodes/generics.go:67:9) Name: result
+  *ast.FuncDecl (go-nodes/generics.go:71:1)
+    Name: Max
+    Type:
+      *ast.FuncType (go-nodes/generics.go:71:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:71:19) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:71:20)
+                Name: a
+                Name: b
+                Type:
+                  *ast.Ident (go-nodes/generics.go:71:25) Name: T
+        Results:
+          *ast.FieldList (go-nodes/generics.go:71:28) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:71:28)
+                Type:
+                  *ast.Ident (go-nodes/generics.go:71:28) Name: T
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:71:30) Stmts: 2
+        *ast.IfStmt (go-nodes/generics.go:72:2)
+          Cond:
+            *ast.BinaryExpr (go-nodes/generics.go:72:5) Op: >
+              X:
+                *ast.Ident (go-nodes/generics.go:72:5) Name: a
+              Y:
+                *ast.Ident (go-nodes/generics.go:72:9) Name: b
+          Body:
+            *ast.BlockStmt (go-nodes/generics.go:72:11) Stmts: 1
+              *ast.ReturnStmt (go-nodes/generics.go:73:3)
+                Result[0]:
+                  *ast.Ident (go-nodes/generics.go:73:10) Name: a
+        *ast.ReturnStmt (go-nodes/generics.go:75:2)
+          Result[0]:
+            *ast.Ident (go-nodes/generics.go:75:9) Name: b
+  *ast.GenDecl (go-nodes/generics.go:79:1) Token: type
+    *ast.TypeSpec (go-nodes/generics.go:79:6)
+      Name: Integer
+      Type:
+        *ast.InterfaceType (go-nodes/generics.go:79:14)
+          *ast.FieldList (go-nodes/generics.go:79:24) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:80:2)
+                Type:
+                  *ast.BinaryExpr (go-nodes/generics.go:80:2) Op: |
+                    X:
+                      *ast.BinaryExpr (go-nodes/generics.go:80:2) Op: |
+                        X:
+                          *ast.BinaryExpr (go-nodes/generics.go:80:2) Op: |
+                            X:
+                              *ast.BinaryExpr (go-nodes/generics.go:80:2) Op: |
+                                X:
+                                  *ast.UnaryExpr (go-nodes/generics.go:80:2) Op: ~
+                                    X:
+                                      *ast.Ident (go-nodes/generics.go:80:3) Name: int
+                                Y:
+                                  *ast.UnaryExpr (go-nodes/generics.go:80:9) Op: ~
+                                    X:
+                                      *ast.Ident (go-nodes/generics.go:80:10) Name: int8
+                            Y:
+                              *ast.UnaryExpr (go-nodes/generics.go:80:17) Op: ~
+                                X:
+                                  *ast.Ident (go-nodes/generics.go:80:18) Name: int16
+                        Y:
+                          *ast.UnaryExpr (go-nodes/generics.go:80:26) Op: ~
+                            X:
+                              *ast.Ident (go-nodes/generics.go:80:27) Name: int32
+                    Y:
+                      *ast.UnaryExpr (go-nodes/generics.go:80:35) Op: ~
+                        X:
+                          *ast.Ident (go-nodes/generics.go:80:36) Name: int64
+  *ast.FuncDecl (go-nodes/generics.go:84:1)
+    Name: Set
+    Receiver:
+      *ast.FieldList (go-nodes/generics.go:84:6) NumFields: 1
+        Field[0]:
+          *ast.Field (go-nodes/generics.go:84:7)
+            Name: b
+            Type:
+              *ast.StarExpr (go-nodes/generics.go:84:9)
+    Type:
+      *ast.FuncType (go-nodes/generics.go:84:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:84:21) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:84:22)
+                Name: val
+                Type:
+                  *ast.Ident (go-nodes/generics.go:84:26) Name: T
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:84:29) Stmts: 1
+        *ast.AssignStmt (go-nodes/generics.go:85:2) Token: =
+          LHS:
+            *ast.SelectorExpr (go-nodes/generics.go:85:2)
+              X:
+                *ast.Ident (go-nodes/generics.go:85:2) Name: b
+              Sel: value
+          RHS:
+            *ast.Ident (go-nodes/generics.go:85:12) Name: val
+  *ast.FuncDecl (go-nodes/generics.go:88:1)
+    Name: Get
+    Receiver:
+      *ast.FieldList (go-nodes/generics.go:88:6) NumFields: 1
+        Field[0]:
+          *ast.Field (go-nodes/generics.go:88:7)
+            Name: b
+            Type:
+              *ast.IndexExpr (go-nodes/generics.go:88:9)
+                X:
+                  *ast.Ident (go-nodes/generics.go:88:9) Name: Box
+                Index:
+                  *ast.Ident (go-nodes/generics.go:88:13) Name: T
+    Type:
+      *ast.FuncType (go-nodes/generics.go:88:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:88:20) NumFields: 0
+        Results:
+          *ast.FieldList (go-nodes/generics.go:88:23) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:88:23)
+                Type:
+                  *ast.Ident (go-nodes/generics.go:88:23) Name: T
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:88:25) Stmts: 1
+        *ast.ReturnStmt (go-nodes/generics.go:89:2)
+          Result[0]:
+            *ast.SelectorExpr (go-nodes/generics.go:89:9)
+              X:
+                *ast.Ident (go-nodes/generics.go:89:9) Name: b
+              Sel: value
+  *ast.GenDecl (go-nodes/generics.go:93:1) Token: type
+    *ast.TypeSpec (go-nodes/generics.go:93:6)
+      Name: Container
+      Type:
+        *ast.InterfaceType (go-nodes/generics.go:93:23)
+          *ast.FieldList (go-nodes/generics.go:93:33) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:94:2)
+                Name: Add
+                Type:
+                  *ast.FuncType (go-nodes/generics.go:94:5)
+                    Params:
+                      *ast.FieldList (go-nodes/generics.go:94:5) NumFields: 1
+                        Field[0]:
+                          *ast.Field (go-nodes/generics.go:94:6)
+                            Type:
+                              *ast.Ident (go-nodes/generics.go:94:6) Name: T
+            Field[1]:
+              *ast.Field (go-nodes/generics.go:95:2)
+                Name: Get
+                Type:
+                  *ast.FuncType (go-nodes/generics.go:95:5)
+                    Params:
+                      *ast.FieldList (go-nodes/generics.go:95:5) NumFields: 0
+                    Results:
+                      *ast.FieldList (go-nodes/generics.go:95:8) NumFields: 1
+                        Field[0]:
+                          *ast.Field (go-nodes/generics.go:95:8)
+                            Type:
+                              *ast.Ident (go-nodes/generics.go:95:8) Name: T
+  *ast.GenDecl (go-nodes/generics.go:99:1) Token: type
+    *ast.TypeSpec (go-nodes/generics.go:99:6)
+      Name: SliceContainer
+      Type:
+        *ast.StructType (go-nodes/generics.go:99:28)
+          *ast.FieldList (go-nodes/generics.go:99:35) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:100:2)
+                Name: items
+                Type:
+                  *ast.ArrayType (go-nodes/generics.go:100:8)
+                    Elt:
+                      *ast.Ident (go-nodes/generics.go:100:10) Name: T
+  *ast.FuncDecl (go-nodes/generics.go:103:1)
+    Name: Add
+    Receiver:
+      *ast.FieldList (go-nodes/generics.go:103:6) NumFields: 1
+        Field[0]:
+          *ast.Field (go-nodes/generics.go:103:7)
+            Name: s
+            Type:
+              *ast.StarExpr (go-nodes/generics.go:103:9)
+    Type:
+      *ast.FuncType (go-nodes/generics.go:103:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:103:32) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:103:33)
+                Name: item
+                Type:
+                  *ast.Ident (go-nodes/generics.go:103:38) Name: T
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:103:41) Stmts: 1
+        *ast.AssignStmt (go-nodes/generics.go:104:2) Token: =
+          LHS:
+            *ast.SelectorExpr (go-nodes/generics.go:104:2)
+              X:
+                *ast.Ident (go-nodes/generics.go:104:2) Name: s
+              Sel: items
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:104:12)
+              Fun:
+                *ast.Ident (go-nodes/generics.go:104:12) Name: append
+              Args:
+                [0]:
+                  *ast.SelectorExpr (go-nodes/generics.go:104:19)
+                    X:
+                      *ast.Ident (go-nodes/generics.go:104:19) Name: s
+                    Sel: items
+                [1]:
+                  *ast.Ident (go-nodes/generics.go:104:28) Name: item
+  *ast.FuncDecl (go-nodes/generics.go:107:1)
+    Name: Get
+    Receiver:
+      *ast.FieldList (go-nodes/generics.go:107:6) NumFields: 1
+        Field[0]:
+          *ast.Field (go-nodes/generics.go:107:7)
+            Name: s
+            Type:
+              *ast.StarExpr (go-nodes/generics.go:107:9)
+    Type:
+      *ast.FuncType (go-nodes/generics.go:107:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:107:32) NumFields: 0
+        Results:
+          *ast.FieldList (go-nodes/generics.go:107:35) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/generics.go:107:35)
+                Type:
+                  *ast.Ident (go-nodes/generics.go:107:35) Name: T
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:107:37) Stmts: 2
+        *ast.IfStmt (go-nodes/generics.go:108:2)
+          Cond:
+            *ast.BinaryExpr (go-nodes/generics.go:108:5) Op: ==
+              X:
+                *ast.CallExpr (go-nodes/generics.go:108:5)
+                  Fun:
+                    *ast.Ident (go-nodes/generics.go:108:5) Name: len
+                  Args:
+                    [0]:
+                      *ast.SelectorExpr (go-nodes/generics.go:108:9)
+                        X:
+                          *ast.Ident (go-nodes/generics.go:108:9) Name: s
+                        Sel: items
+              Y:
+                *ast.BasicLit (go-nodes/generics.go:108:21) Kind: INT Value: 0
+          Body:
+            *ast.BlockStmt (go-nodes/generics.go:108:23) Stmts: 2
+              *ast.DeclStmt (go-nodes/generics.go:109:3)
+                *ast.GenDecl (go-nodes/generics.go:109:3) Token: var
+                  *ast.ValueSpec (go-nodes/generics.go:109:7)
+                    Name: zero
+                    Type:
+                      *ast.Ident (go-nodes/generics.go:109:12) Name: T
+              *ast.ReturnStmt (go-nodes/generics.go:110:3)
+                Result[0]:
+                  *ast.Ident (go-nodes/generics.go:110:10) Name: zero
+        *ast.ReturnStmt (go-nodes/generics.go:112:2)
+          Result[0]:
+            *ast.IndexExpr (go-nodes/generics.go:112:9)
+              X:
+                *ast.SelectorExpr (go-nodes/generics.go:112:9)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:112:9) Name: s
+                  Sel: items
+              Index:
+                *ast.BasicLit (go-nodes/generics.go:112:17) Kind: INT Value: 0
+  *ast.FuncDecl (go-nodes/generics.go:115:1)
+    Name: funcMain
+    Type:
+      *ast.FuncType (go-nodes/generics.go:115:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:115:14) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:115:17) Stmts: 77
+        *ast.ExprStmt (go-nodes/generics.go:116:2)
+          *ast.CallExpr (go-nodes/generics.go:116:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:116:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:116:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:116:14) Kind: STRING Value: "=== generics.go AST Node Coverage ==="
+        *ast.ExprStmt (go-nodes/generics.go:117:2)
+          *ast.CallExpr (go-nodes/generics.go:117:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:117:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:117:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:117:14) Kind: STRING Value: "Exercising AST Nodes:"
+        *ast.ExprStmt (go-nodes/generics.go:120:2)
+          *ast.CallExpr (go-nodes/generics.go:120:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:120:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:120:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:120:14) Kind: STRING Value: "  ✓ Generic type with single type parameter:"
+        *ast.AssignStmt (go-nodes/generics.go:121:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:121:2) Name: intBox
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:121:12)
+              Type:
+                *ast.IndexExpr (go-nodes/generics.go:121:12)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:121:12) Name: Box
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:121:16) Name: int
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:121:21)
+        *ast.AssignStmt (go-nodes/generics.go:122:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:122:2) Name: strBox
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:122:12)
+              Type:
+                *ast.IndexExpr (go-nodes/generics.go:122:12)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:122:12) Name: Box
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:122:16) Name: string
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:122:24)
+        *ast.ExprStmt (go-nodes/generics.go:123:2)
+          *ast.CallExpr (go-nodes/generics.go:123:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:123:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:123:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:123:13) Kind: STRING Value: "    Box[int]: %+v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:123:36) Name: intBox
+        *ast.ExprStmt (go-nodes/generics.go:124:2)
+          *ast.CallExpr (go-nodes/generics.go:124:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:124:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:124:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:124:13) Kind: STRING Value: "    Box[string]: %+v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:124:39) Name: strBox
+        *ast.ExprStmt (go-nodes/generics.go:127:2)
+          *ast.CallExpr (go-nodes/generics.go:127:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:127:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:127:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:127:14) Kind: STRING Value: "  ✓ Generic type with multiple type parameters:"
+        *ast.AssignStmt (go-nodes/generics.go:128:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:128:2) Name: pair1
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:128:11)
+              Type:
+                *ast.IndexListExpr (go-nodes/generics.go:128:11)
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:128:29)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:128:41)
+        *ast.AssignStmt (go-nodes/generics.go:129:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:129:2) Name: pair2
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:129:11)
+              Type:
+                *ast.IndexListExpr (go-nodes/generics.go:129:11)
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:129:29)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:129:37)
+        *ast.ExprStmt (go-nodes/generics.go:130:2)
+          *ast.CallExpr (go-nodes/generics.go:130:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:130:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:130:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:130:13) Kind: STRING Value: "    Pair[string, int]: %+v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:130:45) Name: pair1
+        *ast.ExprStmt (go-nodes/generics.go:131:2)
+          *ast.CallExpr (go-nodes/generics.go:131:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:131:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:131:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:131:13) Kind: STRING Value: "    Pair[int, string]: %+v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:131:45) Name: pair2
+        *ast.ExprStmt (go-nodes/generics.go:134:2)
+          *ast.CallExpr (go-nodes/generics.go:134:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:134:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:134:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:134:14) Kind: STRING Value: "  ✓ Generic function instantiation:"
+        *ast.AssignStmt (go-nodes/generics.go:135:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:135:2) Name: v1
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:135:8)
+              Fun:
+                *ast.IndexExpr (go-nodes/generics.go:135:8)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:135:8) Name: Identity
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:135:17) Name: int
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:135:22) Kind: INT Value: 42
+        *ast.AssignStmt (go-nodes/generics.go:136:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:136:2) Name: v2
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:136:8)
+              Fun:
+                *ast.IndexExpr (go-nodes/generics.go:136:8)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:136:8) Name: Identity
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:136:17) Name: string
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:136:25) Kind: STRING Value: "test"
+        *ast.ExprStmt (go-nodes/generics.go:137:2)
+          *ast.CallExpr (go-nodes/generics.go:137:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:137:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:137:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:137:13) Kind: STRING Value: "    Identity[int](42): %d\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:137:44) Name: v1
+        *ast.ExprStmt (go-nodes/generics.go:138:2)
+          *ast.CallExpr (go-nodes/generics.go:138:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:138:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:138:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:138:13) Kind: STRING Value: "    Identity[string](\"test\"): %s\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:138:53) Name: v2
+        *ast.ExprStmt (go-nodes/generics.go:141:2)
+          *ast.CallExpr (go-nodes/generics.go:141:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:141:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:141:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:141:14) Kind: STRING Value: "  ✓ Generic function with type inference:"
+        *ast.AssignStmt (go-nodes/generics.go:142:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:142:2) Name: v3
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:142:8)
+              Fun:
+                *ast.Ident (go-nodes/generics.go:142:8) Name: Identity
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:142:17) Kind: INT Value: 100
+        *ast.AssignStmt (go-nodes/generics.go:143:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:143:2) Name: v4
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:143:8)
+              Fun:
+                *ast.Ident (go-nodes/generics.go:143:8) Name: Identity
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:143:17) Kind: STRING Value: "infer"
+        *ast.ExprStmt (go-nodes/generics.go:144:2)
+          *ast.CallExpr (go-nodes/generics.go:144:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:144:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:144:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:144:13) Kind: STRING Value: "    Identity(100): %d (inferred int)\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:144:55) Name: v3
+        *ast.ExprStmt (go-nodes/generics.go:145:2)
+          *ast.CallExpr (go-nodes/generics.go:145:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:145:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:145:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:145:13) Kind: STRING Value: "    Identity(\"infer\"): %s (inferred string)\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:145:64) Name: v4
+        *ast.ExprStmt (go-nodes/generics.go:148:2)
+          *ast.CallExpr (go-nodes/generics.go:148:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:148:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:148:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:148:14) Kind: STRING Value: "  ✓ Generic function with multiple type parameters:"
+        *ast.AssignStmt (go-nodes/generics.go:149:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:149:2) Name: p1
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:149:8)
+              Fun:
+                *ast.IndexListExpr (go-nodes/generics.go:149:8)
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:149:30) Kind: STRING Value: "count"
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:149:39) Kind: INT Value: 5
+        *ast.AssignStmt (go-nodes/generics.go:150:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:150:2) Name: p2
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:150:8)
+              Fun:
+                *ast.Ident (go-nodes/generics.go:150:8) Name: MakePair
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:150:17) Kind: STRING Value: "name"
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:150:25) Kind: STRING Value: "Alice"
+        *ast.ExprStmt (go-nodes/generics.go:151:2)
+          *ast.CallExpr (go-nodes/generics.go:151:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:151:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:151:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:151:13) Kind: STRING Value: "    MakePair[string, int]: %+v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:151:49) Name: p1
+        *ast.ExprStmt (go-nodes/generics.go:152:2)
+          *ast.CallExpr (go-nodes/generics.go:152:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:152:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:152:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:152:13) Kind: STRING Value: "    MakePair (inferred): %+v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:152:47) Name: p2
+        *ast.ExprStmt (go-nodes/generics.go:155:2)
+          *ast.CallExpr (go-nodes/generics.go:155:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:155:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:155:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:155:14) Kind: STRING Value: "  ✓ Generic function with Number constraint:"
+        *ast.AssignStmt (go-nodes/generics.go:156:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:156:2) Name: sum1
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:156:10)
+              Fun:
+                *ast.IndexExpr (go-nodes/generics.go:156:10)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:156:10) Name: Add
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:156:14) Name: int
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:156:19) Kind: INT Value: 5
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:156:22) Kind: INT Value: 3
+        *ast.AssignStmt (go-nodes/generics.go:157:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:157:2) Name: sum2
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:157:10)
+              Fun:
+                *ast.IndexExpr (go-nodes/generics.go:157:10)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:157:10) Name: Add
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:157:14) Name: float64
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:157:23) Kind: FLOAT Value: 3.14
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:157:29) Kind: FLOAT Value: 2.86
+        *ast.ExprStmt (go-nodes/generics.go:158:2)
+          *ast.CallExpr (go-nodes/generics.go:158:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:158:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:158:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:158:13) Kind: STRING Value: "    Add[int](5, 3): %d\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:158:41) Name: sum1
+        *ast.ExprStmt (go-nodes/generics.go:159:2)
+          *ast.CallExpr (go-nodes/generics.go:159:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:159:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:159:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:159:13) Kind: STRING Value: "    Add[float64](3.14, 2.86): %f\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:159:51) Name: sum2
+        *ast.ExprStmt (go-nodes/generics.go:162:2)
+          *ast.CallExpr (go-nodes/generics.go:162:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:162:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:162:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:162:14) Kind: STRING Value: "  ✓ Generic function with comparable constraint:"
+        *ast.AssignStmt (go-nodes/generics.go:163:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:163:2) Name: eq1
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:163:9)
+              Fun:
+                *ast.IndexExpr (go-nodes/generics.go:163:9)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:163:9) Name: Equal
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:163:15) Name: int
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:163:20) Kind: INT Value: 5
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:163:23) Kind: INT Value: 5
+        *ast.AssignStmt (go-nodes/generics.go:164:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:164:2) Name: eq2
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:164:9)
+              Fun:
+                *ast.IndexExpr (go-nodes/generics.go:164:9)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:164:9) Name: Equal
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:164:15) Name: string
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:164:23) Kind: STRING Value: "hi"
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:164:29) Kind: STRING Value: "bye"
+        *ast.ExprStmt (go-nodes/generics.go:165:2)
+          *ast.CallExpr (go-nodes/generics.go:165:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:165:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:165:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:165:13) Kind: STRING Value: "    Equal[int](5, 5): %v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:165:43) Name: eq1
+        *ast.ExprStmt (go-nodes/generics.go:166:2)
+          *ast.CallExpr (go-nodes/generics.go:166:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:166:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:166:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:166:13) Kind: STRING Value: "    Equal[string](\"hi\", \"bye\"): %v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:166:57) Name: eq2
+        *ast.ExprStmt (go-nodes/generics.go:169:2)
+          *ast.CallExpr (go-nodes/generics.go:169:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:169:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:169:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:169:14) Kind: STRING Value: "  ✓ Generic higher-order function (Map):"
+        *ast.AssignStmt (go-nodes/generics.go:170:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:170:2) Name: ints
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:170:10)
+              Type:
+                *ast.ArrayType (go-nodes/generics.go:170:10)
+                  Elt:
+                    *ast.Ident (go-nodes/generics.go:170:12) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:170:16) Kind: INT Value: 1
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:170:19) Kind: INT Value: 2
+                [2]:
+                  *ast.BasicLit (go-nodes/generics.go:170:22) Kind: INT Value: 3
+                [3]:
+                  *ast.BasicLit (go-nodes/generics.go:170:25) Kind: INT Value: 4
+                [4]:
+                  *ast.BasicLit (go-nodes/generics.go:170:28) Kind: INT Value: 5
+        *ast.AssignStmt (go-nodes/generics.go:171:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:171:2) Name: doubled
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:171:13)
+              Fun:
+                *ast.Ident (go-nodes/generics.go:171:13) Name: Map
+              Args:
+                [0]:
+                  *ast.Ident (go-nodes/generics.go:171:17) Name: ints
+                [1]:
+                  *ast.FuncLit (go-nodes/generics.go:171:23)
+        *ast.ExprStmt (go-nodes/generics.go:172:2)
+          *ast.CallExpr (go-nodes/generics.go:172:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:172:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:172:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:172:13) Kind: STRING Value: "    Map(ints, double): %v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:172:44) Name: doubled
+        *ast.AssignStmt (go-nodes/generics.go:174:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:174:2) Name: strs
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:174:10)
+              Type:
+                *ast.ArrayType (go-nodes/generics.go:174:10)
+                  Elt:
+                    *ast.Ident (go-nodes/generics.go:174:12) Name: string
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:174:19) Kind: STRING Value: "a"
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:174:24) Kind: STRING Value: "b"
+                [2]:
+                  *ast.BasicLit (go-nodes/generics.go:174:29) Kind: STRING Value: "c"
+        *ast.AssignStmt (go-nodes/generics.go:175:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:175:2) Name: lengths
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:175:13)
+              Fun:
+                *ast.Ident (go-nodes/generics.go:175:13) Name: Map
+              Args:
+                [0]:
+                  *ast.Ident (go-nodes/generics.go:175:17) Name: strs
+                [1]:
+                  *ast.FuncLit (go-nodes/generics.go:175:23)
+        *ast.ExprStmt (go-nodes/generics.go:176:2)
+          *ast.CallExpr (go-nodes/generics.go:176:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:176:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:176:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:176:13) Kind: STRING Value: "    Map(strings, len): %v\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:176:44) Name: lengths
+        *ast.ExprStmt (go-nodes/generics.go:179:2)
+          *ast.CallExpr (go-nodes/generics.go:179:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:179:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:179:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:179:14) Kind: STRING Value: "  ✓ Generic Max with Number constraint:"
+        *ast.AssignStmt (go-nodes/generics.go:180:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:180:2) Name: maxInt
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:180:12)
+              Fun:
+                *ast.Ident (go-nodes/generics.go:180:12) Name: Max
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:180:16) Kind: INT Value: 10
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:180:20) Kind: INT Value: 20
+        *ast.AssignStmt (go-nodes/generics.go:181:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:181:2) Name: maxFloat
+          RHS:
+            *ast.CallExpr (go-nodes/generics.go:181:14)
+              Fun:
+                *ast.Ident (go-nodes/generics.go:181:14) Name: Max
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/generics.go:181:18) Kind: FLOAT Value: 3.14
+                [1]:
+                  *ast.BasicLit (go-nodes/generics.go:181:24) Kind: FLOAT Value: 2.71
+        *ast.ExprStmt (go-nodes/generics.go:182:2)
+          *ast.CallExpr (go-nodes/generics.go:182:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:182:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:182:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:182:13) Kind: STRING Value: "    Max(10, 20): %d\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:182:38) Name: maxInt
+        *ast.ExprStmt (go-nodes/generics.go:183:2)
+          *ast.CallExpr (go-nodes/generics.go:183:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:183:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:183:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:183:13) Kind: STRING Value: "    Max(3.14, 2.71): %f\n"
+              [1]:
+                *ast.Ident (go-nodes/generics.go:183:42) Name: maxFloat
+        *ast.ExprStmt (go-nodes/generics.go:186:2)
+          *ast.CallExpr (go-nodes/generics.go:186:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:186:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:186:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:186:14) Kind: STRING Value: "  ✓ Generic type methods:"
+        *ast.AssignStmt (go-nodes/generics.go:187:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:187:2) Name: box
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:187:9)
+              Type:
+                *ast.IndexExpr (go-nodes/generics.go:187:9)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:187:9) Name: Box
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:187:13) Name: int
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:187:18)
+        *ast.ExprStmt (go-nodes/generics.go:188:2)
+          *ast.CallExpr (go-nodes/generics.go:188:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:188:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:188:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:188:13) Kind: STRING Value: "    box.Get(): %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/generics.go:188:36)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/generics.go:188:36)
+                      X:
+                        *ast.Ident (go-nodes/generics.go:188:36) Name: box
+                      Sel: Get
+        *ast.ExprStmt (go-nodes/generics.go:189:2)
+          *ast.CallExpr (go-nodes/generics.go:189:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:189:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:189:2) Name: box
+                Sel: Set
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:189:10) Kind: INT Value: 20
+        *ast.ExprStmt (go-nodes/generics.go:190:2)
+          *ast.CallExpr (go-nodes/generics.go:190:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:190:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:190:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:190:13) Kind: STRING Value: "    After box.Set(20): %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/generics.go:190:44)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/generics.go:190:44)
+                      X:
+                        *ast.Ident (go-nodes/generics.go:190:44) Name: box
+                      Sel: Get
+        *ast.ExprStmt (go-nodes/generics.go:193:2)
+          *ast.CallExpr (go-nodes/generics.go:193:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:193:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:193:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:193:14) Kind: STRING Value: "  ✓ Generic interface:"
+        *ast.DeclStmt (go-nodes/generics.go:194:2)
+          *ast.GenDecl (go-nodes/generics.go:194:2) Token: var
+            *ast.ValueSpec (go-nodes/generics.go:194:6)
+              Name: container
+              Type:
+                *ast.IndexExpr (go-nodes/generics.go:194:16)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:194:16) Name: Container
+                  Index:
+                    *ast.Ident (go-nodes/generics.go:194:26) Name: string
+              Value[0]:
+                *ast.UnaryExpr (go-nodes/generics.go:194:36) Op: &
+                  X:
+                    *ast.CompositeLit (go-nodes/generics.go:194:37)
+                      Type:
+                        *ast.IndexExpr (go-nodes/generics.go:194:37)
+                          X:
+                            *ast.Ident (go-nodes/generics.go:194:37) Name: SliceContainer
+                          Index:
+                            *ast.Ident (go-nodes/generics.go:194:52) Name: string
+        *ast.ExprStmt (go-nodes/generics.go:195:2)
+          *ast.CallExpr (go-nodes/generics.go:195:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:195:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:195:2) Name: container
+                Sel: Add
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:195:16) Kind: STRING Value: "first"
+        *ast.ExprStmt (go-nodes/generics.go:196:2)
+          *ast.CallExpr (go-nodes/generics.go:196:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:196:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:196:2) Name: container
+                Sel: Add
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:196:16) Kind: STRING Value: "second"
+        *ast.ExprStmt (go-nodes/generics.go:197:2)
+          *ast.CallExpr (go-nodes/generics.go:197:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:197:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:197:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:197:13) Kind: STRING Value: "    Container[string].Get(): %s\n"
+              [1]:
+                *ast.CallExpr (go-nodes/generics.go:197:50)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/generics.go:197:50)
+                      X:
+                        *ast.Ident (go-nodes/generics.go:197:50) Name: container
+                      Sel: Get
+        *ast.ExprStmt (go-nodes/generics.go:200:2)
+          *ast.CallExpr (go-nodes/generics.go:200:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:200:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:200:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:200:14) Kind: STRING Value: "  ✓ Type constraints with union (|):"
+        *ast.ExprStmt (go-nodes/generics.go:201:2)
+          *ast.CallExpr (go-nodes/generics.go:201:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:201:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:201:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:201:14) Kind: STRING Value: "    Number interface defined with union of numeric types"
+        *ast.ExprStmt (go-nodes/generics.go:204:2)
+          *ast.CallExpr (go-nodes/generics.go:204:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:204:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:204:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:204:14) Kind: STRING Value: "  ✓ Type constraints with approximation (~):"
+        *ast.ExprStmt (go-nodes/generics.go:205:2)
+          *ast.CallExpr (go-nodes/generics.go:205:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:205:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:205:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:205:14) Kind: STRING Value: "    Integer interface uses ~int | ~int8 | ..."
+        *ast.ExprStmt (go-nodes/generics.go:208:2)
+          *ast.CallExpr (go-nodes/generics.go:208:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:208:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:208:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:208:14) Kind: STRING Value: "  ✓ Nested generic types:"
+        *ast.AssignStmt (go-nodes/generics.go:209:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:209:2) Name: nestedBox
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:209:15)
+              Type:
+                *ast.IndexExpr (go-nodes/generics.go:209:15)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:209:15) Name: Box
+                  Index:
+                    *ast.IndexExpr (go-nodes/generics.go:209:19)
+                      X:
+                        *ast.Ident (go-nodes/generics.go:209:19) Name: Box
+                      Index:
+                        *ast.Ident (go-nodes/generics.go:209:23) Name: int
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:209:29)
+        *ast.ExprStmt (go-nodes/generics.go:210:2)
+          *ast.CallExpr (go-nodes/generics.go:210:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:210:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:210:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:210:13) Kind: STRING Value: "    Box[Box[int]]: inner value = %d\n"
+              [1]:
+                *ast.SelectorExpr (go-nodes/generics.go:210:54)
+                  X:
+                    *ast.SelectorExpr (go-nodes/generics.go:210:54)
+                      X:
+                        *ast.Ident (go-nodes/generics.go:210:54) Name: nestedBox
+                      Sel: value
+                  Sel: value
+        *ast.ExprStmt (go-nodes/generics.go:213:2)
+          *ast.CallExpr (go-nodes/generics.go:213:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:213:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:213:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:213:14) Kind: STRING Value: "  ✓ Generic with slice types:"
+        *ast.AssignStmt (go-nodes/generics.go:214:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:214:2) Name: sliceBox
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:214:14)
+              Type:
+                *ast.IndexExpr (go-nodes/generics.go:214:14)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:214:14) Name: Box
+                  Index:
+                    *ast.ArrayType (go-nodes/generics.go:214:18)
+                      Elt:
+                        *ast.Ident (go-nodes/generics.go:214:20) Name: int
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:214:25)
+        *ast.ExprStmt (go-nodes/generics.go:215:2)
+          *ast.CallExpr (go-nodes/generics.go:215:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:215:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:215:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:215:13) Kind: STRING Value: "    Box[[]int]: %v\n"
+              [1]:
+                *ast.SelectorExpr (go-nodes/generics.go:215:37)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:215:37) Name: sliceBox
+                  Sel: value
+        *ast.AssignStmt (go-nodes/generics.go:218:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/generics.go:218:2) Name: mapBox
+          RHS:
+            *ast.CompositeLit (go-nodes/generics.go:218:12)
+              Type:
+                *ast.IndexExpr (go-nodes/generics.go:218:12)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:218:12) Name: Box
+                  Index:
+                    *ast.MapType (go-nodes/generics.go:218:16)
+                      Key:
+                        *ast.Ident (go-nodes/generics.go:218:20) Name: string
+                      Value:
+                        *ast.Ident (go-nodes/generics.go:218:27) Name: int
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/generics.go:218:32)
+        *ast.ExprStmt (go-nodes/generics.go:219:2)
+          *ast.CallExpr (go-nodes/generics.go:219:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:219:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:219:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:219:13) Kind: STRING Value: "    Box[map[string]int]: %v\n"
+              [1]:
+                *ast.SelectorExpr (go-nodes/generics.go:219:46)
+                  X:
+                    *ast.Ident (go-nodes/generics.go:219:46) Name: mapBox
+                  Sel: value
+        *ast.ExprStmt (go-nodes/generics.go:222:2)
+          *ast.CallExpr (go-nodes/generics.go:222:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:222:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:222:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:222:14) Kind: STRING Value: "  ✓ any constraint (builtin):"
+        *ast.ExprStmt (go-nodes/generics.go:223:2)
+          *ast.CallExpr (go-nodes/generics.go:223:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:223:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:223:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:223:14) Kind: STRING Value: "    Used in Box[T any] and Identity[T any]"
+        *ast.ExprStmt (go-nodes/generics.go:225:2)
+          *ast.CallExpr (go-nodes/generics.go:225:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:225:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:225:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:225:14) Kind: STRING Value: "Summary: Comprehensive generics AST node coverage (Go 1.18+)"
+        *ast.ExprStmt (go-nodes/generics.go:226:2)
+          *ast.CallExpr (go-nodes/generics.go:226:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:226:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:226:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:226:14) Kind: STRING Value: "Primary AST Nodes: ast.IndexListExpr, ast.FieldList (type parameters)"
+        *ast.ExprStmt (go-nodes/generics.go:227:2)
+          *ast.CallExpr (go-nodes/generics.go:227:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:227:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:227:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:227:14) Kind: STRING Value: "Features: type parameters, constraints, inference, generic types/functions/methods"
+        *ast.ExprStmt (go-nodes/generics.go:228:2)
+          *ast.CallExpr (go-nodes/generics.go:228:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/generics.go:228:2)
+                X:
+                  *ast.Ident (go-nodes/generics.go:228:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/generics.go:228:14) Kind: STRING Value: "========================================"
+  *ast.FuncDecl (go-nodes/generics.go:231:1)
+    Name: main
+    Type:
+      *ast.FuncType (go-nodes/generics.go:231:1)
+        Params:
+          *ast.FieldList (go-nodes/generics.go:231:10) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/generics.go:231:13) Stmts: 1
+        *ast.ExprStmt (go-nodes/generics.go:232:2)
+          *ast.CallExpr (go-nodes/generics.go:232:2)
+            Fun:
+              *ast.Ident (go-nodes/generics.go:232:2) Name: funcMain

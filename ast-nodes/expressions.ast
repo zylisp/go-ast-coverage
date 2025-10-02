@@ -1,0 +1,1319 @@
+=== AST for expressions.go ===
+
+File Information:
+  Package: main
+  Position: go-nodes/expressions.go:3:1
+  Imports:
+    "fmt"
+  Comment Groups: 16
+  Declarations: 4
+
+=== AST Node Tree ===
+
+*ast.File (go-nodes/expressions.go:3:1)
+  Package: main
+  *ast.GenDecl (go-nodes/expressions.go:5:1) Token: import
+    *ast.ImportSpec (go-nodes/expressions.go:5:8)
+      Path: "fmt"
+  *ast.FuncDecl (go-nodes/expressions.go:22:1)
+    Name: main
+    Type:
+      *ast.FuncType (go-nodes/expressions.go:22:1)
+        Params:
+          *ast.FieldList (go-nodes/expressions.go:22:10) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/expressions.go:22:13) Stmts: 90
+        *ast.ExprStmt (go-nodes/expressions.go:23:2)
+          *ast.CallExpr (go-nodes/expressions.go:23:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:23:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:23:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:23:14) Kind: STRING Value: "=== expressions.go AST Node Coverage ==="
+        *ast.ExprStmt (go-nodes/expressions.go:24:2)
+          *ast.CallExpr (go-nodes/expressions.go:24:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:24:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:24:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:24:14) Kind: STRING Value: "Exercising AST Nodes:"
+        *ast.AssignStmt (go-nodes/expressions.go:27:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:27:2) Name: result
+          RHS:
+            *ast.BinaryExpr (go-nodes/expressions.go:27:12) Op: *
+              X:
+                *ast.ParenExpr (go-nodes/expressions.go:27:12)
+              Y:
+                *ast.BasicLit (go-nodes/expressions.go:27:22) Kind: INT Value: 4
+        *ast.ExprStmt (go-nodes/expressions.go:28:2)
+          *ast.CallExpr (go-nodes/expressions.go:28:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:28:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:28:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:28:13) Kind: STRING Value: "  ✓ ast.ParenExpr: (2 + 3) * 4 = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:28:56) Name: result
+        *ast.ExprStmt (go-nodes/expressions.go:31:2)
+          *ast.CallExpr (go-nodes/expressions.go:31:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:31:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:31:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:31:14) Kind: STRING Value: "  ✓ ast.BinaryExpr (arithmetic):"
+        *ast.ExprStmt (go-nodes/expressions.go:32:2)
+          *ast.CallExpr (go-nodes/expressions.go:32:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:32:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:32:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:32:13) Kind: STRING Value: "    ADD: 5 + 3 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:32:38) Op: +
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:32:38) Kind: INT Value: 5
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:32:40) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:33:2)
+          *ast.CallExpr (go-nodes/expressions.go:33:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:33:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:33:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:33:13) Kind: STRING Value: "    SUB: 5 - 3 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:33:38) Op: -
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:33:38) Kind: INT Value: 5
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:33:40) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:34:2)
+          *ast.CallExpr (go-nodes/expressions.go:34:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:34:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:34:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:34:13) Kind: STRING Value: "    MUL: 5 * 3 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:34:38) Op: *
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:34:38) Kind: INT Value: 5
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:34:40) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:35:2)
+          *ast.CallExpr (go-nodes/expressions.go:35:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:35:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:35:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:35:13) Kind: STRING Value: "    QUO: 15 / 3 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:35:39) Op: /
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:35:39) Kind: INT Value: 15
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:35:42) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:36:2)
+          *ast.CallExpr (go-nodes/expressions.go:36:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:36:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:36:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:36:13) Kind: STRING Value: "    REM: 17 %% 5 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:36:40) Op: %
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:36:40) Kind: INT Value: 17
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:36:43) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/expressions.go:38:2)
+          *ast.CallExpr (go-nodes/expressions.go:38:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:38:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:38:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:38:14) Kind: STRING Value: "  ✓ ast.BinaryExpr (bitwise):"
+        *ast.ExprStmt (go-nodes/expressions.go:39:2)
+          *ast.CallExpr (go-nodes/expressions.go:39:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:39:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:39:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:39:13) Kind: STRING Value: "    AND: 12 & 10 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:39:40) Op: &
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:39:40) Kind: INT Value: 12
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:39:43) Kind: INT Value: 10
+        *ast.ExprStmt (go-nodes/expressions.go:40:2)
+          *ast.CallExpr (go-nodes/expressions.go:40:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:40:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:40:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:40:13) Kind: STRING Value: "    OR: 12 | 10 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:40:39) Op: |
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:40:39) Kind: INT Value: 12
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:40:42) Kind: INT Value: 10
+        *ast.ExprStmt (go-nodes/expressions.go:41:2)
+          *ast.CallExpr (go-nodes/expressions.go:41:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:41:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:41:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:41:13) Kind: STRING Value: "    XOR: 12 ^ 10 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:41:40) Op: ^
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:41:40) Kind: INT Value: 12
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:41:43) Kind: INT Value: 10
+        *ast.ExprStmt (go-nodes/expressions.go:42:2)
+          *ast.CallExpr (go-nodes/expressions.go:42:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:42:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:42:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:42:13) Kind: STRING Value: "    AND_NOT: 12 &^ 10 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:42:45) Op: &^
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:42:45) Kind: INT Value: 12
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:42:49) Kind: INT Value: 10
+        *ast.ExprStmt (go-nodes/expressions.go:43:2)
+          *ast.CallExpr (go-nodes/expressions.go:43:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:43:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:43:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:43:13) Kind: STRING Value: "    SHL: 3 << 2 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:43:39) Op: <<
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:43:39) Kind: INT Value: 3
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:43:42) Kind: INT Value: 2
+        *ast.ExprStmt (go-nodes/expressions.go:44:2)
+          *ast.CallExpr (go-nodes/expressions.go:44:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:44:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:44:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:44:13) Kind: STRING Value: "    SHR: 12 >> 2 = %d\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:44:40) Op: >>
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:44:40) Kind: INT Value: 12
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:44:44) Kind: INT Value: 2
+        *ast.ExprStmt (go-nodes/expressions.go:46:2)
+          *ast.CallExpr (go-nodes/expressions.go:46:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:46:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:46:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:46:14) Kind: STRING Value: "  ✓ ast.BinaryExpr (comparison):"
+        *ast.ExprStmt (go-nodes/expressions.go:47:2)
+          *ast.CallExpr (go-nodes/expressions.go:47:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:47:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:47:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:47:13) Kind: STRING Value: "    EQL: 5 == 5 = %v\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:47:39) Op: ==
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:47:39) Kind: INT Value: 5
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:47:44) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/expressions.go:48:2)
+          *ast.CallExpr (go-nodes/expressions.go:48:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:48:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:48:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:48:13) Kind: STRING Value: "    NEQ: 5 != 3 = %v\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:48:39) Op: !=
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:48:39) Kind: INT Value: 5
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:48:44) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:49:2)
+          *ast.CallExpr (go-nodes/expressions.go:49:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:49:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:49:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:49:13) Kind: STRING Value: "    LSS: 3 < 5 = %v\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:49:38) Op: <
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:49:38) Kind: INT Value: 3
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:49:42) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/expressions.go:50:2)
+          *ast.CallExpr (go-nodes/expressions.go:50:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:50:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:50:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:50:13) Kind: STRING Value: "    LEQ: 5 <= 5 = %v\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:50:39) Op: <=
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:50:39) Kind: INT Value: 5
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:50:44) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/expressions.go:51:2)
+          *ast.CallExpr (go-nodes/expressions.go:51:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:51:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:51:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:51:13) Kind: STRING Value: "    GTR: 5 > 3 = %v\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:51:38) Op: >
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:51:38) Kind: INT Value: 5
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:51:42) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:52:2)
+          *ast.CallExpr (go-nodes/expressions.go:52:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:52:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:52:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:52:13) Kind: STRING Value: "    GEQ: 5 >= 5 = %v\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:52:39) Op: >=
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:52:39) Kind: INT Value: 5
+                  Y:
+                    *ast.BasicLit (go-nodes/expressions.go:52:44) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/expressions.go:54:2)
+          *ast.CallExpr (go-nodes/expressions.go:54:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:54:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:54:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:54:14) Kind: STRING Value: "  ✓ ast.BinaryExpr (logical):"
+        *ast.ExprStmt (go-nodes/expressions.go:55:2)
+          *ast.CallExpr (go-nodes/expressions.go:55:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:55:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:55:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:55:13) Kind: STRING Value: "    LAND: true && false = %v\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:55:47) Op: &&
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:55:47) Name: true
+                  Y:
+                    *ast.Ident (go-nodes/expressions.go:55:55) Name: false
+        *ast.ExprStmt (go-nodes/expressions.go:56:2)
+          *ast.CallExpr (go-nodes/expressions.go:56:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:56:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:56:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:56:13) Kind: STRING Value: "    LOR: true || false = %v\n"
+              [1]:
+                *ast.BinaryExpr (go-nodes/expressions.go:56:46) Op: ||
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:56:46) Name: true
+                  Y:
+                    *ast.Ident (go-nodes/expressions.go:56:54) Name: false
+        *ast.ExprStmt (go-nodes/expressions.go:59:2)
+          *ast.CallExpr (go-nodes/expressions.go:59:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:59:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:59:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:59:14) Kind: STRING Value: "  ✓ ast.UnaryExpr:"
+        *ast.DeclStmt (go-nodes/expressions.go:60:2)
+          *ast.GenDecl (go-nodes/expressions.go:60:2) Token: var
+            *ast.ValueSpec (go-nodes/expressions.go:60:6)
+              Name: x
+              Type:
+                *ast.Ident (go-nodes/expressions.go:60:8) Name: int
+              Value[0]:
+                *ast.BasicLit (go-nodes/expressions.go:60:14) Kind: INT Value: 42
+        *ast.DeclStmt (go-nodes/expressions.go:61:2)
+          *ast.GenDecl (go-nodes/expressions.go:61:2) Token: var
+            *ast.ValueSpec (go-nodes/expressions.go:61:6)
+              Name: ptr
+              Type:
+                *ast.StarExpr (go-nodes/expressions.go:61:10)
+              Value[0]:
+                *ast.UnaryExpr (go-nodes/expressions.go:61:17) Op: &
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:61:18) Name: x
+        *ast.ExprStmt (go-nodes/expressions.go:62:2)
+          *ast.CallExpr (go-nodes/expressions.go:62:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:62:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:62:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:62:13) Kind: STRING Value: "    ADD (unary plus): +42 = %d\n"
+              [1]:
+                *ast.UnaryExpr (go-nodes/expressions.go:62:49) Op: +
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:62:50) Kind: INT Value: 42
+        *ast.ExprStmt (go-nodes/expressions.go:63:2)
+          *ast.CallExpr (go-nodes/expressions.go:63:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:63:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:63:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:63:13) Kind: STRING Value: "    SUB (unary minus): -42 = %d\n"
+              [1]:
+                *ast.UnaryExpr (go-nodes/expressions.go:63:50) Op: -
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:63:51) Kind: INT Value: 42
+        *ast.ExprStmt (go-nodes/expressions.go:64:2)
+          *ast.CallExpr (go-nodes/expressions.go:64:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:64:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:64:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:64:13) Kind: STRING Value: "    NOT: !true = %v\n"
+              [1]:
+                *ast.UnaryExpr (go-nodes/expressions.go:64:38) Op: !
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:64:39) Name: true
+        *ast.ExprStmt (go-nodes/expressions.go:65:2)
+          *ast.CallExpr (go-nodes/expressions.go:65:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:65:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:65:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:65:13) Kind: STRING Value: "    XOR (bitwise not): ^42 = %d\n"
+              [1]:
+                *ast.UnaryExpr (go-nodes/expressions.go:65:50) Op: ^
+                  X:
+                    *ast.BasicLit (go-nodes/expressions.go:65:51) Kind: INT Value: 42
+        *ast.ExprStmt (go-nodes/expressions.go:66:2)
+          *ast.CallExpr (go-nodes/expressions.go:66:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:66:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:66:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:66:13) Kind: STRING Value: "    AND (address-of): &x = %p\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:66:48) Name: ptr
+        *ast.ExprStmt (go-nodes/expressions.go:67:2)
+          *ast.CallExpr (go-nodes/expressions.go:67:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:67:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:67:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:67:13) Kind: STRING Value: "    MUL (dereference): *ptr = %d\n"
+              [1]:
+                *ast.StarExpr (go-nodes/expressions.go:67:51)
+        *ast.ExprStmt (go-nodes/expressions.go:68:2)
+          *ast.CallExpr (go-nodes/expressions.go:68:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:68:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:68:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:68:13) Kind: STRING Value: "    ARROW (receive): will be in channels\n"
+        *ast.DeclStmt (go-nodes/expressions.go:71:2)
+          *ast.GenDecl (go-nodes/expressions.go:71:2) Token: var
+            *ast.ValueSpec (go-nodes/expressions.go:71:6)
+              Name: value
+              Type:
+                *ast.Ident (go-nodes/expressions.go:71:12) Name: int
+              Value[0]:
+                *ast.BasicLit (go-nodes/expressions.go:71:18) Kind: INT Value: 100
+        *ast.DeclStmt (go-nodes/expressions.go:72:2)
+          *ast.GenDecl (go-nodes/expressions.go:72:2) Token: var
+            *ast.ValueSpec (go-nodes/expressions.go:72:6)
+              Name: pointer
+              Type:
+                *ast.StarExpr (go-nodes/expressions.go:72:14)
+              Value[0]:
+                *ast.UnaryExpr (go-nodes/expressions.go:72:21) Op: &
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:72:22) Name: value
+        *ast.DeclStmt (go-nodes/expressions.go:73:2)
+          *ast.GenDecl (go-nodes/expressions.go:73:2) Token: var
+            *ast.ValueSpec (go-nodes/expressions.go:73:6)
+              Name: deref
+              Type:
+                *ast.Ident (go-nodes/expressions.go:73:12) Name: int
+              Value[0]:
+                *ast.StarExpr (go-nodes/expressions.go:73:18)
+        *ast.ExprStmt (go-nodes/expressions.go:74:2)
+          *ast.CallExpr (go-nodes/expressions.go:74:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:74:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:74:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:74:13) Kind: STRING Value: "  ✓ ast.StarExpr (dereference): *pointer = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:74:66) Name: deref
+        *ast.DeclStmt (go-nodes/expressions.go:77:2)
+          *ast.GenDecl (go-nodes/expressions.go:77:2) Token: type
+            *ast.TypeSpec (go-nodes/expressions.go:77:7)
+              Name: Point
+              Type:
+                *ast.StructType (go-nodes/expressions.go:77:13)
+                  *ast.FieldList (go-nodes/expressions.go:77:20) NumFields: 2
+                    Field[0]:
+                      *ast.Field (go-nodes/expressions.go:78:3)
+                        Name: X
+                        Name: Y
+                        Type:
+                          *ast.Ident (go-nodes/expressions.go:78:8) Name: int
+        *ast.AssignStmt (go-nodes/expressions.go:80:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:80:2) Name: p
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:80:7)
+              Type:
+                *ast.Ident (go-nodes/expressions.go:80:7) Name: Point
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:80:13)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:80:20)
+        *ast.ExprStmt (go-nodes/expressions.go:81:2)
+          *ast.CallExpr (go-nodes/expressions.go:81:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:81:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:81:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:81:13) Kind: STRING Value: "  ✓ ast.SelectorExpr (field): p.X = %d, p.Y = %d\n"
+              [1]:
+                *ast.SelectorExpr (go-nodes/expressions.go:81:69)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:81:69) Name: p
+                  Sel: X
+              [2]:
+                *ast.SelectorExpr (go-nodes/expressions.go:81:74)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:81:74) Name: p
+                  Sel: Y
+        *ast.ExprStmt (go-nodes/expressions.go:82:2)
+          *ast.CallExpr (go-nodes/expressions.go:82:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:82:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:82:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:82:13) Kind: STRING Value: "  ✓ ast.SelectorExpr (package.Name): fmt.Println\n"
+        *ast.AssignStmt (go-nodes/expressions.go:85:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:85:2) Name: arr
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:85:9)
+              Type:
+                *ast.ArrayType (go-nodes/expressions.go:85:9)
+                  Len:
+                    *ast.BasicLit (go-nodes/expressions.go:85:10) Kind: INT Value: 5
+                  Elt:
+                    *ast.Ident (go-nodes/expressions.go:85:12) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/expressions.go:85:16) Kind: INT Value: 10
+                [1]:
+                  *ast.BasicLit (go-nodes/expressions.go:85:20) Kind: INT Value: 20
+                [2]:
+                  *ast.BasicLit (go-nodes/expressions.go:85:24) Kind: INT Value: 30
+                [3]:
+                  *ast.BasicLit (go-nodes/expressions.go:85:28) Kind: INT Value: 40
+                [4]:
+                  *ast.BasicLit (go-nodes/expressions.go:85:32) Kind: INT Value: 50
+        *ast.AssignStmt (go-nodes/expressions.go:86:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:86:2) Name: slice
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:86:11)
+              Type:
+                *ast.ArrayType (go-nodes/expressions.go:86:11)
+                  Elt:
+                    *ast.Ident (go-nodes/expressions.go:86:13) Name: string
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/expressions.go:86:20) Kind: STRING Value: "a"
+                [1]:
+                  *ast.BasicLit (go-nodes/expressions.go:86:25) Kind: STRING Value: "b"
+                [2]:
+                  *ast.BasicLit (go-nodes/expressions.go:86:30) Kind: STRING Value: "c"
+        *ast.AssignStmt (go-nodes/expressions.go:87:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:87:2) Name: m
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:87:7)
+              Type:
+                *ast.MapType (go-nodes/expressions.go:87:7)
+                  Key:
+                    *ast.Ident (go-nodes/expressions.go:87:11) Name: string
+                  Value:
+                    *ast.Ident (go-nodes/expressions.go:87:18) Name: int
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:87:22)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:87:32)
+        *ast.ExprStmt (go-nodes/expressions.go:88:2)
+          *ast.CallExpr (go-nodes/expressions.go:88:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:88:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:88:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:88:13) Kind: STRING Value: "  ✓ ast.IndexExpr (array): arr[2] = %d\n"
+              [1]:
+                *ast.IndexExpr (go-nodes/expressions.go:88:59)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:88:59) Name: arr
+                  Index:
+                    *ast.BasicLit (go-nodes/expressions.go:88:63) Kind: INT Value: 2
+        *ast.ExprStmt (go-nodes/expressions.go:89:2)
+          *ast.CallExpr (go-nodes/expressions.go:89:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:89:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:89:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:89:13) Kind: STRING Value: "  ✓ ast.IndexExpr (slice): slice[1] = %q\n"
+              [1]:
+                *ast.IndexExpr (go-nodes/expressions.go:89:61)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:89:61) Name: slice
+                  Index:
+                    *ast.BasicLit (go-nodes/expressions.go:89:67) Kind: INT Value: 1
+        *ast.ExprStmt (go-nodes/expressions.go:90:2)
+          *ast.CallExpr (go-nodes/expressions.go:90:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:90:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:90:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:90:13) Kind: STRING Value: "  ✓ ast.IndexExpr (map): m[\"two\"] = %d\n"
+              [1]:
+                *ast.IndexExpr (go-nodes/expressions.go:90:61)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:90:61) Name: m
+                  Index:
+                    *ast.BasicLit (go-nodes/expressions.go:90:63) Kind: STRING Value: "two"
+        *ast.AssignStmt (go-nodes/expressions.go:93:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:93:2) Name: s
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:93:7)
+              Type:
+                *ast.ArrayType (go-nodes/expressions.go:93:7)
+                  Elt:
+                    *ast.Ident (go-nodes/expressions.go:93:9) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/expressions.go:93:13) Kind: INT Value: 1
+                [1]:
+                  *ast.BasicLit (go-nodes/expressions.go:93:16) Kind: INT Value: 2
+                [2]:
+                  *ast.BasicLit (go-nodes/expressions.go:93:19) Kind: INT Value: 3
+                [3]:
+                  *ast.BasicLit (go-nodes/expressions.go:93:22) Kind: INT Value: 4
+                [4]:
+                  *ast.BasicLit (go-nodes/expressions.go:93:25) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/expressions.go:94:2)
+          *ast.CallExpr (go-nodes/expressions.go:94:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:94:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:94:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:94:13) Kind: STRING Value: "  ✓ ast.SliceExpr (simple): s[1:3] = %v\n"
+              [1]:
+                *ast.SliceExpr (go-nodes/expressions.go:94:60)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:94:60) Name: s
+                  Low:
+                    *ast.BasicLit (go-nodes/expressions.go:94:62) Kind: INT Value: 1
+                  High:
+                    *ast.BasicLit (go-nodes/expressions.go:94:64) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:95:2)
+          *ast.CallExpr (go-nodes/expressions.go:95:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:95:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:95:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:95:13) Kind: STRING Value: "  ✓ ast.SliceExpr (from start): s[:3] = %v\n"
+              [1]:
+                *ast.SliceExpr (go-nodes/expressions.go:95:63)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:95:63) Name: s
+                  High:
+                    *ast.BasicLit (go-nodes/expressions.go:95:66) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:96:2)
+          *ast.CallExpr (go-nodes/expressions.go:96:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:96:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:96:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:96:13) Kind: STRING Value: "  ✓ ast.SliceExpr (to end): s[2:] = %v\n"
+              [1]:
+                *ast.SliceExpr (go-nodes/expressions.go:96:59)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:96:59) Name: s
+                  Low:
+                    *ast.BasicLit (go-nodes/expressions.go:96:61) Kind: INT Value: 2
+        *ast.ExprStmt (go-nodes/expressions.go:97:2)
+          *ast.CallExpr (go-nodes/expressions.go:97:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:97:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:97:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:97:13) Kind: STRING Value: "  ✓ ast.SliceExpr (full): s[1:4:5] = %v\n"
+              [1]:
+                *ast.SliceExpr (go-nodes/expressions.go:97:60)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:97:60) Name: s
+                  Low:
+                    *ast.BasicLit (go-nodes/expressions.go:97:62) Kind: INT Value: 1
+                  High:
+                    *ast.BasicLit (go-nodes/expressions.go:97:64) Kind: INT Value: 4
+                  Max:
+                    *ast.BasicLit (go-nodes/expressions.go:97:66) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/expressions.go:100:2)
+          *ast.CallExpr (go-nodes/expressions.go:100:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:100:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:100:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:100:13) Kind: STRING Value: "  ✓ ast.CallExpr (function): add(2, 3) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/expressions.go:100:64)
+                  Fun:
+                    *ast.Ident (go-nodes/expressions.go:100:64) Name: add
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/expressions.go:100:68) Kind: INT Value: 2
+                    [1]:
+                      *ast.BasicLit (go-nodes/expressions.go:100:71) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:101:2)
+          *ast.CallExpr (go-nodes/expressions.go:101:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:101:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:101:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:101:13) Kind: STRING Value: "  ✓ ast.CallExpr (builtin): len(slice) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/expressions.go:101:64)
+                  Fun:
+                    *ast.Ident (go-nodes/expressions.go:101:64) Name: len
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/expressions.go:101:68) Name: slice
+        *ast.ExprStmt (go-nodes/expressions.go:102:2)
+          *ast.CallExpr (go-nodes/expressions.go:102:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:102:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:102:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:102:13) Kind: STRING Value: "  ✓ ast.CallExpr (method): will be shown in methods\n"
+        *ast.AssignStmt (go-nodes/expressions.go:103:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:103:2) Name: floatVal
+          RHS:
+            *ast.BasicLit (go-nodes/expressions.go:103:14) Kind: FLOAT Value: 3.14
+        *ast.AssignStmt (go-nodes/expressions.go:104:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:104:2) Name: intVal
+          RHS:
+            *ast.CallExpr (go-nodes/expressions.go:104:12)
+              Fun:
+                *ast.Ident (go-nodes/expressions.go:104:12) Name: int
+              Args:
+                [0]:
+                  *ast.Ident (go-nodes/expressions.go:104:16) Name: floatVal
+        *ast.ExprStmt (go-nodes/expressions.go:105:2)
+          *ast.CallExpr (go-nodes/expressions.go:105:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:105:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:105:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:105:13) Kind: STRING Value: "  ✓ ast.CallExpr (type conversion): int(3.14) = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:105:71) Name: intVal
+        *ast.ExprStmt (go-nodes/expressions.go:108:2)
+          *ast.CallExpr (go-nodes/expressions.go:108:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:108:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:108:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:108:13) Kind: STRING Value: "  ✓ ast.Ellipsis (variadic): sum(1, 2, 3, 4, 5) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/expressions.go:108:73)
+                  Fun:
+                    *ast.Ident (go-nodes/expressions.go:108:73) Name: sum
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/expressions.go:108:77) Kind: INT Value: 1
+                    [1]:
+                      *ast.BasicLit (go-nodes/expressions.go:108:80) Kind: INT Value: 2
+                    [2]:
+                      *ast.BasicLit (go-nodes/expressions.go:108:83) Kind: INT Value: 3
+                    [3]:
+                      *ast.BasicLit (go-nodes/expressions.go:108:86) Kind: INT Value: 4
+                    [4]:
+                      *ast.BasicLit (go-nodes/expressions.go:108:89) Kind: INT Value: 5
+        *ast.AssignStmt (go-nodes/expressions.go:109:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:109:2) Name: nums
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:109:10)
+              Type:
+                *ast.ArrayType (go-nodes/expressions.go:109:10)
+                  Elt:
+                    *ast.Ident (go-nodes/expressions.go:109:12) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/expressions.go:109:16) Kind: INT Value: 10
+                [1]:
+                  *ast.BasicLit (go-nodes/expressions.go:109:20) Kind: INT Value: 20
+                [2]:
+                  *ast.BasicLit (go-nodes/expressions.go:109:24) Kind: INT Value: 30
+        *ast.ExprStmt (go-nodes/expressions.go:110:2)
+          *ast.CallExpr (go-nodes/expressions.go:110:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:110:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:110:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:110:13) Kind: STRING Value: "  ✓ ast.Ellipsis (spread): sum(nums...) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/expressions.go:110:65)
+                  Fun:
+                    *ast.Ident (go-nodes/expressions.go:110:65) Name: sum
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/expressions.go:110:69) Name: nums
+        *ast.DeclStmt (go-nodes/expressions.go:113:2)
+          *ast.GenDecl (go-nodes/expressions.go:113:2) Token: var
+            *ast.ValueSpec (go-nodes/expressions.go:113:6)
+              Name: i
+              Type:
+                *ast.InterfaceType (go-nodes/expressions.go:113:8)
+                  *ast.FieldList (go-nodes/expressions.go:113:17) NumFields: 0
+              Value[0]:
+                *ast.BasicLit (go-nodes/expressions.go:113:22) Kind: STRING Value: "hello"
+        *ast.AssignStmt (go-nodes/expressions.go:114:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:114:2) Name: str
+            *ast.Ident (go-nodes/expressions.go:114:7) Name: ok
+          RHS:
+            *ast.TypeAssertExpr (go-nodes/expressions.go:114:13)
+        *ast.ExprStmt (go-nodes/expressions.go:115:2)
+          *ast.CallExpr (go-nodes/expressions.go:115:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:115:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:115:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:115:13) Kind: STRING Value: "  ✓ ast.TypeAssertExpr: i.(string) = %q, ok = %v\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:115:69) Name: str
+              [2]:
+                *ast.Ident (go-nodes/expressions.go:115:74) Name: ok
+        *ast.AssignStmt (go-nodes/expressions.go:116:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:116:2) Name: num
+            *ast.Ident (go-nodes/expressions.go:116:7) Name: ok
+          RHS:
+            *ast.TypeAssertExpr (go-nodes/expressions.go:116:13)
+        *ast.ExprStmt (go-nodes/expressions.go:117:2)
+          *ast.CallExpr (go-nodes/expressions.go:117:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:117:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:117:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:117:13) Kind: STRING Value: "  ✓ ast.TypeAssertExpr (failed): i.(int) = %d, ok = %v\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:117:75) Name: num
+              [2]:
+                *ast.Ident (go-nodes/expressions.go:117:80) Name: ok
+        *ast.ExprStmt (go-nodes/expressions.go:120:2)
+          *ast.CallExpr (go-nodes/expressions.go:120:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:120:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:120:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:120:14) Kind: STRING Value: "  ✓ ast.CompositeLit:"
+        *ast.AssignStmt (go-nodes/expressions.go:121:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:121:2) Name: arrLit
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:121:12)
+              Type:
+                *ast.ArrayType (go-nodes/expressions.go:121:12)
+                  Len:
+                    *ast.BasicLit (go-nodes/expressions.go:121:13) Kind: INT Value: 3
+                  Elt:
+                    *ast.Ident (go-nodes/expressions.go:121:15) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/expressions.go:121:19) Kind: INT Value: 1
+                [1]:
+                  *ast.BasicLit (go-nodes/expressions.go:121:22) Kind: INT Value: 2
+                [2]:
+                  *ast.BasicLit (go-nodes/expressions.go:121:25) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/expressions.go:122:2)
+          *ast.CallExpr (go-nodes/expressions.go:122:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:122:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:122:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:122:13) Kind: STRING Value: "    Array: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:122:32) Name: arrLit
+        *ast.AssignStmt (go-nodes/expressions.go:123:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:123:2) Name: sliceLit
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:123:14)
+              Type:
+                *ast.ArrayType (go-nodes/expressions.go:123:14)
+                  Elt:
+                    *ast.Ident (go-nodes/expressions.go:123:16) Name: string
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/expressions.go:123:23) Kind: STRING Value: "a"
+                [1]:
+                  *ast.BasicLit (go-nodes/expressions.go:123:28) Kind: STRING Value: "b"
+                [2]:
+                  *ast.BasicLit (go-nodes/expressions.go:123:33) Kind: STRING Value: "c"
+        *ast.ExprStmt (go-nodes/expressions.go:124:2)
+          *ast.CallExpr (go-nodes/expressions.go:124:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:124:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:124:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:124:13) Kind: STRING Value: "    Slice: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:124:32) Name: sliceLit
+        *ast.AssignStmt (go-nodes/expressions.go:125:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:125:2) Name: structLit
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:125:15)
+              Type:
+                *ast.Ident (go-nodes/expressions.go:125:15) Name: Point
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:125:21)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:125:27)
+        *ast.ExprStmt (go-nodes/expressions.go:126:2)
+          *ast.CallExpr (go-nodes/expressions.go:126:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:126:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:126:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:126:13) Kind: STRING Value: "    Struct: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:126:33) Name: structLit
+        *ast.AssignStmt (go-nodes/expressions.go:127:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:127:2) Name: mapLit
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:127:12)
+              Type:
+                *ast.MapType (go-nodes/expressions.go:127:12)
+                  Key:
+                    *ast.Ident (go-nodes/expressions.go:127:16) Name: string
+                  Value:
+                    *ast.Ident (go-nodes/expressions.go:127:23) Name: int
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:127:27)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:127:35)
+        *ast.ExprStmt (go-nodes/expressions.go:128:2)
+          *ast.CallExpr (go-nodes/expressions.go:128:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:128:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:128:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:128:13) Kind: STRING Value: "    Map: %v\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:128:30) Name: mapLit
+        *ast.AssignStmt (go-nodes/expressions.go:131:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:131:2) Name: person
+          RHS:
+            *ast.CompositeLit (go-nodes/expressions.go:131:12)
+              Type:
+                *ast.StructType (go-nodes/expressions.go:131:12)
+                  *ast.FieldList (go-nodes/expressions.go:131:19) NumFields: 2
+                    Field[0]:
+                      *ast.Field (go-nodes/expressions.go:132:3)
+                        Name: Name
+                        Type:
+                          *ast.Ident (go-nodes/expressions.go:132:8) Name: string
+                    Field[1]:
+                      *ast.Field (go-nodes/expressions.go:133:3)
+                        Name: Age
+                        Type:
+                          *ast.Ident (go-nodes/expressions.go:133:8) Name: int
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:135:3)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/expressions.go:136:3)
+        *ast.ExprStmt (go-nodes/expressions.go:138:2)
+          *ast.CallExpr (go-nodes/expressions.go:138:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:138:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:138:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:138:13) Kind: STRING Value: "  ✓ ast.KeyValueExpr: {Name: %q, Age: %d}\n"
+              [1]:
+                *ast.SelectorExpr (go-nodes/expressions.go:138:62)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:138:62) Name: person
+                  Sel: Name
+              [2]:
+                *ast.SelectorExpr (go-nodes/expressions.go:138:75)
+                  X:
+                    *ast.Ident (go-nodes/expressions.go:138:75) Name: person
+                  Sel: Age
+        *ast.AssignStmt (go-nodes/expressions.go:141:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:141:2) Name: multiply
+          RHS:
+            *ast.FuncLit (go-nodes/expressions.go:141:14)
+        *ast.ExprStmt (go-nodes/expressions.go:144:2)
+          *ast.CallExpr (go-nodes/expressions.go:144:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:144:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:144:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:144:13) Kind: STRING Value: "  ✓ ast.FuncLit (closure): multiply(3, 4) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/expressions.go:144:67)
+                  Fun:
+                    *ast.Ident (go-nodes/expressions.go:144:67) Name: multiply
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/expressions.go:144:76) Kind: INT Value: 3
+                    [1]:
+                      *ast.BasicLit (go-nodes/expressions.go:144:79) Kind: INT Value: 4
+        *ast.AssignStmt (go-nodes/expressions.go:147:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:147:2) Name: complex
+          RHS:
+            *ast.BinaryExpr (go-nodes/expressions.go:147:13) Op: -
+              X:
+                *ast.ParenExpr (go-nodes/expressions.go:147:13)
+              Y:
+                *ast.ParenExpr (go-nodes/expressions.go:147:29)
+        *ast.ExprStmt (go-nodes/expressions.go:148:2)
+          *ast.CallExpr (go-nodes/expressions.go:148:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:148:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:148:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:148:13) Kind: STRING Value: "  ✓ Complex nested expression: ((5+3)*2)-(10/2) = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/expressions.go:148:73) Name: complex
+        *ast.ExprStmt (go-nodes/expressions.go:150:2)
+          *ast.CallExpr (go-nodes/expressions.go:150:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:150:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:150:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:150:14) Kind: STRING Value: "Summary: All major expression AST nodes exercised"
+        *ast.ExprStmt (go-nodes/expressions.go:151:2)
+          *ast.CallExpr (go-nodes/expressions.go:151:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:151:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:151:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:151:14) Kind: STRING Value: "Primary AST Nodes: ast.BinaryExpr, ast.UnaryExpr, ast.CallExpr, ast.SelectorExpr,"
+        *ast.ExprStmt (go-nodes/expressions.go:152:2)
+          *ast.CallExpr (go-nodes/expressions.go:152:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:152:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:152:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:152:14) Kind: STRING Value: "                   ast.IndexExpr, ast.SliceExpr, ast.TypeAssertExpr, ast.CompositeLit,"
+        *ast.ExprStmt (go-nodes/expressions.go:153:2)
+          *ast.CallExpr (go-nodes/expressions.go:153:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:153:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:153:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:153:14) Kind: STRING Value: "                   ast.FuncLit, ast.ParenExpr, ast.KeyValueExpr, ast.Ellipsis, ast.StarExpr"
+        *ast.ExprStmt (go-nodes/expressions.go:154:2)
+          *ast.CallExpr (go-nodes/expressions.go:154:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/expressions.go:154:2)
+                X:
+                  *ast.Ident (go-nodes/expressions.go:154:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/expressions.go:154:14) Kind: STRING Value: "========================================"
+  *ast.FuncDecl (go-nodes/expressions.go:157:1)
+    Name: add
+    Type:
+      *ast.FuncType (go-nodes/expressions.go:157:1)
+        Params:
+          *ast.FieldList (go-nodes/expressions.go:157:9) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/expressions.go:157:10)
+                Name: a
+                Name: b
+                Type:
+                  *ast.Ident (go-nodes/expressions.go:157:15) Name: int
+        Results:
+          *ast.FieldList (go-nodes/expressions.go:157:20) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/expressions.go:157:20)
+                Type:
+                  *ast.Ident (go-nodes/expressions.go:157:20) Name: int
+    Body:
+      *ast.BlockStmt (go-nodes/expressions.go:157:24) Stmts: 1
+        *ast.ReturnStmt (go-nodes/expressions.go:158:2)
+          Result[0]:
+            *ast.BinaryExpr (go-nodes/expressions.go:158:9) Op: +
+              X:
+                *ast.Ident (go-nodes/expressions.go:158:9) Name: a
+              Y:
+                *ast.Ident (go-nodes/expressions.go:158:13) Name: b
+  *ast.FuncDecl (go-nodes/expressions.go:161:1)
+    Name: sum
+    Type:
+      *ast.FuncType (go-nodes/expressions.go:161:1)
+        Params:
+          *ast.FieldList (go-nodes/expressions.go:161:9) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/expressions.go:161:10)
+                Name: nums
+                Type:
+                  *ast.Ellipsis (go-nodes/expressions.go:161:15)
+        Results:
+          *ast.FieldList (go-nodes/expressions.go:161:23) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/expressions.go:161:23)
+                Type:
+                  *ast.Ident (go-nodes/expressions.go:161:23) Name: int
+    Body:
+      *ast.BlockStmt (go-nodes/expressions.go:161:27) Stmts: 3
+        *ast.AssignStmt (go-nodes/expressions.go:162:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/expressions.go:162:2) Name: total
+          RHS:
+            *ast.BasicLit (go-nodes/expressions.go:162:11) Kind: INT Value: 0
+        *ast.RangeStmt (go-nodes/expressions.go:163:2) Token: :=
+          Key:
+            *ast.Ident (go-nodes/expressions.go:163:6) Name: _
+          Value:
+            *ast.Ident (go-nodes/expressions.go:163:9) Name: n
+          X:
+            *ast.Ident (go-nodes/expressions.go:163:20) Name: nums
+          Body:
+            *ast.BlockStmt (go-nodes/expressions.go:163:25) Stmts: 1
+              *ast.AssignStmt (go-nodes/expressions.go:164:3) Token: +=
+                LHS:
+                  *ast.Ident (go-nodes/expressions.go:164:3) Name: total
+                RHS:
+                  *ast.Ident (go-nodes/expressions.go:164:12) Name: n
+        *ast.ReturnStmt (go-nodes/expressions.go:166:2)
+          Result[0]:
+            *ast.Ident (go-nodes/expressions.go:166:9) Name: total

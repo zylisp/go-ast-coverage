@@ -5,6 +5,7 @@ A comprehensive test suite that demonstrates and exercises every AST (Abstract S
 ## Overview
 
 This project provides:
+
 - **Complete AST node coverage**: Test files covering all expression, statement, declaration, type, and structural nodes
 - **AST analyzer**: Tool to inspect and enumerate AST nodes in Go source files
 - **Coverage reporting**: Comprehensive reports showing which AST nodes are covered and which are missing
@@ -101,6 +102,7 @@ go run <filename>.go
 This test suite aims for 100% coverage of all AST node types defined in Go's `go/ast` package:
 
 ### Expression Nodes (ast.Expr)
+
 - ✓ `*ast.BadExpr` - Error recovery node
 - ✓ `*ast.Ident` - Identifiers
 - ✓ `*ast.Ellipsis` - `...` in variadic functions
@@ -120,6 +122,7 @@ This test suite aims for 100% coverage of all AST node types defined in Go's `go
 - ✓ `*ast.KeyValueExpr` - Key-value pairs in composite literals
 
 ### Statement Nodes (ast.Stmt)
+
 - ✓ `*ast.BadStmt` - Error recovery node
 - ✓ `*ast.DeclStmt` - Declarations in function bodies
 - ✓ `*ast.EmptyStmt` - Empty statements
@@ -143,16 +146,19 @@ This test suite aims for 100% coverage of all AST node types defined in Go's `go
 - ✓ `*ast.RangeStmt` - Range loops
 
 ### Declaration Nodes (ast.Decl)
+
 - ✓ `*ast.BadDecl` - Error recovery node
 - ✓ `*ast.GenDecl` - General declarations (import, const, type, var)
 - ✓ `*ast.FuncDecl` - Function declarations
 
 ### Spec Nodes (ast.Spec)
+
 - ✓ `*ast.ImportSpec` - Import specifications
 - ✓ `*ast.ValueSpec` - Constant and variable specifications
 - ✓ `*ast.TypeSpec` - Type specifications
 
 ### Type Nodes
+
 - ✓ `*ast.ArrayType` - Array and slice types
 - ✓ `*ast.StructType` - Struct types
 - ✓ `*ast.FuncType` - Function types
@@ -161,6 +167,7 @@ This test suite aims for 100% coverage of all AST node types defined in Go's `go
 - ✓ `*ast.ChanType` - Channel types
 
 ### Other Nodes
+
 - ✓ `*ast.File` - Source file node
 - ✓ `*ast.Package` - Package node
 - ✓ `*ast.Comment` - Individual comments
@@ -171,6 +178,7 @@ This test suite aims for 100% coverage of all AST node types defined in Go's `go
 ## Features Demonstrated
 
 ### Go Language Features
+
 - All primitive types (int variants, uint variants, float, complex, string, bool, byte, rune)
 - Variables, constants, type definitions
 - Functions (regular, variadic, methods, anonymous, generic)
@@ -185,6 +193,7 @@ This test suite aims for 100% coverage of all AST node types defined in Go's `go
 - Comments and documentation
 
 ### Modern Go Features (1.18+)
+
 - Generic types and functions
 - Type parameters with constraints
 - Type inference
@@ -295,6 +304,7 @@ func main() {
 ## Contributing
 
 Contributions are welcome! Please ensure:
+
 - All new files compile and run successfully
 - Output follows the established format
 - Documentation is comprehensive

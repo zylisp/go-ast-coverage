@@ -1,0 +1,892 @@
+=== AST for statements.go ===
+
+File Information:
+  Package: main
+  Position: go-nodes/statements.go:3:1
+  Imports:
+    "fmt"
+  Comment Groups: 22
+  Declarations: 6
+
+=== AST Node Tree ===
+
+*ast.File (go-nodes/statements.go:3:1)
+  Package: main
+  *ast.GenDecl (go-nodes/statements.go:5:1) Token: import
+    *ast.ImportSpec (go-nodes/statements.go:5:8)
+      Path: "fmt"
+  *ast.FuncDecl (go-nodes/statements.go:21:1)
+    Name: main
+    Type:
+      *ast.FuncType (go-nodes/statements.go:21:1)
+        Params:
+          *ast.FieldList (go-nodes/statements.go:21:10) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/statements.go:21:13) Stmts: 79
+        *ast.ExprStmt (go-nodes/statements.go:22:2)
+          *ast.CallExpr (go-nodes/statements.go:22:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:22:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:22:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:22:14) Kind: STRING Value: "=== statements.go AST Node Coverage ==="
+        *ast.ExprStmt (go-nodes/statements.go:23:2)
+          *ast.CallExpr (go-nodes/statements.go:23:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:23:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:23:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:23:14) Kind: STRING Value: "Exercising AST Nodes:"
+        *ast.DeclStmt (go-nodes/statements.go:26:2)
+          *ast.GenDecl (go-nodes/statements.go:26:2) Token: var
+            *ast.ValueSpec (go-nodes/statements.go:26:6)
+              Name: x
+              Type:
+                *ast.Ident (go-nodes/statements.go:26:8) Name: int
+              Value[0]:
+                *ast.BasicLit (go-nodes/statements.go:26:14) Kind: INT Value: 42
+        *ast.DeclStmt (go-nodes/statements.go:27:2)
+          *ast.GenDecl (go-nodes/statements.go:27:2) Token: const
+            *ast.ValueSpec (go-nodes/statements.go:27:8)
+              Name: y
+              Value[0]:
+                *ast.BasicLit (go-nodes/statements.go:27:12) Kind: INT Value: 100
+        *ast.DeclStmt (go-nodes/statements.go:28:2)
+          *ast.GenDecl (go-nodes/statements.go:28:2) Token: type
+            *ast.TypeSpec (go-nodes/statements.go:28:7)
+              Name: MyInt
+              Type:
+                *ast.Ident (go-nodes/statements.go:28:13) Name: int
+        *ast.ExprStmt (go-nodes/statements.go:29:2)
+          *ast.CallExpr (go-nodes/statements.go:29:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:29:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:29:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:29:13) Kind: STRING Value: "  ✓ ast.DeclStmt (var): x = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:29:51) Name: x
+        *ast.ExprStmt (go-nodes/statements.go:30:2)
+          *ast.CallExpr (go-nodes/statements.go:30:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:30:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:30:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:30:13) Kind: STRING Value: "  ✓ ast.DeclStmt (const): y = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:30:53) Name: y
+        *ast.ExprStmt (go-nodes/statements.go:31:2)
+          *ast.CallExpr (go-nodes/statements.go:31:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:31:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:31:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:31:13) Kind: STRING Value: "  ✓ ast.DeclStmt (type): MyInt declared\n"
+        *ast.AssignStmt (go-nodes/statements.go:34:2) Token: =
+          LHS:
+            *ast.Ident (go-nodes/statements.go:34:2) Name: _
+          RHS:
+            *ast.CallExpr (go-nodes/statements.go:34:6)
+              Fun:
+                *ast.Ident (go-nodes/statements.go:34:6) Name: add
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/statements.go:34:10) Kind: INT Value: 5
+                [1]:
+                  *ast.BasicLit (go-nodes/statements.go:34:13) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/statements.go:35:2)
+          *ast.CallExpr (go-nodes/statements.go:35:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:35:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:35:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:35:13) Kind: STRING Value: "  ✓ ast.ExprStmt: function call as statement\n"
+        *ast.AssignStmt (go-nodes/statements.go:38:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:38:2) Name: a
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:38:7) Kind: INT Value: 10
+        *ast.ExprStmt (go-nodes/statements.go:39:2)
+          *ast.CallExpr (go-nodes/statements.go:39:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:39:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:39:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:39:13) Kind: STRING Value: "  ✓ ast.AssignStmt (DEFINE :=): a = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:39:59) Name: a
+        *ast.AssignStmt (go-nodes/statements.go:41:2) Token: =
+          LHS:
+            *ast.Ident (go-nodes/statements.go:41:2) Name: a
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:41:6) Kind: INT Value: 20
+        *ast.ExprStmt (go-nodes/statements.go:42:2)
+          *ast.CallExpr (go-nodes/statements.go:42:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:42:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:42:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:42:13) Kind: STRING Value: "  ✓ ast.AssignStmt (ASSIGN =): a = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:42:58) Name: a
+        *ast.AssignStmt (go-nodes/statements.go:44:2) Token: +=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:44:2) Name: a
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:44:7) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/statements.go:45:2)
+          *ast.CallExpr (go-nodes/statements.go:45:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:45:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:45:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:45:13) Kind: STRING Value: "  ✓ ast.AssignStmt (ADD_ASSIGN +=): a = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:45:63) Name: a
+        *ast.AssignStmt (go-nodes/statements.go:47:2) Token: -=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:47:2) Name: a
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:47:7) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/statements.go:48:2)
+          *ast.CallExpr (go-nodes/statements.go:48:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:48:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:48:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:48:13) Kind: STRING Value: "  ✓ ast.AssignStmt (SUB_ASSIGN -=): a = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:48:63) Name: a
+        *ast.AssignStmt (go-nodes/statements.go:50:2) Token: *=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:50:2) Name: a
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:50:7) Kind: INT Value: 2
+        *ast.ExprStmt (go-nodes/statements.go:51:2)
+          *ast.CallExpr (go-nodes/statements.go:51:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:51:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:51:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:51:13) Kind: STRING Value: "  ✓ ast.AssignStmt (MUL_ASSIGN *=): a = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:51:63) Name: a
+        *ast.AssignStmt (go-nodes/statements.go:53:2) Token: /=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:53:2) Name: a
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:53:7) Kind: INT Value: 4
+        *ast.ExprStmt (go-nodes/statements.go:54:2)
+          *ast.CallExpr (go-nodes/statements.go:54:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:54:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:54:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:54:13) Kind: STRING Value: "  ✓ ast.AssignStmt (QUO_ASSIGN /=): a = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:54:63) Name: a
+        *ast.AssignStmt (go-nodes/statements.go:56:2) Token: %=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:56:2) Name: a
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:56:7) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/statements.go:57:2)
+          *ast.CallExpr (go-nodes/statements.go:57:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:57:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:57:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:57:13) Kind: STRING Value: "  ✓ ast.AssignStmt (REM_ASSIGN %%=): a = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:57:64) Name: a
+        *ast.AssignStmt (go-nodes/statements.go:59:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:59:2) Name: b
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:59:7) Kind: INT Value: 12
+        *ast.AssignStmt (go-nodes/statements.go:60:2) Token: &=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:60:2) Name: b
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:60:7) Kind: INT Value: 10
+        *ast.ExprStmt (go-nodes/statements.go:61:2)
+          *ast.CallExpr (go-nodes/statements.go:61:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:61:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:61:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:61:13) Kind: STRING Value: "  ✓ ast.AssignStmt (AND_ASSIGN &=): b = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:61:63) Name: b
+        *ast.AssignStmt (go-nodes/statements.go:63:2) Token: |=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:63:2) Name: b
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:63:7) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/statements.go:64:2)
+          *ast.CallExpr (go-nodes/statements.go:64:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:64:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:64:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:64:13) Kind: STRING Value: "  ✓ ast.AssignStmt (OR_ASSIGN |=): b = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:64:62) Name: b
+        *ast.AssignStmt (go-nodes/statements.go:66:2) Token: ^=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:66:2) Name: b
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:66:7) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/statements.go:67:2)
+          *ast.CallExpr (go-nodes/statements.go:67:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:67:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:67:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:67:13) Kind: STRING Value: "  ✓ ast.AssignStmt (XOR_ASSIGN ^=): b = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:67:63) Name: b
+        *ast.AssignStmt (go-nodes/statements.go:69:2) Token: <<=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:69:2) Name: b
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:69:8) Kind: INT Value: 2
+        *ast.ExprStmt (go-nodes/statements.go:70:2)
+          *ast.CallExpr (go-nodes/statements.go:70:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:70:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:70:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:70:13) Kind: STRING Value: "  ✓ ast.AssignStmt (SHL_ASSIGN <<=): b = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:70:64) Name: b
+        *ast.AssignStmt (go-nodes/statements.go:72:2) Token: >>=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:72:2) Name: b
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:72:8) Kind: INT Value: 1
+        *ast.ExprStmt (go-nodes/statements.go:73:2)
+          *ast.CallExpr (go-nodes/statements.go:73:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:73:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:73:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:73:13) Kind: STRING Value: "  ✓ ast.AssignStmt (SHR_ASSIGN >>=): b = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:73:64) Name: b
+        *ast.AssignStmt (go-nodes/statements.go:75:2) Token: &^=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:75:2) Name: b
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:75:8) Kind: INT Value: 2
+        *ast.ExprStmt (go-nodes/statements.go:76:2)
+          *ast.CallExpr (go-nodes/statements.go:76:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:76:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:76:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:76:13) Kind: STRING Value: "  ✓ ast.AssignStmt (AND_NOT_ASSIGN &^=): b = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:76:68) Name: b
+        *ast.AssignStmt (go-nodes/statements.go:79:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:79:2) Name: m
+            *ast.Ident (go-nodes/statements.go:79:5) Name: n
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:79:10) Kind: INT Value: 1
+            *ast.BasicLit (go-nodes/statements.go:79:13) Kind: INT Value: 2
+        *ast.ExprStmt (go-nodes/statements.go:80:2)
+          *ast.CallExpr (go-nodes/statements.go:80:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:80:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:80:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:80:13) Kind: STRING Value: "  ✓ ast.AssignStmt (multiple): m=%d, n=%d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:80:62) Name: m
+              [2]:
+                *ast.Ident (go-nodes/statements.go:80:65) Name: n
+        *ast.AssignStmt (go-nodes/statements.go:82:2) Token: =
+          LHS:
+            *ast.Ident (go-nodes/statements.go:82:2) Name: m
+            *ast.Ident (go-nodes/statements.go:82:5) Name: n
+          RHS:
+            *ast.Ident (go-nodes/statements.go:82:9) Name: n
+            *ast.Ident (go-nodes/statements.go:82:12) Name: m
+        *ast.ExprStmt (go-nodes/statements.go:83:2)
+          *ast.CallExpr (go-nodes/statements.go:83:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:83:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:83:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:83:13) Kind: STRING Value: "  ✓ ast.AssignStmt (swap): m=%d, n=%d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:83:58) Name: m
+              [2]:
+                *ast.Ident (go-nodes/statements.go:83:61) Name: n
+        *ast.AssignStmt (go-nodes/statements.go:86:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:86:2) Name: counter
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:86:13) Kind: INT Value: 10
+        *ast.IncDecStmt (go-nodes/statements.go:87:2)
+        *ast.ExprStmt (go-nodes/statements.go:88:2)
+          *ast.CallExpr (go-nodes/statements.go:88:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:88:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:88:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:88:13) Kind: STRING Value: "  ✓ ast.IncDecStmt (++): counter = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:88:58) Name: counter
+        *ast.IncDecStmt (go-nodes/statements.go:90:2)
+        *ast.ExprStmt (go-nodes/statements.go:91:2)
+          *ast.CallExpr (go-nodes/statements.go:91:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:91:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:91:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:91:13) Kind: STRING Value: "  ✓ ast.IncDecStmt (--): counter = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:91:58) Name: counter
+        *ast.AssignStmt (go-nodes/statements.go:94:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:94:2) Name: ch
+          RHS:
+            *ast.CallExpr (go-nodes/statements.go:94:8)
+              Fun:
+                *ast.Ident (go-nodes/statements.go:94:8) Name: make
+              Args:
+                [0]:
+                  *ast.ChanType (go-nodes/statements.go:94:13) Dir: %!s(ast.ChanDir=3)
+                    Value:
+                      *ast.Ident (go-nodes/statements.go:94:18) Name: int
+                [1]:
+                  *ast.BasicLit (go-nodes/statements.go:94:23) Kind: INT Value: 1
+        *ast.SendStmt (go-nodes/statements.go:95:2)
+        *ast.ExprStmt (go-nodes/statements.go:96:2)
+          *ast.CallExpr (go-nodes/statements.go:96:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:96:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:96:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:96:13) Kind: STRING Value: "  ✓ ast.SendStmt: ch <- 42\n"
+        *ast.AssignStmt (go-nodes/statements.go:97:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:97:2) Name: received
+          RHS:
+            *ast.UnaryExpr (go-nodes/statements.go:97:14) Op: <-
+              X:
+                *ast.Ident (go-nodes/statements.go:97:16) Name: ch
+        *ast.ExprStmt (go-nodes/statements.go:98:2)
+          *ast.CallExpr (go-nodes/statements.go:98:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:98:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:98:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:98:13) Kind: STRING Value: "  ✓ Channel receive: %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:98:44) Name: received
+        *ast.AssignStmt (go-nodes/statements.go:101:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:101:2) Name: done
+          RHS:
+            *ast.CallExpr (go-nodes/statements.go:101:10)
+              Fun:
+                *ast.Ident (go-nodes/statements.go:101:10) Name: make
+              Args:
+                [0]:
+                  *ast.ChanType (go-nodes/statements.go:101:15) Dir: %!s(ast.ChanDir=3)
+                    Value:
+                      *ast.Ident (go-nodes/statements.go:101:20) Name: bool
+        *ast.GoStmt (go-nodes/statements.go:102:2)
+        *ast.ExprStmt (go-nodes/statements.go:106:2)
+          *ast.UnaryExpr (go-nodes/statements.go:106:2) Op: <-
+            X:
+              *ast.Ident (go-nodes/statements.go:106:4) Name: done
+        *ast.DeferStmt (go-nodes/statements.go:109:2)
+        *ast.ExprStmt (go-nodes/statements.go:110:2)
+          *ast.CallExpr (go-nodes/statements.go:110:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:110:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:110:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:110:13) Kind: STRING Value: "  ✓ ast.DeferStmt: defer registered\n"
+        *ast.AssignStmt (go-nodes/statements.go:113:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:113:2) Name: result
+          RHS:
+            *ast.CallExpr (go-nodes/statements.go:113:12)
+              Fun:
+                *ast.Ident (go-nodes/statements.go:113:12) Name: returnExample
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/statements.go:113:26) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/statements.go:114:2)
+          *ast.CallExpr (go-nodes/statements.go:114:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:114:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:114:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:114:13) Kind: STRING Value: "  ✓ ast.ReturnStmt (value): returned %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:114:60) Name: result
+        *ast.AssignStmt (go-nodes/statements.go:116:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:116:2) Name: r1
+            *ast.Ident (go-nodes/statements.go:116:6) Name: r2
+          RHS:
+            *ast.CallExpr (go-nodes/statements.go:116:12)
+              Fun:
+                *ast.Ident (go-nodes/statements.go:116:12) Name: multiReturn
+        *ast.ExprStmt (go-nodes/statements.go:117:2)
+          *ast.CallExpr (go-nodes/statements.go:117:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:117:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:117:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:117:13) Kind: STRING Value: "  ✓ ast.ReturnStmt (multiple): returned %d, %d\n"
+              [1]:
+                *ast.Ident (go-nodes/statements.go:117:67) Name: r1
+              [2]:
+                *ast.Ident (go-nodes/statements.go:117:71) Name: r2
+        *ast.ExprStmt (go-nodes/statements.go:119:2)
+          *ast.CallExpr (go-nodes/statements.go:119:2)
+            Fun:
+              *ast.Ident (go-nodes/statements.go:119:2) Name: namedReturn
+        *ast.ExprStmt (go-nodes/statements.go:120:2)
+          *ast.CallExpr (go-nodes/statements.go:120:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:120:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:120:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:120:13) Kind: STRING Value: "  ✓ ast.ReturnStmt (named): executed\n"
+        *ast.ExprStmt (go-nodes/statements.go:123:2)
+          *ast.CallExpr (go-nodes/statements.go:123:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:123:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:123:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:123:13) Kind: STRING Value: "  ✓ ast.BranchStmt (break):\n"
+        *ast.ForStmt (go-nodes/statements.go:124:2)
+          Init:
+            *ast.AssignStmt (go-nodes/statements.go:124:6) Token: :=
+              LHS:
+                *ast.Ident (go-nodes/statements.go:124:6) Name: i
+              RHS:
+                *ast.BasicLit (go-nodes/statements.go:124:11) Kind: INT Value: 0
+          Cond:
+            *ast.BinaryExpr (go-nodes/statements.go:124:14) Op: <
+              X:
+                *ast.Ident (go-nodes/statements.go:124:14) Name: i
+              Y:
+                *ast.BasicLit (go-nodes/statements.go:124:18) Kind: INT Value: 5
+          Post:
+            *ast.IncDecStmt (go-nodes/statements.go:124:21)
+          Body:
+            *ast.BlockStmt (go-nodes/statements.go:124:25) Stmts: 2
+              *ast.IfStmt (go-nodes/statements.go:125:3)
+                Cond:
+                  *ast.BinaryExpr (go-nodes/statements.go:125:6) Op: ==
+                    X:
+                      *ast.Ident (go-nodes/statements.go:125:6) Name: i
+                    Y:
+                      *ast.BasicLit (go-nodes/statements.go:125:11) Kind: INT Value: 3
+                Body:
+                  *ast.BlockStmt (go-nodes/statements.go:125:13) Stmts: 2
+                    *ast.ExprStmt (go-nodes/statements.go:126:4)
+                      *ast.CallExpr (go-nodes/statements.go:126:4)
+                        Fun:
+                          *ast.SelectorExpr (go-nodes/statements.go:126:4)
+                            X:
+                              *ast.Ident (go-nodes/statements.go:126:4) Name: fmt
+                            Sel: Printf
+                        Args:
+                          [0]:
+                            *ast.BasicLit (go-nodes/statements.go:126:15) Kind: STRING Value: "    Breaking at i=%d\n"
+                          [1]:
+                            *ast.Ident (go-nodes/statements.go:126:41) Name: i
+                    *ast.BranchStmt (go-nodes/statements.go:127:4)
+              *ast.ExprStmt (go-nodes/statements.go:129:3)
+                *ast.CallExpr (go-nodes/statements.go:129:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/statements.go:129:3)
+                      X:
+                        *ast.Ident (go-nodes/statements.go:129:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/statements.go:129:14) Kind: STRING Value: "    i=%d\n"
+                    [1]:
+                      *ast.Ident (go-nodes/statements.go:129:28) Name: i
+        *ast.ExprStmt (go-nodes/statements.go:132:2)
+          *ast.CallExpr (go-nodes/statements.go:132:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:132:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:132:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:132:13) Kind: STRING Value: "  ✓ ast.BranchStmt (continue):\n"
+        *ast.ForStmt (go-nodes/statements.go:133:2)
+          Init:
+            *ast.AssignStmt (go-nodes/statements.go:133:6) Token: :=
+              LHS:
+                *ast.Ident (go-nodes/statements.go:133:6) Name: i
+              RHS:
+                *ast.BasicLit (go-nodes/statements.go:133:11) Kind: INT Value: 0
+          Cond:
+            *ast.BinaryExpr (go-nodes/statements.go:133:14) Op: <
+              X:
+                *ast.Ident (go-nodes/statements.go:133:14) Name: i
+              Y:
+                *ast.BasicLit (go-nodes/statements.go:133:18) Kind: INT Value: 5
+          Post:
+            *ast.IncDecStmt (go-nodes/statements.go:133:21)
+          Body:
+            *ast.BlockStmt (go-nodes/statements.go:133:25) Stmts: 2
+              *ast.IfStmt (go-nodes/statements.go:134:3)
+                Cond:
+                  *ast.BinaryExpr (go-nodes/statements.go:134:6) Op: ==
+                    X:
+                      *ast.Ident (go-nodes/statements.go:134:6) Name: i
+                    Y:
+                      *ast.BasicLit (go-nodes/statements.go:134:11) Kind: INT Value: 2
+                Body:
+                  *ast.BlockStmt (go-nodes/statements.go:134:13) Stmts: 2
+                    *ast.ExprStmt (go-nodes/statements.go:135:4)
+                      *ast.CallExpr (go-nodes/statements.go:135:4)
+                        Fun:
+                          *ast.SelectorExpr (go-nodes/statements.go:135:4)
+                            X:
+                              *ast.Ident (go-nodes/statements.go:135:4) Name: fmt
+                            Sel: Printf
+                        Args:
+                          [0]:
+                            *ast.BasicLit (go-nodes/statements.go:135:15) Kind: STRING Value: "    Skipping i=%d\n"
+                          [1]:
+                            *ast.Ident (go-nodes/statements.go:135:38) Name: i
+                    *ast.BranchStmt (go-nodes/statements.go:136:4)
+              *ast.ExprStmt (go-nodes/statements.go:138:3)
+                *ast.CallExpr (go-nodes/statements.go:138:3)
+                  Fun:
+                    *ast.SelectorExpr (go-nodes/statements.go:138:3)
+                      X:
+                        *ast.Ident (go-nodes/statements.go:138:3) Name: fmt
+                      Sel: Printf
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/statements.go:138:14) Kind: STRING Value: "    i=%d\n"
+                    [1]:
+                      *ast.Ident (go-nodes/statements.go:138:28) Name: i
+        *ast.ExprStmt (go-nodes/statements.go:141:2)
+          *ast.CallExpr (go-nodes/statements.go:141:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:141:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:141:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:141:13) Kind: STRING Value: "  ✓ ast.BranchStmt (goto):\n"
+        *ast.AssignStmt (go-nodes/statements.go:142:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/statements.go:142:2) Name: i
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:142:7) Kind: INT Value: 0
+        *ast.LabeledStmt (go-nodes/statements.go:143:1)
+        *ast.ExprStmt (go-nodes/statements.go:151:2)
+          *ast.CallExpr (go-nodes/statements.go:151:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:151:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:151:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:151:13) Kind: STRING Value: "  ✓ ast.LabeledStmt:\n"
+        *ast.LabeledStmt (go-nodes/statements.go:152:1)
+        *ast.BlockStmt (go-nodes/statements.go:164:2) Stmts: 2
+          *ast.AssignStmt (go-nodes/statements.go:165:3) Token: :=
+            LHS:
+              *ast.Ident (go-nodes/statements.go:165:3) Name: blockVar
+            RHS:
+              *ast.BasicLit (go-nodes/statements.go:165:15) Kind: STRING Value: "inside block"
+          *ast.ExprStmt (go-nodes/statements.go:166:3)
+            *ast.CallExpr (go-nodes/statements.go:166:3)
+              Fun:
+                *ast.SelectorExpr (go-nodes/statements.go:166:3)
+                  X:
+                    *ast.Ident (go-nodes/statements.go:166:3) Name: fmt
+                  Sel: Printf
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/statements.go:166:14) Kind: STRING Value: "  ✓ ast.BlockStmt: %s\n"
+                [1]:
+                  *ast.Ident (go-nodes/statements.go:166:43) Name: blockVar
+        *ast.ForStmt (go-nodes/statements.go:170:2)
+          Init:
+            *ast.AssignStmt (go-nodes/statements.go:170:6) Token: :=
+              LHS:
+                *ast.Ident (go-nodes/statements.go:170:6) Name: j
+              RHS:
+                *ast.BasicLit (go-nodes/statements.go:170:11) Kind: INT Value: 0
+          Cond:
+            *ast.BinaryExpr (go-nodes/statements.go:170:14) Op: <
+              X:
+                *ast.Ident (go-nodes/statements.go:170:14) Name: j
+              Y:
+                *ast.BasicLit (go-nodes/statements.go:170:18) Kind: INT Value: 1
+          Post:
+            *ast.IncDecStmt (go-nodes/statements.go:170:21)
+          Body:
+            *ast.BlockStmt (go-nodes/statements.go:170:25) Stmts: 1
+              *ast.EmptyStmt (go-nodes/statements.go:171:3)
+        *ast.ExprStmt (go-nodes/statements.go:173:2)
+          *ast.CallExpr (go-nodes/statements.go:173:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:173:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:173:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:173:13) Kind: STRING Value: "  ✓ ast.EmptyStmt: demonstrated in loop\n"
+        *ast.ExprStmt (go-nodes/statements.go:175:2)
+          *ast.CallExpr (go-nodes/statements.go:175:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:175:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:175:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:175:14) Kind: STRING Value: "Summary: All statement AST node types exercised"
+        *ast.ExprStmt (go-nodes/statements.go:176:2)
+          *ast.CallExpr (go-nodes/statements.go:176:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:176:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:176:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:176:14) Kind: STRING Value: "Primary AST Nodes: ast.DeclStmt, ast.AssignStmt, ast.IncDecStmt, ast.SendStmt,"
+        *ast.ExprStmt (go-nodes/statements.go:177:2)
+          *ast.CallExpr (go-nodes/statements.go:177:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:177:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:177:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:177:14) Kind: STRING Value: "                   ast.GoStmt, ast.DeferStmt, ast.ReturnStmt, ast.BranchStmt,"
+        *ast.ExprStmt (go-nodes/statements.go:178:2)
+          *ast.CallExpr (go-nodes/statements.go:178:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:178:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:178:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:178:14) Kind: STRING Value: "                   ast.BlockStmt, ast.LabeledStmt, ast.ExprStmt, ast.EmptyStmt"
+        *ast.ExprStmt (go-nodes/statements.go:179:2)
+          *ast.CallExpr (go-nodes/statements.go:179:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/statements.go:179:2)
+                X:
+                  *ast.Ident (go-nodes/statements.go:179:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/statements.go:179:14) Kind: STRING Value: "========================================"
+  *ast.FuncDecl (go-nodes/statements.go:182:1)
+    Name: add
+    Type:
+      *ast.FuncType (go-nodes/statements.go:182:1)
+        Params:
+          *ast.FieldList (go-nodes/statements.go:182:9) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/statements.go:182:10)
+                Name: a
+                Name: b
+                Type:
+                  *ast.Ident (go-nodes/statements.go:182:15) Name: int
+        Results:
+          *ast.FieldList (go-nodes/statements.go:182:20) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/statements.go:182:20)
+                Type:
+                  *ast.Ident (go-nodes/statements.go:182:20) Name: int
+    Body:
+      *ast.BlockStmt (go-nodes/statements.go:182:24) Stmts: 1
+        *ast.ReturnStmt (go-nodes/statements.go:183:2)
+          Result[0]:
+            *ast.BinaryExpr (go-nodes/statements.go:183:9) Op: +
+              X:
+                *ast.Ident (go-nodes/statements.go:183:9) Name: a
+              Y:
+                *ast.Ident (go-nodes/statements.go:183:13) Name: b
+  *ast.FuncDecl (go-nodes/statements.go:186:1)
+    Name: returnExample
+    Type:
+      *ast.FuncType (go-nodes/statements.go:186:1)
+        Params:
+          *ast.FieldList (go-nodes/statements.go:186:19) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/statements.go:186:20)
+                Name: x
+                Type:
+                  *ast.Ident (go-nodes/statements.go:186:22) Name: int
+        Results:
+          *ast.FieldList (go-nodes/statements.go:186:27) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/statements.go:186:27)
+                Type:
+                  *ast.Ident (go-nodes/statements.go:186:27) Name: int
+    Body:
+      *ast.BlockStmt (go-nodes/statements.go:186:31) Stmts: 1
+        *ast.ReturnStmt (go-nodes/statements.go:187:2)
+          Result[0]:
+            *ast.BinaryExpr (go-nodes/statements.go:187:9) Op: *
+              X:
+                *ast.Ident (go-nodes/statements.go:187:9) Name: x
+              Y:
+                *ast.BasicLit (go-nodes/statements.go:187:13) Kind: INT Value: 2
+  *ast.FuncDecl (go-nodes/statements.go:190:1)
+    Name: multiReturn
+    Type:
+      *ast.FuncType (go-nodes/statements.go:190:1)
+        Params:
+          *ast.FieldList (go-nodes/statements.go:190:17) NumFields: 0
+        Results:
+          *ast.FieldList (go-nodes/statements.go:190:20) NumFields: 2
+            Field[0]:
+              *ast.Field (go-nodes/statements.go:190:21)
+                Type:
+                  *ast.Ident (go-nodes/statements.go:190:21) Name: int
+            Field[1]:
+              *ast.Field (go-nodes/statements.go:190:26)
+                Type:
+                  *ast.Ident (go-nodes/statements.go:190:26) Name: int
+    Body:
+      *ast.BlockStmt (go-nodes/statements.go:190:31) Stmts: 1
+        *ast.ReturnStmt (go-nodes/statements.go:191:2)
+          Result[0]:
+            *ast.BasicLit (go-nodes/statements.go:191:9) Kind: INT Value: 1
+          Result[1]:
+            *ast.BasicLit (go-nodes/statements.go:191:12) Kind: INT Value: 2
+  *ast.FuncDecl (go-nodes/statements.go:194:1)
+    Name: namedReturn
+    Type:
+      *ast.FuncType (go-nodes/statements.go:194:1)
+        Params:
+          *ast.FieldList (go-nodes/statements.go:194:17) NumFields: 0
+        Results:
+          *ast.FieldList (go-nodes/statements.go:194:20) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/statements.go:194:21)
+                Name: result
+                Type:
+                  *ast.Ident (go-nodes/statements.go:194:28) Name: int
+    Body:
+      *ast.BlockStmt (go-nodes/statements.go:194:33) Stmts: 2
+        *ast.AssignStmt (go-nodes/statements.go:195:2) Token: =
+          LHS:
+            *ast.Ident (go-nodes/statements.go:195:2) Name: result
+          RHS:
+            *ast.BasicLit (go-nodes/statements.go:195:11) Kind: INT Value: 42
+        *ast.ReturnStmt (go-nodes/statements.go:196:2)

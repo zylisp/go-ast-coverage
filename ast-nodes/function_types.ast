@@ -1,0 +1,1061 @@
+=== AST for function_types.go ===
+
+File Information:
+  Package: main
+  Position: go-nodes/function_types.go:3:1
+  Imports:
+    "fmt"
+  Comment Groups: 27
+  Declarations: 13
+
+=== AST Node Tree ===
+
+*ast.File (go-nodes/function_types.go:3:1)
+  Package: main
+  *ast.GenDecl (go-nodes/function_types.go:5:1) Token: import
+    *ast.ImportSpec (go-nodes/function_types.go:5:8)
+      Path: "fmt"
+  *ast.GenDecl (go-nodes/function_types.go:14:1) Token: type
+    *ast.TypeSpec (go-nodes/function_types.go:14:6)
+      Name: UnaryFunc
+      Type:
+        *ast.FuncType (go-nodes/function_types.go:14:16)
+          Params:
+            *ast.FieldList (go-nodes/function_types.go:14:20) NumFields: 1
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:14:21)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:14:21) Name: int
+          Results:
+            *ast.FieldList (go-nodes/function_types.go:14:26) NumFields: 1
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:14:26)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:14:26) Name: int
+  *ast.GenDecl (go-nodes/function_types.go:15:1) Token: type
+    *ast.TypeSpec (go-nodes/function_types.go:15:6)
+      Name: BinaryFunc
+      Type:
+        *ast.FuncType (go-nodes/function_types.go:15:17)
+          Params:
+            *ast.FieldList (go-nodes/function_types.go:15:21) NumFields: 2
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:15:22)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:15:22) Name: int
+              Field[1]:
+                *ast.Field (go-nodes/function_types.go:15:27)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:15:27) Name: int
+          Results:
+            *ast.FieldList (go-nodes/function_types.go:15:32) NumFields: 1
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:15:32)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:15:32) Name: int
+  *ast.GenDecl (go-nodes/function_types.go:16:1) Token: type
+    *ast.TypeSpec (go-nodes/function_types.go:16:6)
+      Name: NoParamFunc
+      Type:
+        *ast.FuncType (go-nodes/function_types.go:16:18)
+          Params:
+            *ast.FieldList (go-nodes/function_types.go:16:22) NumFields: 0
+          Results:
+            *ast.FieldList (go-nodes/function_types.go:16:25) NumFields: 1
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:16:25)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:16:25) Name: string
+  *ast.GenDecl (go-nodes/function_types.go:17:1) Token: type
+    *ast.TypeSpec (go-nodes/function_types.go:17:6)
+      Name: NoReturnFunc
+      Type:
+        *ast.FuncType (go-nodes/function_types.go:17:19)
+          Params:
+            *ast.FieldList (go-nodes/function_types.go:17:23) NumFields: 1
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:17:24)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:17:24) Name: int
+  *ast.GenDecl (go-nodes/function_types.go:18:1) Token: type
+    *ast.TypeSpec (go-nodes/function_types.go:18:6)
+      Name: MultiReturnFunc
+      Type:
+        *ast.FuncType (go-nodes/function_types.go:18:22)
+          Params:
+            *ast.FieldList (go-nodes/function_types.go:18:26) NumFields: 2
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:18:27)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:18:27) Name: int
+              Field[1]:
+                *ast.Field (go-nodes/function_types.go:18:32)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:18:32) Name: string
+          Results:
+            *ast.FieldList (go-nodes/function_types.go:18:40) NumFields: 3
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:18:41)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:18:41) Name: int
+              Field[1]:
+                *ast.Field (go-nodes/function_types.go:18:46)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:18:46) Name: string
+              Field[2]:
+                *ast.Field (go-nodes/function_types.go:18:54)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:18:54) Name: bool
+  *ast.GenDecl (go-nodes/function_types.go:19:1) Token: type
+    *ast.TypeSpec (go-nodes/function_types.go:19:6)
+      Name: VariadicFunc
+      Type:
+        *ast.FuncType (go-nodes/function_types.go:19:19)
+          Params:
+            *ast.FieldList (go-nodes/function_types.go:19:23) NumFields: 2
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:19:24)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:19:24) Name: string
+              Field[1]:
+                *ast.Field (go-nodes/function_types.go:19:32)
+                  Type:
+                    *ast.Ellipsis (go-nodes/function_types.go:19:32)
+  *ast.GenDecl (go-nodes/function_types.go:20:1) Token: type
+    *ast.TypeSpec (go-nodes/function_types.go:20:6)
+      Name: ErrorFunc
+      Type:
+        *ast.FuncType (go-nodes/function_types.go:20:16)
+          Params:
+            *ast.FieldList (go-nodes/function_types.go:20:20) NumFields: 0
+          Results:
+            *ast.FieldList (go-nodes/function_types.go:20:23) NumFields: 1
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:20:23)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:20:23) Name: error
+  *ast.GenDecl (go-nodes/function_types.go:21:1) Token: type
+    *ast.TypeSpec (go-nodes/function_types.go:21:6)
+      Name: NamedReturnFunc
+      Type:
+        *ast.FuncType (go-nodes/function_types.go:21:22)
+          Params:
+            *ast.FieldList (go-nodes/function_types.go:21:26) NumFields: 1
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:21:27)
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:21:27) Name: int
+          Results:
+            *ast.FieldList (go-nodes/function_types.go:21:32) NumFields: 2
+              Field[0]:
+                *ast.Field (go-nodes/function_types.go:21:33)
+                  Name: result
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:21:40) Name: int
+              Field[1]:
+                *ast.Field (go-nodes/function_types.go:21:45)
+                  Name: err
+                  Type:
+                    *ast.Ident (go-nodes/function_types.go:21:49) Name: error
+  *ast.FuncDecl (go-nodes/function_types.go:23:1)
+    Name: funcMain
+    Type:
+      *ast.FuncType (go-nodes/function_types.go:23:1)
+        Params:
+          *ast.FieldList (go-nodes/function_types.go:23:14) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/function_types.go:23:17) Stmts: 75
+        *ast.ExprStmt (go-nodes/function_types.go:24:2)
+          *ast.CallExpr (go-nodes/function_types.go:24:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:24:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:24:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:24:14) Kind: STRING Value: "=== function_types.go AST Node Coverage ==="
+        *ast.ExprStmt (go-nodes/function_types.go:25:2)
+          *ast.CallExpr (go-nodes/function_types.go:25:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:25:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:25:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:25:14) Kind: STRING Value: "Exercising AST Nodes:"
+        *ast.ExprStmt (go-nodes/function_types.go:28:2)
+          *ast.CallExpr (go-nodes/function_types.go:28:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:28:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:28:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:28:14) Kind: STRING Value: "  ✓ ast.FuncType (simple):"
+        *ast.DeclStmt (go-nodes/function_types.go:29:2)
+          *ast.GenDecl (go-nodes/function_types.go:29:2) Token: var
+            *ast.ValueSpec (go-nodes/function_types.go:29:6)
+              Name: f1
+              Type:
+                *ast.Ident (go-nodes/function_types.go:29:9) Name: UnaryFunc
+              Value[0]:
+                *ast.FuncLit (go-nodes/function_types.go:29:21)
+        *ast.ExprStmt (go-nodes/function_types.go:32:2)
+          *ast.CallExpr (go-nodes/function_types.go:32:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:32:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:32:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:32:13) Kind: STRING Value: "    UnaryFunc: f1(5) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:32:44)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:32:44) Name: f1
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:32:47) Kind: INT Value: 5
+        *ast.DeclStmt (go-nodes/function_types.go:35:2)
+          *ast.GenDecl (go-nodes/function_types.go:35:2) Token: var
+            *ast.ValueSpec (go-nodes/function_types.go:35:6)
+              Name: f2
+              Type:
+                *ast.Ident (go-nodes/function_types.go:35:9) Name: BinaryFunc
+              Value[0]:
+                *ast.FuncLit (go-nodes/function_types.go:35:22)
+        *ast.ExprStmt (go-nodes/function_types.go:38:2)
+          *ast.CallExpr (go-nodes/function_types.go:38:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:38:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:38:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:38:13) Kind: STRING Value: "    BinaryFunc: f2(3, 4) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:38:48)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:38:48) Name: f2
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:38:51) Kind: INT Value: 3
+                    [1]:
+                      *ast.BasicLit (go-nodes/function_types.go:38:54) Kind: INT Value: 4
+        *ast.DeclStmt (go-nodes/function_types.go:41:2)
+          *ast.GenDecl (go-nodes/function_types.go:41:2) Token: var
+            *ast.ValueSpec (go-nodes/function_types.go:41:6)
+              Name: f3
+              Type:
+                *ast.Ident (go-nodes/function_types.go:41:9) Name: NoParamFunc
+              Value[0]:
+                *ast.FuncLit (go-nodes/function_types.go:41:23)
+        *ast.ExprStmt (go-nodes/function_types.go:44:2)
+          *ast.CallExpr (go-nodes/function_types.go:44:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:44:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:44:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:44:13) Kind: STRING Value: "    NoParamFunc: f3() = %s\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:44:45)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:44:45) Name: f3
+        *ast.DeclStmt (go-nodes/function_types.go:47:2)
+          *ast.GenDecl (go-nodes/function_types.go:47:2) Token: var
+            *ast.ValueSpec (go-nodes/function_types.go:47:6)
+              Name: f4
+              Type:
+                *ast.Ident (go-nodes/function_types.go:47:9) Name: NoReturnFunc
+              Value[0]:
+                *ast.FuncLit (go-nodes/function_types.go:47:24)
+        *ast.ExprStmt (go-nodes/function_types.go:50:2)
+          *ast.CallExpr (go-nodes/function_types.go:50:2)
+            Fun:
+              *ast.Ident (go-nodes/function_types.go:50:2) Name: f4
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:50:5) Kind: INT Value: 42
+        *ast.DeclStmt (go-nodes/function_types.go:53:2)
+          *ast.GenDecl (go-nodes/function_types.go:53:2) Token: var
+            *ast.ValueSpec (go-nodes/function_types.go:53:6)
+              Name: f5
+              Type:
+                *ast.Ident (go-nodes/function_types.go:53:9) Name: MultiReturnFunc
+              Value[0]:
+                *ast.FuncLit (go-nodes/function_types.go:53:27)
+        *ast.AssignStmt (go-nodes/function_types.go:56:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:56:2) Name: i
+            *ast.Ident (go-nodes/function_types.go:56:5) Name: s
+            *ast.Ident (go-nodes/function_types.go:56:8) Name: b
+          RHS:
+            *ast.CallExpr (go-nodes/function_types.go:56:13)
+              Fun:
+                *ast.Ident (go-nodes/function_types.go:56:13) Name: f5
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/function_types.go:56:16) Kind: INT Value: 5
+                [1]:
+                  *ast.BasicLit (go-nodes/function_types.go:56:19) Kind: STRING Value: "hi"
+        *ast.ExprStmt (go-nodes/function_types.go:57:2)
+          *ast.CallExpr (go-nodes/function_types.go:57:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:57:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:57:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:57:13) Kind: STRING Value: "    MultiReturnFunc: returns (%d, %s, %v)\n"
+              [1]:
+                *ast.Ident (go-nodes/function_types.go:57:60) Name: i
+              [2]:
+                *ast.Ident (go-nodes/function_types.go:57:63) Name: s
+              [3]:
+                *ast.Ident (go-nodes/function_types.go:57:66) Name: b
+        *ast.DeclStmt (go-nodes/function_types.go:60:2)
+          *ast.GenDecl (go-nodes/function_types.go:60:2) Token: var
+            *ast.ValueSpec (go-nodes/function_types.go:60:6)
+              Name: f6
+              Type:
+                *ast.Ident (go-nodes/function_types.go:60:9) Name: VariadicFunc
+              Value[0]:
+                *ast.FuncLit (go-nodes/function_types.go:60:24)
+        *ast.ExprStmt (go-nodes/function_types.go:63:2)
+          *ast.CallExpr (go-nodes/function_types.go:63:2)
+            Fun:
+              *ast.Ident (go-nodes/function_types.go:63:2) Name: f6
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:63:5) Kind: STRING Value: "values: %d, %s, %v"
+              [1]:
+                *ast.BasicLit (go-nodes/function_types.go:63:27) Kind: INT Value: 42
+              [2]:
+                *ast.BasicLit (go-nodes/function_types.go:63:31) Kind: STRING Value: "test"
+              [3]:
+                *ast.Ident (go-nodes/function_types.go:63:39) Name: true
+        *ast.ExprStmt (go-nodes/function_types.go:66:2)
+          *ast.CallExpr (go-nodes/function_types.go:66:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:66:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:66:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:66:14) Kind: STRING Value: "  ✓ ast.FuncLit (closures):"
+        *ast.AssignStmt (go-nodes/function_types.go:67:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:67:2) Name: x
+          RHS:
+            *ast.BasicLit (go-nodes/function_types.go:67:7) Kind: INT Value: 10
+        *ast.AssignStmt (go-nodes/function_types.go:68:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:68:2) Name: closure
+          RHS:
+            *ast.FuncLit (go-nodes/function_types.go:68:13)
+        *ast.ExprStmt (go-nodes/function_types.go:72:2)
+          *ast.CallExpr (go-nodes/function_types.go:72:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:72:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:72:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:72:13) Kind: STRING Value: "    Closure (1st call): x = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:72:49)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:72:49) Name: closure
+        *ast.ExprStmt (go-nodes/function_types.go:73:2)
+          *ast.CallExpr (go-nodes/function_types.go:73:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:73:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:73:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:73:13) Kind: STRING Value: "    Closure (2nd call): x = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:73:49)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:73:49) Name: closure
+        *ast.AssignStmt (go-nodes/function_types.go:76:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:76:2) Name: multiplier
+          RHS:
+            *ast.BasicLit (go-nodes/function_types.go:76:16) Kind: INT Value: 3
+        *ast.AssignStmt (go-nodes/function_types.go:77:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:77:2) Name: closureWithParam
+          RHS:
+            *ast.FuncLit (go-nodes/function_types.go:77:22)
+        *ast.ExprStmt (go-nodes/function_types.go:80:2)
+          *ast.CallExpr (go-nodes/function_types.go:80:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:80:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:80:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:80:13) Kind: STRING Value: "    Closure with param: f(10) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:80:53)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:80:53) Name: closureWithParam
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:80:70) Kind: INT Value: 10
+        *ast.AssignStmt (go-nodes/function_types.go:83:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:83:2) Name: result
+          RHS:
+            *ast.CallExpr (go-nodes/function_types.go:83:12)
+              Fun:
+                *ast.FuncLit (go-nodes/function_types.go:83:12)
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/function_types.go:85:4) Kind: INT Value: 6
+                [1]:
+                  *ast.BasicLit (go-nodes/function_types.go:85:7) Kind: INT Value: 7
+        *ast.ExprStmt (go-nodes/function_types.go:86:2)
+          *ast.CallExpr (go-nodes/function_types.go:86:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:86:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:86:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:86:13) Kind: STRING Value: "    IIFE (Immediately Invoked): 6*7 = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/function_types.go:86:59) Name: result
+        *ast.ExprStmt (go-nodes/function_types.go:89:2)
+          *ast.CallExpr (go-nodes/function_types.go:89:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:89:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:89:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:89:14) Kind: STRING Value: "  ✓ Higher-order functions:"
+        *ast.AssignStmt (go-nodes/function_types.go:90:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:90:2) Name: makeAdder
+          RHS:
+            *ast.FuncLit (go-nodes/function_types.go:90:15)
+        *ast.AssignStmt (go-nodes/function_types.go:95:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:95:2) Name: add5
+          RHS:
+            *ast.CallExpr (go-nodes/function_types.go:95:10)
+              Fun:
+                *ast.Ident (go-nodes/function_types.go:95:10) Name: makeAdder
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/function_types.go:95:20) Kind: INT Value: 5
+        *ast.AssignStmt (go-nodes/function_types.go:96:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:96:2) Name: add10
+          RHS:
+            *ast.CallExpr (go-nodes/function_types.go:96:11)
+              Fun:
+                *ast.Ident (go-nodes/function_types.go:96:11) Name: makeAdder
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/function_types.go:96:21) Kind: INT Value: 10
+        *ast.ExprStmt (go-nodes/function_types.go:97:2)
+          *ast.CallExpr (go-nodes/function_types.go:97:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:97:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:97:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:97:13) Kind: STRING Value: "    add5(3) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:97:35)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:97:35) Name: add5
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:97:40) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/function_types.go:98:2)
+          *ast.CallExpr (go-nodes/function_types.go:98:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:98:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:98:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:98:13) Kind: STRING Value: "    add10(3) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:98:36)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:98:36) Name: add10
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:98:42) Kind: INT Value: 3
+        *ast.AssignStmt (go-nodes/function_types.go:101:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:101:2) Name: applyFunc
+          RHS:
+            *ast.FuncLit (go-nodes/function_types.go:101:15)
+        *ast.AssignStmt (go-nodes/function_types.go:104:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:104:2) Name: double
+          RHS:
+            *ast.FuncLit (go-nodes/function_types.go:104:12)
+        *ast.AssignStmt (go-nodes/function_types.go:105:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:105:2) Name: triple
+          RHS:
+            *ast.FuncLit (go-nodes/function_types.go:105:12)
+        *ast.ExprStmt (go-nodes/function_types.go:106:2)
+          *ast.CallExpr (go-nodes/function_types.go:106:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:106:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:106:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:106:13) Kind: STRING Value: "    applyFunc(double, 7) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:106:48)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:106:48) Name: applyFunc
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/function_types.go:106:58) Name: double
+                    [1]:
+                      *ast.BasicLit (go-nodes/function_types.go:106:66) Kind: INT Value: 7
+        *ast.ExprStmt (go-nodes/function_types.go:107:2)
+          *ast.CallExpr (go-nodes/function_types.go:107:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:107:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:107:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:107:13) Kind: STRING Value: "    applyFunc(triple, 7) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:107:48)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:107:48) Name: applyFunc
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/function_types.go:107:58) Name: triple
+                    [1]:
+                      *ast.BasicLit (go-nodes/function_types.go:107:66) Kind: INT Value: 7
+        *ast.ExprStmt (go-nodes/function_types.go:110:2)
+          *ast.CallExpr (go-nodes/function_types.go:110:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:110:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:110:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:110:14) Kind: STRING Value: "  ✓ ast.FuncType with named returns:"
+        *ast.DeclStmt (go-nodes/function_types.go:111:2)
+          *ast.GenDecl (go-nodes/function_types.go:111:2) Token: var
+            *ast.ValueSpec (go-nodes/function_types.go:111:6)
+              Name: f7
+              Type:
+                *ast.Ident (go-nodes/function_types.go:111:9) Name: NamedReturnFunc
+              Value[0]:
+                *ast.FuncLit (go-nodes/function_types.go:111:27)
+        *ast.AssignStmt (go-nodes/function_types.go:116:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:116:2) Name: res
+            *ast.Ident (go-nodes/function_types.go:116:7) Name: _
+          RHS:
+            *ast.CallExpr (go-nodes/function_types.go:116:12)
+              Fun:
+                *ast.Ident (go-nodes/function_types.go:116:12) Name: f7
+              Args:
+                [0]:
+                  *ast.BasicLit (go-nodes/function_types.go:116:15) Kind: INT Value: 21
+        *ast.ExprStmt (go-nodes/function_types.go:117:2)
+          *ast.CallExpr (go-nodes/function_types.go:117:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:117:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:117:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:117:13) Kind: STRING Value: "    NamedReturnFunc: result = %d\n"
+              [1]:
+                *ast.Ident (go-nodes/function_types.go:117:51) Name: res
+        *ast.ExprStmt (go-nodes/function_types.go:120:2)
+          *ast.CallExpr (go-nodes/function_types.go:120:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:120:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:120:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:120:14) Kind: STRING Value: "  ✓ Recursive function:"
+        *ast.DeclStmt (go-nodes/function_types.go:121:2)
+          *ast.GenDecl (go-nodes/function_types.go:121:2) Token: var
+            *ast.ValueSpec (go-nodes/function_types.go:121:6)
+              Name: factorial
+              Type:
+                *ast.FuncType (go-nodes/function_types.go:121:16)
+                  Params:
+                    *ast.FieldList (go-nodes/function_types.go:121:20) NumFields: 1
+                      Field[0]:
+                        *ast.Field (go-nodes/function_types.go:121:21)
+                          Type:
+                            *ast.Ident (go-nodes/function_types.go:121:21) Name: int
+                  Results:
+                    *ast.FieldList (go-nodes/function_types.go:121:26) NumFields: 1
+                      Field[0]:
+                        *ast.Field (go-nodes/function_types.go:121:26)
+                          Type:
+                            *ast.Ident (go-nodes/function_types.go:121:26) Name: int
+        *ast.AssignStmt (go-nodes/function_types.go:122:2) Token: =
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:122:2) Name: factorial
+          RHS:
+            *ast.FuncLit (go-nodes/function_types.go:122:14)
+        *ast.ExprStmt (go-nodes/function_types.go:128:2)
+          *ast.CallExpr (go-nodes/function_types.go:128:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:128:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:128:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:128:13) Kind: STRING Value: "    factorial(5) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:128:40)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:128:40) Name: factorial
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:128:50) Kind: INT Value: 5
+        *ast.ExprStmt (go-nodes/function_types.go:131:2)
+          *ast.CallExpr (go-nodes/function_types.go:131:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:131:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:131:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:131:14) Kind: STRING Value: "  ✓ Method value (function extracted from method):"
+        *ast.AssignStmt (go-nodes/function_types.go:132:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:132:2) Name: calc
+          RHS:
+            *ast.CompositeLit (go-nodes/function_types.go:132:10)
+              Type:
+                *ast.Ident (go-nodes/function_types.go:132:10) Name: Calculator
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/function_types.go:132:21)
+        *ast.AssignStmt (go-nodes/function_types.go:133:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:133:2) Name: method
+          RHS:
+            *ast.SelectorExpr (go-nodes/function_types.go:133:12)
+              X:
+                *ast.Ident (go-nodes/function_types.go:133:12) Name: calc
+              Sel: Add
+        *ast.ExprStmt (go-nodes/function_types.go:134:2)
+          *ast.CallExpr (go-nodes/function_types.go:134:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:134:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:134:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:134:13) Kind: STRING Value: "    Method value: method(5) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:134:51)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:134:51) Name: method
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:134:58) Kind: INT Value: 5
+        *ast.AssignStmt (go-nodes/function_types.go:137:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:137:2) Name: methodExpr
+          RHS:
+            *ast.SelectorExpr (go-nodes/function_types.go:137:16)
+              X:
+                *ast.Ident (go-nodes/function_types.go:137:16) Name: Calculator
+              Sel: Add
+        *ast.ExprStmt (go-nodes/function_types.go:138:2)
+          *ast.CallExpr (go-nodes/function_types.go:138:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:138:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:138:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:138:13) Kind: STRING Value: "    Method expression: methodExpr(calc, 7) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:138:66)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:138:66) Name: methodExpr
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/function_types.go:138:77) Name: calc
+                    [1]:
+                      *ast.BasicLit (go-nodes/function_types.go:138:83) Kind: INT Value: 7
+        *ast.ExprStmt (go-nodes/function_types.go:141:2)
+          *ast.CallExpr (go-nodes/function_types.go:141:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:141:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:141:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:141:14) Kind: STRING Value: "  ✓ Defer with function literal:"
+        *ast.ExprStmt (go-nodes/function_types.go:142:2)
+          *ast.CallExpr (go-nodes/function_types.go:142:2)
+            Fun:
+              *ast.FuncLit (go-nodes/function_types.go:142:2)
+        *ast.ExprStmt (go-nodes/function_types.go:150:2)
+          *ast.CallExpr (go-nodes/function_types.go:150:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:150:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:150:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:150:14) Kind: STRING Value: "  ✓ Goroutine with function literal:"
+        *ast.AssignStmt (go-nodes/function_types.go:151:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:151:2) Name: done
+          RHS:
+            *ast.CallExpr (go-nodes/function_types.go:151:10)
+              Fun:
+                *ast.Ident (go-nodes/function_types.go:151:10) Name: make
+              Args:
+                [0]:
+                  *ast.ChanType (go-nodes/function_types.go:151:15) Dir: %!s(ast.ChanDir=3)
+                    Value:
+                      *ast.Ident (go-nodes/function_types.go:151:20) Name: bool
+        *ast.GoStmt (go-nodes/function_types.go:152:2)
+        *ast.ExprStmt (go-nodes/function_types.go:156:2)
+          *ast.UnaryExpr (go-nodes/function_types.go:156:2) Op: <-
+            X:
+              *ast.Ident (go-nodes/function_types.go:156:4) Name: done
+        *ast.ExprStmt (go-nodes/function_types.go:159:2)
+          *ast.CallExpr (go-nodes/function_types.go:159:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:159:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:159:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:159:14) Kind: STRING Value: "  ✓ Function with blank identifiers:"
+        *ast.AssignStmt (go-nodes/function_types.go:160:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:160:2) Name: ignoreParams
+          RHS:
+            *ast.FuncLit (go-nodes/function_types.go:160:18)
+        *ast.ExprStmt (go-nodes/function_types.go:163:2)
+          *ast.CallExpr (go-nodes/function_types.go:163:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:163:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:163:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:163:13) Kind: STRING Value: "    ignoreParams(1, \"x\") = %s\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:163:50)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:163:50) Name: ignoreParams
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:163:63) Kind: INT Value: 1
+                    [1]:
+                      *ast.BasicLit (go-nodes/function_types.go:163:66) Kind: STRING Value: "x"
+        *ast.ExprStmt (go-nodes/function_types.go:166:2)
+          *ast.CallExpr (go-nodes/function_types.go:166:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:166:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:166:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:166:14) Kind: STRING Value: "  ✓ Variadic function calls:"
+        *ast.AssignStmt (go-nodes/function_types.go:167:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:167:2) Name: sum
+          RHS:
+            *ast.FuncLit (go-nodes/function_types.go:167:9)
+        *ast.ExprStmt (go-nodes/function_types.go:174:2)
+          *ast.CallExpr (go-nodes/function_types.go:174:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:174:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:174:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:174:13) Kind: STRING Value: "    sum(1, 2, 3) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:174:40)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:174:40) Name: sum
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:174:44) Kind: INT Value: 1
+                    [1]:
+                      *ast.BasicLit (go-nodes/function_types.go:174:47) Kind: INT Value: 2
+                    [2]:
+                      *ast.BasicLit (go-nodes/function_types.go:174:50) Kind: INT Value: 3
+        *ast.ExprStmt (go-nodes/function_types.go:175:2)
+          *ast.CallExpr (go-nodes/function_types.go:175:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:175:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:175:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:175:13) Kind: STRING Value: "    sum(1, 2, 3, 4, 5) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:175:46)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:175:46) Name: sum
+                  Args:
+                    [0]:
+                      *ast.BasicLit (go-nodes/function_types.go:175:50) Kind: INT Value: 1
+                    [1]:
+                      *ast.BasicLit (go-nodes/function_types.go:175:53) Kind: INT Value: 2
+                    [2]:
+                      *ast.BasicLit (go-nodes/function_types.go:175:56) Kind: INT Value: 3
+                    [3]:
+                      *ast.BasicLit (go-nodes/function_types.go:175:59) Kind: INT Value: 4
+                    [4]:
+                      *ast.BasicLit (go-nodes/function_types.go:175:62) Kind: INT Value: 5
+        *ast.AssignStmt (go-nodes/function_types.go:176:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:176:2) Name: values
+          RHS:
+            *ast.CompositeLit (go-nodes/function_types.go:176:12)
+              Type:
+                *ast.ArrayType (go-nodes/function_types.go:176:12)
+                  Elt:
+                    *ast.Ident (go-nodes/function_types.go:176:14) Name: int
+              Elts:
+                [0]:
+                  *ast.BasicLit (go-nodes/function_types.go:176:18) Kind: INT Value: 10
+                [1]:
+                  *ast.BasicLit (go-nodes/function_types.go:176:22) Kind: INT Value: 20
+                [2]:
+                  *ast.BasicLit (go-nodes/function_types.go:176:26) Kind: INT Value: 30
+        *ast.ExprStmt (go-nodes/function_types.go:177:2)
+          *ast.CallExpr (go-nodes/function_types.go:177:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:177:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:177:2) Name: fmt
+                Sel: Printf
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:177:13) Kind: STRING Value: "    sum(values...) = %d\n"
+              [1]:
+                *ast.CallExpr (go-nodes/function_types.go:177:42)
+                  Fun:
+                    *ast.Ident (go-nodes/function_types.go:177:42) Name: sum
+                  Args:
+                    [0]:
+                      *ast.Ident (go-nodes/function_types.go:177:46) Name: values
+        *ast.ExprStmt (go-nodes/function_types.go:180:2)
+          *ast.CallExpr (go-nodes/function_types.go:180:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:180:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:180:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:180:14) Kind: STRING Value: "  ✓ Function type in struct:"
+        *ast.DeclStmt (go-nodes/function_types.go:181:2)
+          *ast.GenDecl (go-nodes/function_types.go:181:2) Token: type
+            *ast.TypeSpec (go-nodes/function_types.go:181:7)
+              Name: Handler
+              Type:
+                *ast.StructType (go-nodes/function_types.go:181:15)
+                  *ast.FieldList (go-nodes/function_types.go:181:22) NumFields: 2
+                    Field[0]:
+                      *ast.Field (go-nodes/function_types.go:182:3)
+                        Name: OnClick
+                        Type:
+                          *ast.FuncType (go-nodes/function_types.go:182:11)
+                            Params:
+                              *ast.FieldList (go-nodes/function_types.go:182:15) NumFields: 1
+                                Field[0]:
+                                  *ast.Field (go-nodes/function_types.go:182:16)
+                                    Type:
+                                      *ast.Ident (go-nodes/function_types.go:182:16) Name: int
+                    Field[1]:
+                      *ast.Field (go-nodes/function_types.go:183:3)
+                        Name: OnHover
+                        Type:
+                          *ast.FuncType (go-nodes/function_types.go:183:11)
+                            Params:
+                              *ast.FieldList (go-nodes/function_types.go:183:15) NumFields: 0
+        *ast.AssignStmt (go-nodes/function_types.go:185:2) Token: :=
+          LHS:
+            *ast.Ident (go-nodes/function_types.go:185:2) Name: h
+          RHS:
+            *ast.CompositeLit (go-nodes/function_types.go:185:7)
+              Type:
+                *ast.Ident (go-nodes/function_types.go:185:7) Name: Handler
+              Elts:
+                [0]:
+                  *ast.KeyValueExpr (go-nodes/function_types.go:186:3)
+                [1]:
+                  *ast.KeyValueExpr (go-nodes/function_types.go:189:3)
+        *ast.ExprStmt (go-nodes/function_types.go:193:2)
+          *ast.CallExpr (go-nodes/function_types.go:193:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:193:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:193:2) Name: h
+                Sel: OnClick
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:193:12) Kind: INT Value: 100
+        *ast.ExprStmt (go-nodes/function_types.go:194:2)
+          *ast.CallExpr (go-nodes/function_types.go:194:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:194:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:194:2) Name: h
+                Sel: OnHover
+        *ast.ExprStmt (go-nodes/function_types.go:196:2)
+          *ast.CallExpr (go-nodes/function_types.go:196:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:196:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:196:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:196:14) Kind: STRING Value: "Summary: Comprehensive function type AST node coverage"
+        *ast.ExprStmt (go-nodes/function_types.go:197:2)
+          *ast.CallExpr (go-nodes/function_types.go:197:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:197:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:197:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:197:14) Kind: STRING Value: "Primary AST Nodes: ast.FuncType, ast.FuncLit, ast.FuncDecl, ast.FieldList"
+        *ast.ExprStmt (go-nodes/function_types.go:198:2)
+          *ast.CallExpr (go-nodes/function_types.go:198:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:198:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:198:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:198:14) Kind: STRING Value: "Features: function types, closures, higher-order functions, variadic, named returns"
+        *ast.ExprStmt (go-nodes/function_types.go:199:2)
+          *ast.CallExpr (go-nodes/function_types.go:199:2)
+            Fun:
+              *ast.SelectorExpr (go-nodes/function_types.go:199:2)
+                X:
+                  *ast.Ident (go-nodes/function_types.go:199:2) Name: fmt
+                Sel: Println
+            Args:
+              [0]:
+                *ast.BasicLit (go-nodes/function_types.go:199:14) Kind: STRING Value: "========================================"
+  *ast.GenDecl (go-nodes/function_types.go:202:1) Token: type
+    *ast.TypeSpec (go-nodes/function_types.go:202:6)
+      Name: Calculator
+      Type:
+        *ast.StructType (go-nodes/function_types.go:202:17)
+          *ast.FieldList (go-nodes/function_types.go:202:24) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/function_types.go:203:2)
+                Name: value
+                Type:
+                  *ast.Ident (go-nodes/function_types.go:203:8) Name: int
+  *ast.FuncDecl (go-nodes/function_types.go:206:1)
+    Name: Add
+    Receiver:
+      *ast.FieldList (go-nodes/function_types.go:206:6) NumFields: 1
+        Field[0]:
+          *ast.Field (go-nodes/function_types.go:206:7)
+            Name: c
+            Type:
+              *ast.Ident (go-nodes/function_types.go:206:9) Name: Calculator
+    Type:
+      *ast.FuncType (go-nodes/function_types.go:206:1)
+        Params:
+          *ast.FieldList (go-nodes/function_types.go:206:24) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/function_types.go:206:25)
+                Name: n
+                Type:
+                  *ast.Ident (go-nodes/function_types.go:206:27) Name: int
+        Results:
+          *ast.FieldList (go-nodes/function_types.go:206:32) NumFields: 1
+            Field[0]:
+              *ast.Field (go-nodes/function_types.go:206:32)
+                Type:
+                  *ast.Ident (go-nodes/function_types.go:206:32) Name: int
+    Body:
+      *ast.BlockStmt (go-nodes/function_types.go:206:36) Stmts: 1
+        *ast.ReturnStmt (go-nodes/function_types.go:207:2)
+          Result[0]:
+            *ast.BinaryExpr (go-nodes/function_types.go:207:9) Op: +
+              X:
+                *ast.SelectorExpr (go-nodes/function_types.go:207:9)
+                  X:
+                    *ast.Ident (go-nodes/function_types.go:207:9) Name: c
+                  Sel: value
+              Y:
+                *ast.Ident (go-nodes/function_types.go:207:19) Name: n
+  *ast.FuncDecl (go-nodes/function_types.go:210:1)
+    Name: main
+    Type:
+      *ast.FuncType (go-nodes/function_types.go:210:1)
+        Params:
+          *ast.FieldList (go-nodes/function_types.go:210:10) NumFields: 0
+    Body:
+      *ast.BlockStmt (go-nodes/function_types.go:210:13) Stmts: 1
+        *ast.ExprStmt (go-nodes/function_types.go:211:2)
+          *ast.CallExpr (go-nodes/function_types.go:211:2)
+            Fun:
+              *ast.Ident (go-nodes/function_types.go:211:2) Name: funcMain
